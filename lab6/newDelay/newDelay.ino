@@ -31,7 +31,7 @@ void setup() {
   myTCCR1C = (unsigned char *) 0x82;
   myTIMSK1 = (unsigned char *) 0x6F;
   myTIFR1 = (unsigned char *) 0x36;
-  myTCNT1 = (unsigned char *) 0x84;
+  myTCNT1 = (unsigned int *) 0x84;
 
   // Initialize NORMAL mode, off, and no interupts for timer1
   *myTCCR1A = 0;
@@ -64,7 +64,7 @@ void newDelay(unsigned long mSeconds) {
   *myTCCR1B = 0b00000101;     // Prescalar of 1024 applied to timer1
   
   // loop through timer;
-  while((*myTMFR1 & 0x01) == 0);
+  while((*myTIFR1 & 0x01) == 0);
   
   // Turn off the timer and clear the flag bit for next use
   *myTCCR1B = 0;
