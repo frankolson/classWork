@@ -1,14 +1,14 @@
 /*
-New Delay Blinky
+440Hz Tone
 Frank Olson
 V.1
-11 March 2014
+13 March 2014
 Arduino Mega 2560 R3
 Last Update: 13 March 2014
 
-This program is for question one on the homework. Replacing the crude delay 
-function used previously with a more accurate deay function utilizing the board 
-timers.
+This program is for question two on the homework. Using the new delay function
+created in the previous question of the assignment, write a C program to 
+produce a 440Hz tone on portB.6 on the Arduino Mega.
 */
 
 // Define hardware pointers
@@ -47,14 +47,7 @@ void setup() {
 
 // Loop Function
 void loop() {
-  portB = (unsigned char *) 0x25; 
   
-  // Turn on portB then wait half a second
-  *portB |= 0x80;
-  newDelay(500);
-  // Turn off portB then wait half a second 
-  *portB &= 0x7F;
-  newDelay(500);
 }
 
 // Delay Function
