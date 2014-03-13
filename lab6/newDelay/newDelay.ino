@@ -4,7 +4,7 @@ Frank Olson
 V.1
 11 March 2014
 Arduino Mega 2560 R3
-Last Update: 11 March 2014
+Last Update: 13 March 2014
 
 This program is for question one on the homework. Replacing the crude delay 
 function used previously with a more accurate deay function utilizing the board 
@@ -40,7 +40,7 @@ void setup() {
   *myTIMSK1 = 0;
 
   // Initialize GPIO portB
-  unsigned char *portDDRB;
+  volatile unsigned char *portDDRB;
   portDDRB = (unsigned char *) 0x24;
   *portDDRB |= 0x80;
 }
@@ -48,6 +48,7 @@ void setup() {
 // Loop Function
 void loop() {
   portB = (unsigned char *) 0x25; 
+  
   // Turn on portB then wait half a second
   *portB |= 0x80;
   newDelay(500);
