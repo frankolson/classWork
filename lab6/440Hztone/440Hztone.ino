@@ -54,20 +54,19 @@ void loop() {
   portB = (unsigned char *) 0x25; 
   
  // Pulse width is going to be half the period
-  // Turn on portB then wait half a second
+  // Turn on portB then use speakerTone/2 to define pulses
   *portB |= 0x80;
   newDelay(speakerTone/2);
-  // Turn off portB then wait half a second 
+  // Turn off portB then use speakerTone/2 to define pulses
   *portB &= 0x7F;
   newDelay(speakerTone/2);
 }
 
 // Delay Function
 void newDelay(unsigned long mSeconds) {
-  // 15.625  ticks per millisecond on the timer when a F_CPU/1024 prescaler
-  // is applied
+  // used a prescaler of 64 with mSeconds/4 scaling converting to microseconds
   *myTCNT1 = (unsigned int) (65536 - (long) (mSeconds/4));
-  *myTCCR1B = 0b0000011;     // Prescalar of 1024 applied to timer1
+  *myTCCR1B = 0b0000011;     // Prescalar of 64 applied to timer1
   
   // loop through timer;
   while((*myTIFR1 & 0x01) == 0);
