@@ -21,8 +21,8 @@ volatile unsigned char *myTIFR1;    // Timer/Counter 1 Interupt Flag Register
 volatile unsigned int  *myTCNT1;    // Timer/Counter 1 16-bit Counter Register
 
 // Define frequency, tone(period), and convert to milliseconds
-volatile unsigned long speakerTone = 83; // period = 1/frequency
-                                          // period = 1/12k = 83 microseconds
+volatile unsigned long speakerTone = 2000; // period = 1/frequency
+                                          // period = 1/500 = 2000 microseconds
 
 // Define functions
 void newDelay(unsigned long mSeconds);
@@ -53,16 +53,18 @@ void setup() {
 void loop() {
   portB = (unsigned char *) 0x25; 
   
- // Pulse width is going to be half the period
-  // Flip portB then wait half a second
-  *portB ^= 0x80;
-  newDelay(speakerTone/2);
+  // 
+  // Turn on portB so its on 30% of the time
+  *portB |= 0x80;
+  newDelay(speakerTone * (0.3));
+  // Turn off portB so its off 70% of the time
+  *portB &= 0x7F;
+  newDelay(speakerTone * (0.7));
 }
 
 // Delay Function
 void newDelay(unsigned long mSeconds) {
-  // 15.625  ticks per millisecond on the timer when a F_CPU/1024 prescaler
-  // is applied
+  // used a prescaler of 64 with mSeconds/4 scaling converting to microseconds
   *myTCNT1 = (unsigned int) (65536 - (long) (mSeconds/4));
   *myTCCR1B = 0b00000011;     // Prescalar of 1024 applied to timer1
   
