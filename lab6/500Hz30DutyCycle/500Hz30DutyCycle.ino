@@ -1,14 +1,14 @@
 /*
-12Hkz Tone
+500Hz Tone 30% Duty Cycle
 Frank Olson
 V.1
 13 March 2014
 Arduino Mega 2560 R3
 Last Update: 13 March 2014
 
-This program is for question three on the homework. Using the new delay function
+This program is for question four on the homework. Using the new delay function
 created in the previous question of the assignment, write a C program to 
-produce a 12kHz squarewave on portB.6 on the Arduino Mega.
+produce a 500Hz squarewave on portB.6 on the Arduino Mega with a 30% duty cycle.
 */
 
 // Define hardware pointers
@@ -22,7 +22,7 @@ volatile unsigned int  *myTCNT1;    // Timer/Counter 1 16-bit Counter Register
 
 // Define frequency, tone(period), and convert to milliseconds
 volatile unsigned long speakerTone = 83; // period = 1/frequency
-                                         // period = 1/12k = 83 microseconds
+                                          // period = 1/12k = 83 microseconds
 
 // Define functions
 void newDelay(unsigned long mSeconds);
@@ -73,4 +73,3 @@ void newDelay(unsigned long mSeconds) {
   *myTCCR1B = 0;
   *myTIFR1 &= 0x01;
 }
-
