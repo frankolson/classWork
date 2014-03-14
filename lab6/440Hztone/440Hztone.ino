@@ -21,7 +21,8 @@ volatile unsigned char *myTIFR1;    // Timer/Counter 1 Interupt Flag Register
 volatile unsigned int  *myTCNT1;    // Timer/Counter 1 16-bit Counter Register
 
 // Define frequency, tone(period), and convert to microseconds
-volatile unsigned long speakerTone = 2272; // period = 1/frequency
+volatile unsigned long speakerTone = 2272; // period = 1/frequenc
+                                           // period = 1/440 = 2272 microseconds
 
 // Define functions
 void newDelay(unsigned long mSeconds);
