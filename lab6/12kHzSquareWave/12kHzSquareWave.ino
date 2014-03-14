@@ -6,9 +6,9 @@ V.1
 Arduino Mega 2560 R3
 Last Update: 13 March 2014
 
-This program is for question two on the homework. Using the new delay function
+This program is for question three on the homework. Using the new delay function
 created in the previous question of the assignment, write a C program to 
-produce a 440Hz tone on portB.6 on the Arduino Mega.
+produce a 12kHz squarewave on portB.6 on the Arduino Mega.
 */
 
 // Define hardware pointers
@@ -20,8 +20,7 @@ volatile unsigned char *myTIMSK1;   // Timer/Counter 1 Interupt Mask Register
 volatile unsigned char *myTIFR1;    // Timer/Counter 1 Interupt Flag Register
 volatile unsigned int  *myTCNT1;    // Timer/Counter 1 16-bit Counter Register
 
-// Define frequency, tone(period), and convert to microseconds
-volatile unsigned long speakerTone = 2272; // period = 1/frequency
+// Define frequency, tone(period), and convert to milliseconds
 
 // Define functions
 void newDelay(unsigned long mSeconds);
@@ -66,7 +65,7 @@ void newDelay(unsigned long mSeconds) {
   // 15.625  ticks per millisecond on the timer when a F_CPU/1024 prescaler
   // is applied
   *myTCNT1 = (unsigned int) (65536 - (long) (mSeconds/4));
-  *myTCCR1B = 0b0000011;     // Prescalar of 1024 applied to timer1
+  *myTCCR1B = 0b00000011;     // Prescalar of 1024 applied to timer1
   
   // loop through timer;
   while((*myTIFR1 & 0x01) == 0);
