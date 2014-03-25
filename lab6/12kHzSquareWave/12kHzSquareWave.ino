@@ -46,7 +46,7 @@ void setup() {
   // Initialize GPIO portB
   volatile unsigned char *portDDRB;
   portDDRB = (unsigned char *) 0x24;
-  *portDDRB |= 0x80;
+  *portDDRB |= 0x40;
 }
 
 // Loop Function
@@ -54,7 +54,7 @@ void loop() {
   portB = (unsigned char *) 0x25; 
   
   // Flip portB then use speakerTone/2 to define pulses
-  *portB ^= 0x80;
+  *portB ^= 0x40;
   newDelay(speakerTone/2);
 }
 

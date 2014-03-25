@@ -68,7 +68,7 @@ void setup() {
   // Initialize GPIO portB
   volatile unsigned char *portDDRB;
   portDDRB = (unsigned char *) 0x24;
-  *portDDRB |= 0x80;
+  *portDDRB |= 0x40;
   
   Serial.println("Notes are A, A#, B, C, C#, D, D#, E, F, F#, G, G#.");
   Serial.println("Arduino will default at A. Write sharp notes lower case.");
@@ -92,7 +92,7 @@ void loop() {
   portB = (unsigned char *) 0x25; 
   
   // Flip portB then use byteRead/2 to define pulses
-  *portB ^= 0x80;
+  *portB ^= 0x40;
   newDelay(convertInput(byteRead)/2);
   
 }

@@ -46,7 +46,7 @@ void setup() {
   // Initialize GPIO portB
   volatile unsigned char *portDDRB;
   portDDRB = (unsigned char *) 0x24;
-  *portDDRB |= 0x80;
+  *portDDRB |= 0x40;
 }
 
 // Loop Function
@@ -55,10 +55,10 @@ void loop() {
   
   // 
   // Turn on portB so its on 30% of the time
-  *portB |= 0x80;
+  *portB |= 0x40;
   newDelay(speakerTone * (0.3));
   // Turn off portB so its off 70% of the time
-  *portB &= 0x7F;
+  *portB &= 0xBF;
   newDelay(speakerTone * (0.7));
 }
 
