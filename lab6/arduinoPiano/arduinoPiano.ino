@@ -83,6 +83,7 @@ void loop() {
     // ECHO the value that was read, back to the serial port
     Serial.write(byteRead);
     Serial.println();
+    Serial.println();
     // Message to user/prompt
     Serial.println("Notes are A, A#, B, C, C#, D, D#, E, F, F#, G, G#.");
     Serial.println("Arduino will default at A. Write sharp notes lower case");
