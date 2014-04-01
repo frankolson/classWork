@@ -4,6 +4,7 @@ Frank Olson
 V.1
 31 March 2014
 Arduino Mega 2560 R3
+Last Update: 01 April 2014
 
 
 */
@@ -23,7 +24,26 @@ void loop(){
 
 // Functions to initialize the serial port
 unsigned USART0baud(int USART0baud){
+  // defining the clock speed
+  unsigned long FCPU = 16000000;
+  // Initializing the BAUD rate variable
+  unsigned int tBaud;
+  // Setting the value of tBaud
+  tBaud = (FCPU / 16 / USART0baud)
+
+  // Set normal transmission speed, disabled multi-processor mode, turn on data
+  // data register empty
+  UCSR0A = 0x20;
+  // Enabled the reciever and transmitter, turned off both RX and TX complete
+  // interupt 
+  UCSR0B = 0x18;
+  // Set the character size to 8-bit, parity mode 0ff, 1 stop bit, set to 
+  // asynchronous USART mode
+  UCSR0C = 0x06;
   
+  // Setting the BAUD rate
+  UBRR0H = (tBaud>>8);
+  UBRR0L = (tBaud & 0xFF);
 }
 
 // Function that will examine the RDA status bit and return a true
