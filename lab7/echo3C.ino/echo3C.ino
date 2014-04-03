@@ -9,6 +9,9 @@ Last Update: 02 April 2014
 
 */
 
+// Mask to get least significant bits
+#define LEASTSIGBITS 0x0F
+
 // RDA: Recieve Data Avalable
 #define RDA 0x80 
 // TBE: Transmiter Buffer Empty
@@ -77,6 +80,41 @@ unsigned char USART0getchar(){
 // and then will take the character USART0pdata and send the 
 // charatcer out to the serial port
 void USART0putchar(unsigned char USART0pdata){
-  // Write value to UDR0 Data register
-  UDR0 = USART0pdata;
+  // Initialize variable to temporarily store char value
+  unsigned char tempChar;
+  // Shift over 4 bits to take the most significant bits
+  tempChar = USART0pdata >> 4;
+  // take the least significant bits (actually most significant
+  // bits, haha trickery!)
+  UDR0 = (tempChar & LEASTSIGBITS) + '0';
+  
+  // Properly convert to HEX
+  if((USART0pdata & LEASTSIGBITS) == 10){
+    tempChar = 'A';
+    UDR0 = tempChar;
+  }else if((USART0pdata & LEASTSIGBITS) == 11){
+    tempChar = 'B';
+    UDR0 = tempChar;
+  }else if((USART0pdata & LEASTSIGBITS) == 12){
+    tempChar = 'C';
+    UDR0 = tempChar;
+  }else if((USART0pdata & LEASTSIGBITS) == 13){
+    tempChar = 'D';
+    UDR0 = tempChar;
+  }else if((USART0pdata & LEASTSIGBITS) == 14){
+    tempChar = 'E';
+    UDR0 = tempChar;
+  }else if((USART0pdata & LEASTSIGBITS) == 15){
+    tempChar = 'F';
+    UDR0 = tempChar;
+  }else{
+    tempChar = (USART0pdata & LEASTSIGBITS);
+    UDR0 = tempChar + '0';
+  }
+  
+  // Wait until TBE is ready
+  while((UCSR0A & TBE) == 0){}
+  
+  // Add in space for asthetics
+  UDR0 = ' ';
 }
