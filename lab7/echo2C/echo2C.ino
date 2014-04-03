@@ -4,7 +4,7 @@ Frank Olson
 V.1
 31 March 2014
 Arduino Mega 2560 R3
-Last Update: 01 April 2014
+Last Update: 02 April 2014
 
 
 */
@@ -15,6 +15,8 @@ Last Update: 01 April 2014
 #define TBE 0x20
 
 void setup(){
+  // Initialize the serial port on USART 0
+  USART0init(9600);
   
 }
 
@@ -23,13 +25,13 @@ void loop(){
 }
 
 // Functions to initialize the serial port
-unsigned USART0baud(int USART0baud){
+unsigned USART0init(int USART0baud){
   // defining the clock speed
   unsigned long FCPU = 16000000;
   // Initializing the BAUD rate variable
   unsigned int tBaud;
   // Setting the value of tBaud
-  tBaud = (FCPU / 16 / USART0baud)
+  tBaud = (FCPU / 16 / USART0baud-1)
 
   // Set normal transmission speed, disabled multi-processor mode, turn on data
   // data register empty
@@ -50,7 +52,13 @@ unsigned USART0baud(int USART0baud){
 // (non-zero) if RDA is true otherwise it will return a false (0
 // value in ACC
 unsigned char USART0kbhit(){
-  
+  // And UCSR0A with RDA to check whether RXC0(bit7) is high
+  if(UCSR0A & RDA){
+    // Return TRUE value
+    return 1;
+  }
+  // Return FALSE value
+  return 0;
 }
 
 // Function that will read one character from the serial port and 
