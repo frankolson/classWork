@@ -6,7 +6,9 @@ V.1
 Arduino Mega 2560 R3
 Last Update: 02 April 2014
 
-
+This program is for lab 7. This is a simple erial echo program that takes a byte
+from the computer input and spits it back out to the serial monitor in its hex
+value equivalent.
 */
 
 // Mask to get least significant bits
