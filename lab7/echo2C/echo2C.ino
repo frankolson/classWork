@@ -6,7 +6,8 @@ V.1
 Arduino Mega 2560 R3
 Last Update: 02 April 2014
 
-
+This program is for lab 7. This is a simple erial echo program that takes a byte
+from the computer input and spits it back out to the serial monitor.
 */
 
 // RDA: Recieve Data Avalable
@@ -21,6 +22,11 @@ void setup(){
 }
 
 void loop(){
+  char tempByte;
+  
+  while(USART0kbhit()==0){}
+  tempByte = USART0getchar();
+  USART0putchar(tempByte);
   
 }
 
@@ -31,7 +37,7 @@ unsigned USART0init(int USART0baud){
   // Initializing the BAUD rate variable
   unsigned int tBaud;
   // Setting the value of tBaud
-  tBaud = (FCPU / 16 / USART0baud-1)
+  tBaud = (FCPU / 16 / USART0baud-1);
 
   // Set normal transmission speed, disabled multi-processor mode, turn on data
   // data register empty
@@ -64,12 +70,14 @@ unsigned char USART0kbhit(){
 // Function that will read one character from the serial port and 
 // return it
 unsigned char USART0getchar(){
-  
+  // Read and clear value from UDR0 data register
+  return UDR0;
 }
 
 // Function will wait until the serial port TBE status bit is high
 // and then will take the character USART0pdata and send the 
 // charatcer out to the serial port
 void USART0putchar(unsigned char USART0pdata){
-  
+  // Write value to UDR0 Data register
+  UDR0 = USART0pdata;
 }
