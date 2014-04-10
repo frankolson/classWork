@@ -2,7 +2,7 @@
 Echo 4C
 Frank Olson
 V.2
-31 March 2014
+03 April 2014
 Arduino Mega 2560 R3
 Last Update: 03 April 2014
 
