@@ -4,7 +4,7 @@
  v.1
  30 September 2014
  Arduino Mega 2560 v3
- Last Update: 01 October 2014 
+ Last Update: 30 September 2014 
 
  This Program is for Lab 5 of EE 426. This project will utilize serial
  connection, an LED, and a button to create a timer. The program will
@@ -51,8 +51,7 @@
    // action when buttons are pressed
    if(buttonState1==HIGH){
      // play sound
-     tone(speaker, toneFreq, 250);
-     delay(250);
+     tone(speaker, toneFreq, 500);
      
      // turn on LED and start timer
      digitalWrite(led, HIGH);
@@ -60,7 +59,7 @@
      
      // turn of LED, and play ending sound
      digitalWrite(led, LOW); 
-     tone(speaker, toneFreq, 250);
+     tone(speaker, toneFreq, 500);
    }
    
    // else if statement to allow users to change the time during the
