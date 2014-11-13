@@ -20,12 +20,17 @@
  const int E = 26;
  const int F = 27;
  const int G = 28;
- const int DOT = 29;
  const int GND1 = 30;
  const int GND2 = 31;
  const int GND3 = 32;
  const int GND4 = 33;
  int time = 0;
+ /////////////////////////////////////////////////////////////////
+ 
+ ///////////////// Variables for motor adjustment// //////////////
+ const float motorRes = 8.6;
+ float testVoltage;
+ int sensorTestVoltage;
  /////////////////////////////////////////////////////////////////
  
  
@@ -37,9 +42,9 @@
  
  
  ////////////////// Constants for ADC Volt Meter /////////////////
- const float r1 = 1500;
+ const float r1 = 1000;
  const float r2 = 1000;
- const float resFactor = 1023.0/(r2/(r1+r2));
+ const float resFactor = 1023.0*(r2/(r1+r2));
  /////////////////////////////////////////////////////////////////
  
  
@@ -52,16 +57,21 @@
    pinMode(E, OUTPUT);
    pinMode(F, OUTPUT);
    pinMode(G, OUTPUT);
-   pinMode(DOT, OUTPUT);
+   pinMode(GND1, OUTPUT);
+   pinMode(GND2, OUTPUT);
+   pinMode(GND3, OUTPUT);
+   pinMode(GND4, OUTPUT);
    
    // Setup of switching power supply pin
    pinMode(powerPin, OUTPUT);
    
    // Ask for initial user input
    Serial.begin(9600);
-   Serial.print("Enter a voltage level from 0-9V (i.e: 000mV): ");
+   Serial.print("Enter a voltage level from 0-6V (i.e: 000mV): ");
    input = userDigits();
-   duty = map(input,0,899,0,255);
+   duty = map(input,0,600,0,255);
+   Serial.println(duty);
+   delay(2000);
  }
  
  void loop(){
@@ -70,126 +80,136 @@
    
    // Print voltage level... need to see if this will work
    float sensor = analogRead(A0);
-   float voltage = (sensor/resFactor) * (50.0);
+   float voltage = (sensor/resFactor) * (5);
+   displayDigs(voltage * 100);
    
-   // Correct voltage
-   if(voltage > (input/100.0)){
-     duty = duty - 1;
-   }else if(voltage < (input/100.0)){
-     duty = duty + 1;
-   }
    
-   // Loop to slow down reading outputs occurances
-   if(time == 10){
-     time = 0;
+   /*
+   if(time==500){
      Serial.println(voltage);
+     time=0;
    }else{
      time++;
    }
+   */
+   
+   // Get back emf
+   sensorTestVoltage = analogRead(A1);
+   testVoltage = sensorTestVoltage * (5.0/1023);
+   
+   if(time==500){
+     Serial.println(testVoltage);
+     time=0;
+   }else{
+     time++;
+   }
+   
+   // Correct speed
+   if(testVoltage > 0.01){
+     duty = duty + 1;
+   }
  }
- 
  
  //////////////////// Functions for each digit ///////////////////
  void digit0() {
-   digitalWrite(A, HIGH);
-   digitalWrite(B, HIGH);
-   digitalWrite(C, HIGH);
-   digitalWrite(D, HIGH);
-   digitalWrite(E, HIGH);
-   digitalWrite(F, HIGH);
-   digitalWrite(G, LOW);
-
- };
- 
- void digit1() {
-   digitalWrite(A,LOW);
-   digitalWrite(B, HIGH);
-   digitalWrite(C, HIGH);
+   digitalWrite(A, LOW);
+   digitalWrite(B, LOW);
+   digitalWrite(C, LOW);
    digitalWrite(D, LOW);
    digitalWrite(E, LOW);
    digitalWrite(F, LOW);
-   digitalWrite(G, LOW);
- };
+   digitalWrite(G, HIGH);
+ }
+ 
+ void digit1() {
+   digitalWrite(A,HIGH);
+   digitalWrite(B, LOW);
+   digitalWrite(C, LOW);
+   digitalWrite(D, HIGH);
+   digitalWrite(E, HIGH);
+   digitalWrite(F, HIGH);
+   digitalWrite(G, HIGH);
+ }
  
  void digit2() {
+   digitalWrite(A,LOW);
+   digitalWrite(B, LOW);
+   digitalWrite(C, HIGH);
+   digitalWrite(D, LOW);
+   digitalWrite(E, LOW);
+   digitalWrite(F, HIGH);
+   digitalWrite(G, LOW);
+ }
+ 
+ void digit3() {
+   digitalWrite(A,LOW);
+   digitalWrite(B, LOW);
+   digitalWrite(C, LOW);
+   digitalWrite(D, LOW);
+   digitalWrite(E, HIGH);
+   digitalWrite(F, HIGH);
+   digitalWrite(G, LOW);
+ }
+ 
+ void digit4() {
    digitalWrite(A,HIGH);
-   digitalWrite(B, HIGH);
+   digitalWrite(B, LOW);
    digitalWrite(C, LOW);
    digitalWrite(D, HIGH);
    digitalWrite(E, HIGH);
    digitalWrite(F, LOW);
-   digitalWrite(G, HIGH);
- };
- 
- void digit3() {
-   digitalWrite(A,HIGH);
-   digitalWrite(B, HIGH);
-   digitalWrite(C, HIGH);
-   digitalWrite(D, HIGH);
-   digitalWrite(E, LOW);
-   digitalWrite(F, LOW);
-   digitalWrite(G, HIGH);
- };
- 
- void digit4() {
-   digitalWrite(A,LOW);
-   digitalWrite(B, HIGH);
-   digitalWrite(C, HIGH);
-   digitalWrite(D, LOW);
-   digitalWrite(E, LOW);
-   digitalWrite(F, HIGH);
-   digitalWrite(G, HIGH);
- };
+   digitalWrite(G, LOW);
+ }
  
  void digit5() {
-   digitalWrite(A,HIGH);
-   digitalWrite(B, LOW);
-   digitalWrite(C, HIGH);
-   digitalWrite(D, HIGH);
-   digitalWrite(E, LOW);
-   digitalWrite(F, HIGH);
-   digitalWrite(G, HIGH);
- };
+   digitalWrite(A,LOW);
+   digitalWrite(B, HIGH);
+   digitalWrite(C, LOW);
+   digitalWrite(D, LOW);
+   digitalWrite(E, HIGH);
+   digitalWrite(F, LOW);
+   digitalWrite(G, LOW);
+ }
  
  void digit6() {
-   digitalWrite(A,HIGH);
-   digitalWrite(B, LOW);
-   digitalWrite(C, HIGH);
-   digitalWrite(D, HIGH);
-   digitalWrite(E, HIGH);
-   digitalWrite(F, HIGH);
-   digitalWrite(G, HIGH);
- };
- 
- void digit7() {
-   digitalWrite(A,HIGH);
+   digitalWrite(A,LOW);
    digitalWrite(B, HIGH);
-   digitalWrite(C, HIGH);
+   digitalWrite(C, LOW);
    digitalWrite(D, LOW);
    digitalWrite(E, LOW);
    digitalWrite(F, LOW);
    digitalWrite(G, LOW);
- };
+ }
  
- void digit8() {
-   digitalWrite(A, HIGH);
-   digitalWrite(B, HIGH);
-   digitalWrite(C, HIGH);
+ void digit7() {
+   digitalWrite(A,LOW);
+   digitalWrite(B, LOW);
+   digitalWrite(C, LOW);
    digitalWrite(D, HIGH);
    digitalWrite(E, HIGH);
    digitalWrite(F, HIGH);
    digitalWrite(G, HIGH);
- };
+ }
+ 
+ void digit8() {
+   digitalWrite(A, LOW);
+   digitalWrite(B, LOW);
+   digitalWrite(C, LOW);
+   digitalWrite(D, LOW);
+   digitalWrite(E, LOW);
+   digitalWrite(F, LOW);
+   digitalWrite(G, LOW);
+ }
  
  void digit9() {
-   digitalWrite(A, HIGH);
-   digitalWrite(B, HIGH);
-   digitalWrite(C, HIGH);
-   digitalWrite(D, HIGH);
-   digitalWrite(E, LOW);
-   digitalWrite(F, HIGH);
-   digitalWrite(G, HIGH);
- };
+   digitalWrite(A, LOW);
+   digitalWrite(B, LOW);
+   digitalWrite(C, LOW);
+   digitalWrite(D, LOW);
+   digitalWrite(E, HIGH);
+   digitalWrite(F, LOW);
+   digitalWrite(G, LOW);
+ }
  /////////////////////////////////////////////////////////////////
  
  
