@@ -95,7 +95,7 @@ void segmentationSmall(Mat img){
 	channel[1].convertTo(binary, CV_8U);
 
 	//OTSU and remove noise
-	threshold(binary, binary, 100, 255, THRESH_BINARY );
+	threshold(binary, binary, 128, 255, THRESH_BINARY );
 	imshow("Result", binary);
 	removeSmallBlobs(binary, 1);
 

@@ -1,6 +1,6 @@
-00:36:20 **** Incremental Build of configuration Release for project EE_492G_MIDTERM_1 ****
+00:39:19 **** Incremental Build of configuration Release for project EE_492G_MIDTERM_1 ****
 make all 
 make: Nothing to be done for `all'.
 
-00:36:20 Build Finished (took 96ms)
+00:39:19 Build Finished (took 83ms)
 
