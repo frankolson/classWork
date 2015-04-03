@@ -1,0 +1,86 @@
+20:46:30 **** Clean-only build of configuration Release for project EE_492G_MIDTERM_1 ****
+make clean 
+rm -rf  ./main.o  ./main.d  EE_492G_MIDTERM_1
+ 
+20:46:30 **** Build of configuration Release for project EE_492G_MIDTERM_1 ****
+make all 
+Building file: ../main.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/local/include/opencv -O3 -Wall -c -fmessage-length=0 -MMD -MP -MF"main.d" -MT"main.d" -o "main.o" "../main.cpp"
+../main.cpp: In function ‘cv::Mat segmentation(cv::Mat)’:
+../main.cpp:130:5: error: expected ‘;’ before ‘namedWindow’
+     namedWindow("watershed", WINDOW_NORMAL);
+     ^
+../main.cpp:130:44: warning: statement is a reference, not call, to function ‘cv::dilate’ [-Waddress]
+     namedWindow("watershed", WINDOW_NORMAL);
+                                            ^
+../main.cpp:130:44: warning: statement has no effect [-Wunused-value]
+make: *** [main.o] Error 1
+20:46:32 **** Clean-only build of configuration Release for project EE_492G_MIDTERM_2 ****
+make clean 
+rm -rf  ./main.o  ./main.d  EE_492G_MIDTERM_2
+ 
+20:46:32 **** Build of configuration Release for project EE_492G_MIDTERM_2 ****
+make all 
+Building file: ../main.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/local/include/opencv -O3 -Wall -c -fmessage-length=0 -MMD -MP -MF"main.d" -MT"main.d" -o "main.o" "../main.cpp"
+Finished building: ../main.cpp
+ 
+Building target: EE_492G_MIDTERM_2
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -o "EE_492G_MIDTERM_2"  ./main.o   -lopencv_core -lopencv_imgproc -lopencv_imgcodecs -lopencv_highgui
+Finished building target: EE_492G_MIDTERM_2
+ 
+20:46:33 **** Clean-only build of configuration Release for project fitElipse ****
+make clean 
+rm -rf  ./main.o  ./main.d  fitElipse
+ 
+20:46:33 **** Build of configuration Release for project fitElipse ****
+make all 
+Building file: ../main.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/local/include/opencv -O3 -Wall -c -fmessage-length=0 -MMD -MP -MF"main.d" -MT"main.d" -o "main.o" "../main.cpp"
+Finished building: ../main.cpp
+ 
+Building target: fitElipse
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -o "fitElipse"  ./main.o   -lopencv_core -lopencv_highgui -lopencv_imgproc -lopencv_imgcodecs
+Finished building target: fitElipse
+ 
+20:47:04 **** Incremental Build of configuration Release for project EE_492G_MIDTERM_1 ****
+make all 
+Building file: ../main.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/local/include/opencv -O3 -Wall -c -fmessage-length=0 -MMD -MP -MF"main.d" -MT"main.d" -o "main.o" "../main.cpp"
+Finished building: ../main.cpp
+ 
+Building target: EE_492G_MIDTERM_1
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -o "EE_492G_MIDTERM_1"  ./main.o   -lopencv_imgproc -lopencv_core -lopencv_highgui -lopencv_imgcodecs
+Finished building target: EE_492G_MIDTERM_1
+ 
+20:47:07 **** Incremental Build of configuration Release for project EE_492G_MIDTERM_2 ****
+make all 
+make: Nothing to be done for `all'.
+20:47:07 **** Incremental Build of configuration Release for project fitElipse ****
+make all 
+make: Nothing to be done for `all'.
+20:47:27 **** Incremental Build of configuration Release for project EE_492G_MIDTERM_1 ****
+make all 
+make: Nothing to be done for `all'.
+20:47:27 **** Incremental Build of configuration Release for project EE_492G_MIDTERM_2 ****
+make all 
+make: Nothing to be done for `all'.
+20:47:28 **** Incremental Build of configuration Release for project fitElipse ****
+make all 
+make: Nothing to be done for `all'.
+20:47:42 **** Incremental Build of configuration Release for project EE_492G_MIDTERM_1 ****
+make all 
+make: Nothing to be done for `all'.
+20:47:42 **** Incremental Build of configuration Release for project EE_492G_MIDTERM_2 ****
+make all 
+make: Nothing to be done for `all'.
+20:47:42 **** Incremental Build of configuration Release for project fitElipse ****
+make all 
+make: Nothing to be done for `all'.
