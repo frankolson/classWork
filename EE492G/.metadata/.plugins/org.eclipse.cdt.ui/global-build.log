@@ -84,3 +84,601 @@ make: Nothing to be done for `all'.
 20:47:42 **** Incremental Build of configuration Release for project fitElipse ****
 make all 
 make: Nothing to be done for `all'.
+21:00:37 **** Build of configuration Release for project EE_492G_MIDTERM_1 ****
+make all 
+Building file: ../main.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/local/include/opencv -O3 -Wall -c -fmessage-length=0 -MMD -MP -MF"main.d" -MT"main.d" -o "main.o" "../main.cpp"
+Finished building: ../main.cpp
+ 
+Building target: EE_492G_MIDTERM_1
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -o "EE_492G_MIDTERM_1"  ./main.o   -lopencv_imgproc -lopencv_core -lopencv_highgui -lopencv_imgcodecs
+Finished building target: EE_492G_MIDTERM_1
+ 
+21:00:39 **** Build of configuration Release for project EE_492G_MIDTERM_2 ****
+make all 
+Building target: EE_492G_MIDTERM_2
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -o "EE_492G_MIDTERM_2"  ./main.o   -lopencv_core -lopencv_imgproc -lopencv_imgcodecs -lopencv_highgui
+Finished building target: EE_492G_MIDTERM_2
+ 
+21:00:39 **** Build of configuration Release for project fitElipse ****
+make all 
+make: Nothing to be done for `all'.
+21:01:56 **** Incremental Build of configuration Release for project EE_492G_MIDTERM_1 ****
+make all 
+Building file: ../main.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/local/include/opencv -O3 -Wall -c -fmessage-length=0 -MMD -MP -MF"main.d" -MT"main.d" -o "main.o" "../main.cpp"
+Finished building: ../main.cpp
+ 
+Building target: EE_492G_MIDTERM_1
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -o "EE_492G_MIDTERM_1"  ./main.o   -lopencv_imgproc -lopencv_core -lopencv_highgui -lopencv_imgcodecs
+Finished building target: EE_492G_MIDTERM_1
+ 
+21:01:57 **** Incremental Build of configuration Release for project EE_492G_MIDTERM_2 ****
+make all 
+make: Nothing to be done for `all'.
+21:01:58 **** Incremental Build of configuration Release for project fitElipse ****
+make all 
+make: Nothing to be done for `all'.
+21:03:37 **** Incremental Build of configuration Release for project EE_492G_MIDTERM_1 ****
+make all 
+Building file: ../main.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/local/include/opencv -O3 -Wall -c -fmessage-length=0 -MMD -MP -MF"main.d" -MT"main.d" -o "main.o" "../main.cpp"
+Finished building: ../main.cpp
+ 
+Building target: EE_492G_MIDTERM_1
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -o "EE_492G_MIDTERM_1"  ./main.o   -lopencv_imgproc -lopencv_core -lopencv_highgui -lopencv_imgcodecs
+Finished building target: EE_492G_MIDTERM_1
+ 
+21:03:38 **** Incremental Build of configuration Release for project EE_492G_MIDTERM_2 ****
+make all 
+make: Nothing to be done for `all'.
+21:03:38 **** Incremental Build of configuration Release for project fitElipse ****
+make all 
+make: Nothing to be done for `all'.
+21:10:23 **** Incremental Build of configuration Release for project EE_492G_MIDTERM_1 ****
+make all 
+Building file: ../main.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/local/include/opencv -O3 -Wall -c -fmessage-length=0 -MMD -MP -MF"main.d" -MT"main.d" -o "main.o" "../main.cpp"
+Finished building: ../main.cpp
+ 
+Building target: EE_492G_MIDTERM_1
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -o "EE_492G_MIDTERM_1"  ./main.o   -lopencv_imgproc -lopencv_core -lopencv_highgui -lopencv_imgcodecs
+Finished building target: EE_492G_MIDTERM_1
+ 
+21:10:24 **** Incremental Build of configuration Release for project EE_492G_MIDTERM_2 ****
+make all 
+make: Nothing to be done for `all'.
+21:10:25 **** Incremental Build of configuration Release for project fitElipse ****
+make all 
+make: Nothing to be done for `all'.
+21:11:12 **** Incremental Build of configuration Release for project EE_492G_MIDTERM_1 ****
+make all 
+Building file: ../main.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/local/include/opencv -O3 -Wall -c -fmessage-length=0 -MMD -MP -MF"main.d" -MT"main.d" -o "main.o" "../main.cpp"
+Finished building: ../main.cpp
+ 
+Building target: EE_492G_MIDTERM_1
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -o "EE_492G_MIDTERM_1"  ./main.o   -lopencv_imgproc -lopencv_core -lopencv_highgui -lopencv_imgcodecs
+Finished building target: EE_492G_MIDTERM_1
+ 
+21:11:14 **** Incremental Build of configuration Release for project EE_492G_MIDTERM_2 ****
+make all 
+make: Nothing to be done for `all'.
+21:11:14 **** Incremental Build of configuration Release for project fitElipse ****
+make all 
+make: Nothing to be done for `all'.
+21:11:44 **** Incremental Build of configuration Release for project EE_492G_MIDTERM_1 ****
+make all 
+Building file: ../main.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/local/include/opencv -O3 -Wall -c -fmessage-length=0 -MMD -MP -MF"main.d" -MT"main.d" -o "main.o" "../main.cpp"
+Finished building: ../main.cpp
+ 
+Building target: EE_492G_MIDTERM_1
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -o "EE_492G_MIDTERM_1"  ./main.o   -lopencv_imgproc -lopencv_core -lopencv_highgui -lopencv_imgcodecs
+Finished building target: EE_492G_MIDTERM_1
+ 
+21:11:45 **** Incremental Build of configuration Release for project EE_492G_MIDTERM_2 ****
+make all 
+make: Nothing to be done for `all'.
+21:11:45 **** Incremental Build of configuration Release for project fitElipse ****
+make all 
+make: Nothing to be done for `all'.
+21:25:10 **** Incremental Build of configuration Release for project EE_492G_MIDTERM_1 ****
+make all 
+Building file: ../main.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/local/include/opencv -O3 -Wall -c -fmessage-length=0 -MMD -MP -MF"main.d" -MT"main.d" -o "main.o" "../main.cpp"
+Finished building: ../main.cpp
+ 
+Building target: EE_492G_MIDTERM_1
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -o "EE_492G_MIDTERM_1"  ./main.o   -lopencv_imgproc -lopencv_core -lopencv_highgui -lopencv_imgcodecs
+Finished building target: EE_492G_MIDTERM_1
+ 
+21:25:11 **** Incremental Build of configuration Release for project EE_492G_MIDTERM_2 ****
+make all 
+make: Nothing to be done for `all'.
+21:25:11 **** Incremental Build of configuration Release for project fitElipse ****
+make all 
+make: Nothing to be done for `all'.
+21:26:00 **** Incremental Build of configuration Release for project EE_492G_MIDTERM_1 ****
+make all 
+Building file: ../main.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/local/include/opencv -O3 -Wall -c -fmessage-length=0 -MMD -MP -MF"main.d" -MT"main.d" -o "main.o" "../main.cpp"
+Finished building: ../main.cpp
+ 
+Building target: EE_492G_MIDTERM_1
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -o "EE_492G_MIDTERM_1"  ./main.o   -lopencv_imgproc -lopencv_core -lopencv_highgui -lopencv_imgcodecs
+Finished building target: EE_492G_MIDTERM_1
+ 
+21:26:01 **** Incremental Build of configuration Release for project EE_492G_MIDTERM_2 ****
+make all 
+make: Nothing to be done for `all'.
+21:26:01 **** Incremental Build of configuration Release for project fitElipse ****
+make all 
+make: Nothing to be done for `all'.
+21:28:42 **** Incremental Build of configuration Release for project EE_492G_MIDTERM_1 ****
+make all 
+Building file: ../main.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/local/include/opencv -O3 -Wall -c -fmessage-length=0 -MMD -MP -MF"main.d" -MT"main.d" -o "main.o" "../main.cpp"
+Finished building: ../main.cpp
+ 
+Building target: EE_492G_MIDTERM_1
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -o "EE_492G_MIDTERM_1"  ./main.o   -lopencv_imgproc -lopencv_core -lopencv_highgui -lopencv_imgcodecs
+Finished building target: EE_492G_MIDTERM_1
+ 
+21:28:43 **** Incremental Build of configuration Release for project EE_492G_MIDTERM_2 ****
+make all 
+make: Nothing to be done for `all'.
+21:28:43 **** Incremental Build of configuration Release for project fitElipse ****
+make all 
+make: Nothing to be done for `all'.
+21:31:07 **** Incremental Build of configuration Release for project EE_492G_MIDTERM_1 ****
+make all 
+Building file: ../main.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/local/include/opencv -O3 -Wall -c -fmessage-length=0 -MMD -MP -MF"main.d" -MT"main.d" -o "main.o" "../main.cpp"
+Finished building: ../main.cpp
+ 
+Building target: EE_492G_MIDTERM_1
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -o "EE_492G_MIDTERM_1"  ./main.o   -lopencv_imgproc -lopencv_core -lopencv_highgui -lopencv_imgcodecs
+Finished building target: EE_492G_MIDTERM_1
+ 
+21:31:08 **** Incremental Build of configuration Release for project EE_492G_MIDTERM_2 ****
+make all 
+make: Nothing to be done for `all'.
+21:31:08 **** Incremental Build of configuration Release for project fitElipse ****
+make all 
+make: Nothing to be done for `all'.
+21:34:57 **** Incremental Build of configuration Release for project EE_492G_MIDTERM_1 ****
+make all 
+Building file: ../main.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/local/include/opencv -O3 -Wall -c -fmessage-length=0 -MMD -MP -MF"main.d" -MT"main.d" -o "main.o" "../main.cpp"
+Finished building: ../main.cpp
+ 
+Building target: EE_492G_MIDTERM_1
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -o "EE_492G_MIDTERM_1"  ./main.o   -lopencv_imgproc -lopencv_core -lopencv_highgui -lopencv_imgcodecs
+Finished building target: EE_492G_MIDTERM_1
+ 
+21:34:58 **** Incremental Build of configuration Release for project EE_492G_MIDTERM_2 ****
+make all 
+make: Nothing to be done for `all'.
+21:34:58 **** Incremental Build of configuration Release for project fitElipse ****
+make all 
+make: Nothing to be done for `all'.
+21:36:01 **** Incremental Build of configuration Release for project EE_492G_MIDTERM_1 ****
+make all 
+Building file: ../main.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/local/include/opencv -O3 -Wall -c -fmessage-length=0 -MMD -MP -MF"main.d" -MT"main.d" -o "main.o" "../main.cpp"
+Finished building: ../main.cpp
+ 
+Building target: EE_492G_MIDTERM_1
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -o "EE_492G_MIDTERM_1"  ./main.o   -lopencv_imgproc -lopencv_core -lopencv_highgui -lopencv_imgcodecs
+Finished building target: EE_492G_MIDTERM_1
+ 
+21:36:02 **** Incremental Build of configuration Release for project EE_492G_MIDTERM_2 ****
+make all 
+make: Nothing to be done for `all'.
+21:36:02 **** Incremental Build of configuration Release for project fitElipse ****
+make all 
+make: Nothing to be done for `all'.
+21:36:22 **** Incremental Build of configuration Release for project EE_492G_MIDTERM_1 ****
+make all 
+Building file: ../main.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/local/include/opencv -O3 -Wall -c -fmessage-length=0 -MMD -MP -MF"main.d" -MT"main.d" -o "main.o" "../main.cpp"
+Finished building: ../main.cpp
+ 
+Building target: EE_492G_MIDTERM_1
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -o "EE_492G_MIDTERM_1"  ./main.o   -lopencv_imgproc -lopencv_core -lopencv_highgui -lopencv_imgcodecs
+Finished building target: EE_492G_MIDTERM_1
+ 
+21:36:23 **** Incremental Build of configuration Release for project EE_492G_MIDTERM_2 ****
+make all 
+make: Nothing to be done for `all'.
+21:36:24 **** Incremental Build of configuration Release for project fitElipse ****
+make all 
+make: Nothing to be done for `all'.
+21:36:45 **** Incremental Build of configuration Release for project EE_492G_MIDTERM_1 ****
+make all 
+Building file: ../main.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/local/include/opencv -O3 -Wall -c -fmessage-length=0 -MMD -MP -MF"main.d" -MT"main.d" -o "main.o" "../main.cpp"
+Finished building: ../main.cpp
+ 
+Building target: EE_492G_MIDTERM_1
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -o "EE_492G_MIDTERM_1"  ./main.o   -lopencv_imgproc -lopencv_core -lopencv_highgui -lopencv_imgcodecs
+Finished building target: EE_492G_MIDTERM_1
+ 
+21:36:46 **** Incremental Build of configuration Release for project EE_492G_MIDTERM_2 ****
+make all 
+make: Nothing to be done for `all'.
+21:36:46 **** Incremental Build of configuration Release for project fitElipse ****
+make all 
+make: Nothing to be done for `all'.
+21:37:30 **** Incremental Build of configuration Release for project EE_492G_MIDTERM_1 ****
+make all 
+Building file: ../main.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/local/include/opencv -O3 -Wall -c -fmessage-length=0 -MMD -MP -MF"main.d" -MT"main.d" -o "main.o" "../main.cpp"
+Finished building: ../main.cpp
+ 
+Building target: EE_492G_MIDTERM_1
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -o "EE_492G_MIDTERM_1"  ./main.o   -lopencv_imgproc -lopencv_core -lopencv_highgui -lopencv_imgcodecs
+Finished building target: EE_492G_MIDTERM_1
+ 
+21:37:31 **** Incremental Build of configuration Release for project EE_492G_MIDTERM_2 ****
+make all 
+make: Nothing to be done for `all'.
+21:37:31 **** Incremental Build of configuration Release for project fitElipse ****
+make all 
+make: Nothing to be done for `all'.
+21:38:15 **** Incremental Build of configuration Release for project EE_492G_MIDTERM_1 ****
+make all 
+Building file: ../main.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/local/include/opencv -O3 -Wall -c -fmessage-length=0 -MMD -MP -MF"main.d" -MT"main.d" -o "main.o" "../main.cpp"
+Finished building: ../main.cpp
+ 
+Building target: EE_492G_MIDTERM_1
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -o "EE_492G_MIDTERM_1"  ./main.o   -lopencv_imgproc -lopencv_core -lopencv_highgui -lopencv_imgcodecs
+Finished building target: EE_492G_MIDTERM_1
+ 
+21:38:16 **** Incremental Build of configuration Release for project EE_492G_MIDTERM_2 ****
+make all 
+make: Nothing to be done for `all'.
+21:38:16 **** Incremental Build of configuration Release for project fitElipse ****
+make all 
+make: Nothing to be done for `all'.
+21:39:48 **** Incremental Build of configuration Release for project EE_492G_MIDTERM_1 ****
+make all 
+Building file: ../main.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/local/include/opencv -O3 -Wall -c -fmessage-length=0 -MMD -MP -MF"main.d" -MT"main.d" -o "main.o" "../main.cpp"
+Finished building: ../main.cpp
+ 
+Building target: EE_492G_MIDTERM_1
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -o "EE_492G_MIDTERM_1"  ./main.o   -lopencv_imgproc -lopencv_core -lopencv_highgui -lopencv_imgcodecs
+Finished building target: EE_492G_MIDTERM_1
+ 
+21:39:49 **** Incremental Build of configuration Release for project EE_492G_MIDTERM_2 ****
+make all 
+make: Nothing to be done for `all'.
+21:39:49 **** Incremental Build of configuration Release for project fitElipse ****
+make all 
+make: Nothing to be done for `all'.
+21:40:09 **** Incremental Build of configuration Release for project EE_492G_MIDTERM_1 ****
+make all 
+Building file: ../main.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/local/include/opencv -O3 -Wall -c -fmessage-length=0 -MMD -MP -MF"main.d" -MT"main.d" -o "main.o" "../main.cpp"
+Finished building: ../main.cpp
+ 
+Building target: EE_492G_MIDTERM_1
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -o "EE_492G_MIDTERM_1"  ./main.o   -lopencv_imgproc -lopencv_core -lopencv_highgui -lopencv_imgcodecs
+Finished building target: EE_492G_MIDTERM_1
+ 
+21:40:10 **** Incremental Build of configuration Release for project EE_492G_MIDTERM_2 ****
+make all 
+make: Nothing to be done for `all'.
+21:40:11 **** Incremental Build of configuration Release for project fitElipse ****
+make all 
+make: Nothing to be done for `all'.
+21:40:39 **** Incremental Build of configuration Release for project EE_492G_MIDTERM_1 ****
+make all 
+Building file: ../main.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/local/include/opencv -O3 -Wall -c -fmessage-length=0 -MMD -MP -MF"main.d" -MT"main.d" -o "main.o" "../main.cpp"
+Finished building: ../main.cpp
+ 
+Building target: EE_492G_MIDTERM_1
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -o "EE_492G_MIDTERM_1"  ./main.o   -lopencv_imgproc -lopencv_core -lopencv_highgui -lopencv_imgcodecs
+Finished building target: EE_492G_MIDTERM_1
+ 
+21:40:41 **** Incremental Build of configuration Release for project EE_492G_MIDTERM_2 ****
+make all 
+make: Nothing to be done for `all'.
+21:40:41 **** Incremental Build of configuration Release for project fitElipse ****
+make all 
+make: Nothing to be done for `all'.
+21:41:38 **** Incremental Build of configuration Release for project EE_492G_MIDTERM_1 ****
+make all 
+Building file: ../main.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/local/include/opencv -O3 -Wall -c -fmessage-length=0 -MMD -MP -MF"main.d" -MT"main.d" -o "main.o" "../main.cpp"
+Finished building: ../main.cpp
+ 
+Building target: EE_492G_MIDTERM_1
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -o "EE_492G_MIDTERM_1"  ./main.o   -lopencv_imgproc -lopencv_core -lopencv_highgui -lopencv_imgcodecs
+Finished building target: EE_492G_MIDTERM_1
+ 
+21:41:39 **** Incremental Build of configuration Release for project EE_492G_MIDTERM_2 ****
+make all 
+make: Nothing to be done for `all'.
+21:41:39 **** Incremental Build of configuration Release for project fitElipse ****
+make all 
+make: Nothing to be done for `all'.
+21:41:54 **** Incremental Build of configuration Release for project EE_492G_MIDTERM_1 ****
+make all 
+Building file: ../main.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/local/include/opencv -O3 -Wall -c -fmessage-length=0 -MMD -MP -MF"main.d" -MT"main.d" -o "main.o" "../main.cpp"
+Finished building: ../main.cpp
+ 
+Building target: EE_492G_MIDTERM_1
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -o "EE_492G_MIDTERM_1"  ./main.o   -lopencv_imgproc -lopencv_core -lopencv_highgui -lopencv_imgcodecs
+Finished building target: EE_492G_MIDTERM_1
+ 
+21:41:55 **** Incremental Build of configuration Release for project EE_492G_MIDTERM_2 ****
+make all 
+make: Nothing to be done for `all'.
+21:41:55 **** Incremental Build of configuration Release for project fitElipse ****
+make all 
+make: Nothing to be done for `all'.
+21:43:27 **** Incremental Build of configuration Release for project EE_492G_MIDTERM_1 ****
+make all 
+Building file: ../main.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/local/include/opencv -O3 -Wall -c -fmessage-length=0 -MMD -MP -MF"main.d" -MT"main.d" -o "main.o" "../main.cpp"
+Finished building: ../main.cpp
+ 
+Building target: EE_492G_MIDTERM_1
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -o "EE_492G_MIDTERM_1"  ./main.o   -lopencv_imgproc -lopencv_core -lopencv_highgui -lopencv_imgcodecs
+Finished building target: EE_492G_MIDTERM_1
+ 
+21:43:28 **** Incremental Build of configuration Release for project EE_492G_MIDTERM_2 ****
+make all 
+make: Nothing to be done for `all'.
+21:43:28 **** Incremental Build of configuration Release for project fitElipse ****
+make all 
+make: Nothing to be done for `all'.
+21:43:48 **** Incremental Build of configuration Release for project EE_492G_MIDTERM_1 ****
+make all 
+make: Nothing to be done for `all'.
+21:43:48 **** Incremental Build of configuration Release for project EE_492G_MIDTERM_2 ****
+make all 
+make: Nothing to be done for `all'.
+21:43:49 **** Incremental Build of configuration Release for project fitElipse ****
+make all 
+make: Nothing to be done for `all'.
+21:43:57 **** Incremental Build of configuration Release for project EE_492G_MIDTERM_1 ****
+make all 
+Building file: ../main.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/local/include/opencv -O3 -Wall -c -fmessage-length=0 -MMD -MP -MF"main.d" -MT"main.d" -o "main.o" "../main.cpp"
+Finished building: ../main.cpp
+ 
+Building target: EE_492G_MIDTERM_1
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -o "EE_492G_MIDTERM_1"  ./main.o   -lopencv_imgproc -lopencv_core -lopencv_highgui -lopencv_imgcodecs
+Finished building target: EE_492G_MIDTERM_1
+ 
+21:43:58 **** Incremental Build of configuration Release for project EE_492G_MIDTERM_2 ****
+make all 
+make: Nothing to be done for `all'.
+21:43:58 **** Incremental Build of configuration Release for project fitElipse ****
+make all 
+make: Nothing to be done for `all'.
+21:45:11 **** Incremental Build of configuration Release for project EE_492G_MIDTERM_1 ****
+make all 
+Building file: ../main.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/local/include/opencv -O3 -Wall -c -fmessage-length=0 -MMD -MP -MF"main.d" -MT"main.d" -o "main.o" "../main.cpp"
+Finished building: ../main.cpp
+ 
+Building target: EE_492G_MIDTERM_1
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -o "EE_492G_MIDTERM_1"  ./main.o   -lopencv_imgproc -lopencv_core -lopencv_highgui -lopencv_imgcodecs
+Finished building target: EE_492G_MIDTERM_1
+ 
+21:45:12 **** Incremental Build of configuration Release for project EE_492G_MIDTERM_2 ****
+make all 
+make: Nothing to be done for `all'.
+21:45:12 **** Incremental Build of configuration Release for project fitElipse ****
+make all 
+make: Nothing to be done for `all'.
+21:46:13 **** Incremental Build of configuration Release for project EE_492G_MIDTERM_1 ****
+make all 
+Building file: ../main.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/local/include/opencv -O3 -Wall -c -fmessage-length=0 -MMD -MP -MF"main.d" -MT"main.d" -o "main.o" "../main.cpp"
+Finished building: ../main.cpp
+ 
+Building target: EE_492G_MIDTERM_1
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -o "EE_492G_MIDTERM_1"  ./main.o   -lopencv_imgproc -lopencv_core -lopencv_highgui -lopencv_imgcodecs
+Finished building target: EE_492G_MIDTERM_1
+ 
+21:46:14 **** Incremental Build of configuration Release for project EE_492G_MIDTERM_2 ****
+make all 
+make: Nothing to be done for `all'.
+21:46:14 **** Incremental Build of configuration Release for project fitElipse ****
+make all 
+make: Nothing to be done for `all'.
+21:46:58 **** Incremental Build of configuration Release for project EE_492G_MIDTERM_1 ****
+make all 
+Building file: ../main.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/local/include/opencv -O3 -Wall -c -fmessage-length=0 -MMD -MP -MF"main.d" -MT"main.d" -o "main.o" "../main.cpp"
+Finished building: ../main.cpp
+ 
+Building target: EE_492G_MIDTERM_1
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -o "EE_492G_MIDTERM_1"  ./main.o   -lopencv_imgproc -lopencv_core -lopencv_highgui -lopencv_imgcodecs
+Finished building target: EE_492G_MIDTERM_1
+ 
+21:46:59 **** Incremental Build of configuration Release for project EE_492G_MIDTERM_2 ****
+make all 
+make: Nothing to be done for `all'.
+21:46:59 **** Incremental Build of configuration Release for project fitElipse ****
+make all 
+make: Nothing to be done for `all'.
+21:47:19 **** Incremental Build of configuration Release for project EE_492G_MIDTERM_1 ****
+make all 
+Building file: ../main.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/local/include/opencv -O3 -Wall -c -fmessage-length=0 -MMD -MP -MF"main.d" -MT"main.d" -o "main.o" "../main.cpp"
+Finished building: ../main.cpp
+ 
+Building target: EE_492G_MIDTERM_1
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -o "EE_492G_MIDTERM_1"  ./main.o   -lopencv_imgproc -lopencv_core -lopencv_highgui -lopencv_imgcodecs
+Finished building target: EE_492G_MIDTERM_1
+ 
+21:47:20 **** Incremental Build of configuration Release for project EE_492G_MIDTERM_2 ****
+make all 
+make: Nothing to be done for `all'.
+21:47:20 **** Incremental Build of configuration Release for project fitElipse ****
+make all 
+make: Nothing to be done for `all'.
+21:47:30 **** Incremental Build of configuration Release for project EE_492G_MIDTERM_1 ****
+make all 
+make: Nothing to be done for `all'.
+21:47:30 **** Incremental Build of configuration Release for project EE_492G_MIDTERM_2 ****
+make all 
+make: Nothing to be done for `all'.
+21:47:30 **** Incremental Build of configuration Release for project fitElipse ****
+make all 
+make: Nothing to be done for `all'.
+21:47:44 **** Incremental Build of configuration Release for project EE_492G_MIDTERM_1 ****
+make all 
+Building file: ../main.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/local/include/opencv -O3 -Wall -c -fmessage-length=0 -MMD -MP -MF"main.d" -MT"main.d" -o "main.o" "../main.cpp"
+Finished building: ../main.cpp
+ 
+Building target: EE_492G_MIDTERM_1
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -o "EE_492G_MIDTERM_1"  ./main.o   -lopencv_imgproc -lopencv_core -lopencv_highgui -lopencv_imgcodecs
+Finished building target: EE_492G_MIDTERM_1
+ 
+21:47:45 **** Incremental Build of configuration Release for project EE_492G_MIDTERM_2 ****
+make all 
+make: Nothing to be done for `all'.
+21:47:45 **** Incremental Build of configuration Release for project fitElipse ****
+make all 
+make: Nothing to be done for `all'.
+21:55:10 **** Incremental Build of configuration Release for project EE_492G_MIDTERM_1 ****
+make all 
+Building file: ../main.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/local/include/opencv -O3 -Wall -c -fmessage-length=0 -MMD -MP -MF"main.d" -MT"main.d" -o "main.o" "../main.cpp"
+Finished building: ../main.cpp
+ 
+Building target: EE_492G_MIDTERM_1
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -o "EE_492G_MIDTERM_1"  ./main.o   -lopencv_imgproc -lopencv_core -lopencv_highgui -lopencv_imgcodecs
+Finished building target: EE_492G_MIDTERM_1
+ 
+21:55:11 **** Incremental Build of configuration Release for project EE_492G_MIDTERM_2 ****
+make all 
+make: Nothing to be done for `all'.
+21:55:11 **** Incremental Build of configuration Release for project fitElipse ****
+make all 
+make: Nothing to be done for `all'.
+21:55:36 **** Incremental Build of configuration Release for project EE_492G_MIDTERM_1 ****
+make all 
+make: Nothing to be done for `all'.
+21:55:36 **** Incremental Build of configuration Release for project EE_492G_MIDTERM_2 ****
+make all 
+make: Nothing to be done for `all'.
+21:55:36 **** Incremental Build of configuration Release for project fitElipse ****
+make all 
+make: Nothing to be done for `all'.
+21:55:39 **** Incremental Build of configuration Release for project EE_492G_MIDTERM_1 ****
+make all 
+make: Nothing to be done for `all'.
+21:55:39 **** Incremental Build of configuration Release for project EE_492G_MIDTERM_2 ****
+make all 
+make: Nothing to be done for `all'.
+21:55:39 **** Incremental Build of configuration Release for project fitElipse ****
+make all 
+make: Nothing to be done for `all'.
+21:57:33 **** Incremental Build of configuration Release for project EE_492G_MIDTERM_1 ****
+make all 
+Building file: ../main.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/local/include/opencv -O3 -Wall -c -fmessage-length=0 -MMD -MP -MF"main.d" -MT"main.d" -o "main.o" "../main.cpp"
+Finished building: ../main.cpp
+ 
+Building target: EE_492G_MIDTERM_1
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -o "EE_492G_MIDTERM_1"  ./main.o   -lopencv_imgproc -lopencv_core -lopencv_highgui -lopencv_imgcodecs
+Finished building target: EE_492G_MIDTERM_1
+ 
+21:57:34 **** Incremental Build of configuration Release for project EE_492G_MIDTERM_2 ****
+make all 
+make: Nothing to be done for `all'.
+21:57:34 **** Incremental Build of configuration Release for project fitElipse ****
+make all 
+make: Nothing to be done for `all'.
+21:57:52 **** Incremental Build of configuration Release for project EE_492G_MIDTERM_1 ****
+make all 
+Building file: ../main.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/local/include/opencv -O3 -Wall -c -fmessage-length=0 -MMD -MP -MF"main.d" -MT"main.d" -o "main.o" "../main.cpp"
+Finished building: ../main.cpp
+ 
+Building target: EE_492G_MIDTERM_1
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -o "EE_492G_MIDTERM_1"  ./main.o   -lopencv_imgproc -lopencv_core -lopencv_highgui -lopencv_imgcodecs
+Finished building target: EE_492G_MIDTERM_1
+ 
+21:57:53 **** Incremental Build of configuration Release for project EE_492G_MIDTERM_2 ****
+make all 
+make: Nothing to be done for `all'.
+21:57:53 **** Incremental Build of configuration Release for project fitElipse ****
+make all 
+make: Nothing to be done for `all'.

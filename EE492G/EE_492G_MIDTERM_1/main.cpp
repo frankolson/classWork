@@ -89,7 +89,7 @@ void findEllipse(Mat& img){
 //////////////////////////////////////////////////////////////////////////////////////////////////
 
 /////////////////////////////////////// Remove Noise /////////////////////////////////////////////
-void removeSmallBlobs(Mat& im)
+void removeSmallBlobs(Mat& im, int thresh)
 {
     // Only accept CV_8UC1
     if (im.channels() != 1 || im.type() != CV_8U){
@@ -100,12 +100,17 @@ void removeSmallBlobs(Mat& im)
     // Find all contours
     vector<vector<Point> > contours;
     vector<Vec4i> hierarchy;
-    findContours(im.clone(), contours, hierarchy, RETR_EXTERNAL, CHAIN_APPROX_SIMPLE);
+    findContours(im.clone(), contours, hierarchy, RETR_CCOMP, CHAIN_APPROX_SIMPLE);
 
     for (size_t i = 0; i < contours.size(); i++){
-        // Calculate contour area
-    	cout << contourArea(contours[i]) << ", ";
-        drawContours(im, contours, i, Scalar(255,255,255),-1);
+        // look for hierarchy[i][3]!=-1, ie hole boundaries
+        if ( (hierarchy[i][3] != -1) && (contourArea(contours[i]) < thresh) ) {
+            // fill with white
+            drawContours( im, contours, i, Scalar(255,255,255),-1  );
+            // Calculate contour area
+            cout << contourArea(contours[i]) << ", ";
+        }
+        //drawContours(im, contours, i, Scalar(255,255,255),-1);
     }
     cout << endl << endl;
 }
@@ -126,12 +131,11 @@ Mat segmentation(Mat image){
 
     // OTSU
     threshold(binary, binary, 64, 255, THRESH_BINARY_INV | THRESH_OTSU);
-    //dilate
-    namedWindow("watershed", WINDOW_NORMAL);
-    imshow("watershed", binary);
+    namedWindow("test1", WINDOW_NORMAL);
+    imshow("test1", binary);
 
     // get rid of small noise
-    removeSmallBlobs(binary);
+    removeSmallBlobs(binary, 70);
 
     // Calculate distance transform
     Mat objects, fg;
@@ -144,8 +148,13 @@ Mat segmentation(Mat image){
     threshold(dist, objects, 0, 255, THRESH_BINARY);
 
     // Dilate threshold results
-    dilate(dist, fg, Mat(), Point(-1, -1), 10);
-    dilate(objects, objects, Mat(), Point(-1, -1), 10);
+    dilate(dist, fg, Mat(), Point(-1, -1), 5);
+    dilate(objects, objects, Mat(), Point(-1, -1), 5);
+    namedWindow("fg", WINDOW_NORMAL);
+    imshow("fg", fg);
+    namedWindow("objects", WINDOW_NORMAL);
+    imshow("objects", objects);
+
 
     // Subtract small foreground from large foreground
     fg = fg - dist;
@@ -179,7 +188,7 @@ Mat segmentation(Mat image){
     vector<unsigned char> colors(ncc);
     colors[0] = 0; // for background
     for (int label = 1; label < ncc; ++label)
-        colors[label] = 255/ ncc*label;
+        colors[label] = (255/ ncc*label)-1;
 
     // Paint every separate peak with a shade of gray
     for (int x = 0; x < dt.rows; x++) {
