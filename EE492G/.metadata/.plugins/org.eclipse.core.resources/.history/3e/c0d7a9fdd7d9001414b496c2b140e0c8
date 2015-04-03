@@ -11,7 +11,6 @@ void findEllipse(Mat& img, Mat& final){
 	// find contours
 	vector<vector<Point> > contours;
 	findContours(img, contours, RETR_LIST, CHAIN_APPROX_NONE);
-	cout << contours.size() << endl;
 
 	// fit the ellipses
 	for (size_t i = 0; i < contours.size(); i++){
@@ -68,35 +67,18 @@ void removeSmallBlobs(Mat& im, int thresh)
 //////////////////////////////////// Segmentation Large //////////////////////////////////////////
 void segmentationLarge(Mat img){
 	// grayscale
-	Mat binaryLarge,binarySmall;
+	Mat binary;
 	// Split Channels
 	Mat channel[3];
 	split(img,channel);
-	channel[0].convertTo(binaryLarge, CV_8U);
-	channel[1].convertTo(binarySmall, CV_8U);
+	channel[0].convertTo(binary, CV_8U);
 
-	//OTSU and remove noise (Large and Small)
-	threshold(binaryLarge, binaryLarge, 0, 255, THRESH_BINARY | THRESH_OTSU); // large
-	removeSmallBlobs(binaryLarge, 70); //large
-	threshold(binarySmall, binarySmall, 120, 255, THRESH_BINARY ); //small
-
-	// threshold (Small)
-	threshold(binarySmall, binarySmall, 120, 255, THRESH_BINARY );
-
-	// distance transform (Small)
-	Mat dist = Mat::zeros(binarySmall.size(), CV_8U);
-	distanceTransform(binarySmall, dist, DIST_L2, 3);
-	normalize(dist, dist, 0, 1.0, NORM_MINMAX);
-
-	// threshold (Small)
-	threshold(dist, dist, 0, 255, THRESH_BINARY );
-	dist.convertTo(dist, CV_8U);
-
-	// Find Small Cells
-	findEllipse(dist,img);
+	//OTSU and remove noise
+	threshold(binary, binary, 0, 255, THRESH_BINARY | THRESH_OTSU);
+	removeSmallBlobs(binary, 70);
 
 	// Find Large Cells
-	findEllipse(binaryLarge, img);
+	findEllipse(binary, img);
 
 }
 //////////////////////////////////////////////////////////////////////////////////////////////////
@@ -108,9 +90,9 @@ void segmentationSmall(Mat img){
 	// Split Channels
 	Mat channel[3];
 	split(img,channel);
+	channel[1].convertTo(binary, CV_8U);
 
-
-	// threshold
+	//OTSU and remove noise
 	threshold(binary, binary, 120, 255, THRESH_BINARY );
 
 	// distance transform
@@ -118,11 +100,13 @@ void segmentationSmall(Mat img){
 	distanceTransform(binary, dist, DIST_L2, 3);
 	normalize(dist, dist, 0, 1.0, NORM_MINMAX);
 
-	// threshold
-	threshold(dist, dist, 0, 255, THRESH_BINARY );
-	dist.convertTo(dist, CV_8U);
+	// dilate and threshold
+	dilate(dist, dist, Mat(), Point(-1, -1), 1);
+	namedWindow("binary", WINDOW_NORMAL);
+	imshow("binary", dist);
 
-    findEllipse(dist,img);
+	// Find Large Cells
+	findEllipse(binary, img);
 
 }
 //////////////////////////////////////////////////////////////////////////////////////////////////
@@ -150,7 +134,7 @@ int main(int argc, char** argv){
 
 	// Segment
 	segmentationLarge(image.clone());
-	//segmentationSmall(image.clone());
+	segmentationSmall(image.clone());
 
 	waitKey(0);
 	return 0;

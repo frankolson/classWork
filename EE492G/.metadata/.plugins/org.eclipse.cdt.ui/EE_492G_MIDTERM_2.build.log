@@ -1,6 +1,15 @@
-00:52:46 **** Incremental Build of configuration Release for project EE_492G_MIDTERM_2 ****
+01:40:44 **** Incremental Build of configuration Release for project EE_492G_MIDTERM_2 ****
 make all 
-make: Nothing to be done for `all'.
+Building file: ../main.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/local/include/opencv -O3 -Wall -c -fmessage-length=0 -MMD -MP -MF"main.d" -MT"main.d" -o "main.o" "../main.cpp"
+Finished building: ../main.cpp
+ 
+Building target: EE_492G_MIDTERM_2
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -o "EE_492G_MIDTERM_2"  ./main.o   -lopencv_core -lopencv_imgproc -lopencv_imgcodecs -lopencv_highgui
+Finished building target: EE_492G_MIDTERM_2
+ 
 
-00:52:46 Build Finished (took 61ms)
+01:40:44 Build Finished (took 825ms)
 

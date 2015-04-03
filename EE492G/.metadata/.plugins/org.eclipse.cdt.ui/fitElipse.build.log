@@ -1,6 +1,6 @@
-00:52:47 **** Incremental Build of configuration Release for project fitElipse ****
+01:40:44 **** Incremental Build of configuration Release for project fitElipse ****
 make all 
 make: Nothing to be done for `all'.
 
-00:52:47 Build Finished (took 68ms)
+01:40:44 Build Finished (took 62ms)
 
