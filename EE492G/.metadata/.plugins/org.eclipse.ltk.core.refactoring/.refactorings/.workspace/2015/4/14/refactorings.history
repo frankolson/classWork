@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Delete resource &apos;EE_492G_MIDTERM_2/Release/replace-bwareaopen-src.png&apos;" deleteContents="false" description="Delete resource &apos;EE_492G_MIDTERM_2/Release/replace-bwareaopen-src.png&apos;" element1="/EE_492G_MIDTERM_2/Release/replace-bwareaopen-src.png" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1428040253843"/>
+</session>
