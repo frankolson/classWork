@@ -1,3 +1,5 @@
+/*************************** Coffee Bean Segmentation ***************************/
+
 #include <opencv2/core/core.hpp>
 #include <opencv2/highgui/highgui.hpp>
 #include <opencv2/imgproc/imgproc.hpp>
@@ -58,7 +60,7 @@ void findEllipse(Mat& img){
 	Mat cimage = Mat::zeros(img.size(), CV_8UC3);
 
 	// fit the ellipses
-	for (size_t i = 0; i < contours.size()-1; i++){
+	for (size_t i = 0; i < contours.size(); i++){
 		size_t count = contours[i].size();
         if( count < 6 )
             continue;

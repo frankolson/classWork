@@ -1,3 +1,5 @@
+/*************************** Nucleus Segmentation ***************************/
+
 #include <opencv2/core/core.hpp>
 #include <opencv2/highgui/highgui.hpp>
 #include <opencv2/imgproc/imgproc.hpp>
@@ -7,11 +9,11 @@ using namespace cv;
 using namespace std;
 
 //////////////////////////////////////// Get Ellipse /////////////////////////////////////////////
-void findEllipse(Mat& img, Mat& final){
+void findEllipse(Mat& img, Mat& final, string txt){
 	// find contours
 	vector<vector<Point> > contours;
 	findContours(img, contours, RETR_LIST, CHAIN_APPROX_NONE);
-	cout << contours.size() << endl;
+	cout << " Number of " << txt << ": " << contours.size() << endl;
 
 	// fit the ellipses
 	for (size_t i = 0; i < contours.size(); i++){
@@ -93,36 +95,10 @@ void segmentationLarge(Mat img){
 	dist.convertTo(dist, CV_8U);
 
 	// Find Small Cells
-	findEllipse(dist,img);
+	findEllipse(dist,img, "Spots");
 
 	// Find Large Cells
-	findEllipse(binaryLarge, img);
-
-}
-//////////////////////////////////////////////////////////////////////////////////////////////////
-
-//////////////////////////////////// Segmentation Small //////////////////////////////////////////
-void segmentationSmall(Mat img){
-	// grayscale
-	Mat binary;
-	// Split Channels
-	Mat channel[3];
-	split(img,channel);
-
-
-	// threshold
-	threshold(binary, binary, 120, 255, THRESH_BINARY );
-
-	// distance transform
-	Mat dist = Mat::zeros(binary.size(), CV_8U);
-	distanceTransform(binary, dist, DIST_L2, 3);
-	normalize(dist, dist, 0, 1.0, NORM_MINMAX);
-
-	// threshold
-	threshold(dist, dist, 0, 255, THRESH_BINARY );
-	dist.convertTo(dist, CV_8U);
-
-    findEllipse(dist,img);
+	findEllipse(binaryLarge, img, "Nuclei");
 
 }
 //////////////////////////////////////////////////////////////////////////////////////////////////
@@ -150,7 +126,6 @@ int main(int argc, char** argv){
 
 	// Segment
 	segmentationLarge(image.clone());
-	//segmentationSmall(image.clone());
 
 	waitKey(0);
 	return 0;

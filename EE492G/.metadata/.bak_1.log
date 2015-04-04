@@ -1,14 +1,128 @@
-!SESSION 2015-04-03 00:50:18.655 -----------------------------------------------
+!SESSION 2015-04-03 13:18:47.127 -----------------------------------------------
 eclipse.buildId=debbuild
 java.version=1.7.0_75
 java.vendor=Oracle Corporation
 BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
 Command-line arguments:  -os linux -ws gtk -arch x86_64
 
-This is a continuation of log file /home/jarvis/classWork/EE492G/.metadata/.bak_0.log
-Created Time: 2015-04-03 01:01:08.041
+This is a continuation of log file /home/will/classWork/EE492G/.metadata/.bak_0.log
+Created Time: 2015-04-03 16:13:01.008
 
-!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 01:01:08.041
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 16:13:01.008
+!MESSAGE String index out of range: -7
+!STACK 0
+java.lang.StringIndexOutOfBoundsException: String index out of range: -7
+	at java.lang.String.substring(String.java:1875)
+	at org.eclipse.cdt.managedbuilder.internal.core.AdditionalInput$1LibFilter.accept(AdditionalInput.java:497)
+	at org.eclipse.cdt.managedbuilder.internal.core.AdditionalInput.findLibrary(AdditionalInput.java:531)
+	at org.eclipse.cdt.managedbuilder.internal.core.AdditionalInput.getDepLibs(AdditionalInput.java:466)
+	at org.eclipse.cdt.managedbuilder.internal.core.AdditionalInput.dependencyChanged(AdditionalInput.java:414)
+	at org.eclipse.cdt.managedbuilder.internal.core.AdditionalInput.needsRebuild(AdditionalInput.java:352)
+	at org.eclipse.cdt.managedbuilder.internal.core.InputType.needsRebuild(InputType.java:1674)
+	at org.eclipse.cdt.managedbuilder.internal.core.Tool.needsRebuild(Tool.java:3395)
+	at org.eclipse.cdt.managedbuilder.internal.core.ToolChain.needsRebuild(ToolChain.java:2043)
+	at org.eclipse.cdt.managedbuilder.internal.core.FolderInfo.needsRebuild(FolderInfo.java:346)
+	at org.eclipse.cdt.managedbuilder.internal.core.Configuration.needsRebuild(Configuration.java:1625)
+	at org.eclipse.cdt.managedbuilder.internal.core.Configuration.needsRebuild(Configuration.java:1608)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.performCleanning(CommonBuilder.java:945)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.performPrebuildGeneration(CommonBuilder.java:867)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:748)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:510)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:459)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:728)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:199)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:239)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:292)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:295)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:351)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:374)
+	at org.eclipse.core.internal.resources.Workspace.buildInternal(Workspace.java:513)
+	at org.eclipse.core.internal.resources.Workspace.build(Workspace.java:422)
+	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 16:13:01.011
+!MESSAGE String index out of range: -7
+!STACK 0
+java.lang.StringIndexOutOfBoundsException: String index out of range: -7
+	at java.lang.String.substring(String.java:1875)
+	at org.eclipse.cdt.managedbuilder.internal.core.AdditionalInput$1LibFilter.accept(AdditionalInput.java:497)
+	at org.eclipse.cdt.managedbuilder.internal.core.AdditionalInput.findLibrary(AdditionalInput.java:531)
+	at org.eclipse.cdt.managedbuilder.internal.core.AdditionalInput.getDepLibs(AdditionalInput.java:466)
+	at org.eclipse.cdt.managedbuilder.internal.core.AdditionalInput.dependencyChanged(AdditionalInput.java:414)
+	at org.eclipse.cdt.managedbuilder.internal.core.AdditionalInput.needsRebuild(AdditionalInput.java:352)
+	at org.eclipse.cdt.managedbuilder.internal.core.InputType.needsRebuild(InputType.java:1674)
+	at org.eclipse.cdt.managedbuilder.internal.core.Tool.needsRebuild(Tool.java:3395)
+	at org.eclipse.cdt.managedbuilder.internal.core.ToolChain.needsRebuild(ToolChain.java:2043)
+	at org.eclipse.cdt.managedbuilder.internal.core.FolderInfo.needsRebuild(FolderInfo.java:346)
+	at org.eclipse.cdt.managedbuilder.internal.core.Configuration.needsRebuild(Configuration.java:1625)
+	at org.eclipse.cdt.managedbuilder.internal.core.Configuration.needsRebuild(Configuration.java:1608)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.performCleanning(CommonBuilder.java:951)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.performPrebuildGeneration(CommonBuilder.java:867)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:748)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:510)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:459)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:728)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:199)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:239)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:292)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:295)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:351)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:374)
+	at org.eclipse.core.internal.resources.Workspace.buildInternal(Workspace.java:513)
+	at org.eclipse.core.internal.resources.Workspace.build(Workspace.java:422)
+	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 16:13:01.040
+!MESSAGE String index out of range: -7
+!STACK 0
+java.lang.StringIndexOutOfBoundsException: String index out of range: -7
+	at java.lang.String.substring(String.java:1875)
+	at org.eclipse.cdt.managedbuilder.internal.core.AdditionalInput$1LibFilter.accept(AdditionalInput.java:497)
+	at org.eclipse.cdt.managedbuilder.internal.core.AdditionalInput.findLibrary(AdditionalInput.java:531)
+	at org.eclipse.cdt.managedbuilder.internal.core.AdditionalInput.getDepLibs(AdditionalInput.java:466)
+	at org.eclipse.cdt.managedbuilder.internal.core.AdditionalInput.dependencyChanged(AdditionalInput.java:414)
+	at org.eclipse.cdt.managedbuilder.internal.core.AdditionalInput.needsRebuild(AdditionalInput.java:352)
+	at org.eclipse.cdt.managedbuilder.internal.core.InputType.needsRebuild(InputType.java:1674)
+	at org.eclipse.cdt.managedbuilder.internal.core.Tool.needsRebuild(Tool.java:3395)
+	at org.eclipse.cdt.managedbuilder.internal.buildmodel.BuildStep.needsRebuild(BuildStep.java:93)
+	at org.eclipse.cdt.managedbuilder.internal.buildmodel.BuildDescription$RebuildStateSynchronizer.visit(BuildDescription.java:302)
+	at org.eclipse.cdt.managedbuilder.buildmodel.BuildDescriptionManager.doAccept(BuildDescriptionManager.java:151)
+	at org.eclipse.cdt.managedbuilder.buildmodel.BuildDescriptionManager.doAccept(BuildDescriptionManager.java:159)
+	at org.eclipse.cdt.managedbuilder.buildmodel.BuildDescriptionManager.doAccept(BuildDescriptionManager.java:159)
+	at org.eclipse.cdt.managedbuilder.buildmodel.BuildDescriptionManager.doAccept(BuildDescriptionManager.java:133)
+	at org.eclipse.cdt.managedbuilder.buildmodel.BuildDescriptionManager.accept(BuildDescriptionManager.java:127)
+	at org.eclipse.cdt.managedbuilder.internal.buildmodel.BuildDescription.synchRebuildState(BuildDescription.java:428)
+	at org.eclipse.cdt.managedbuilder.internal.buildmodel.BuildDescription.initDescription(BuildDescription.java:764)
+	at org.eclipse.cdt.managedbuilder.internal.buildmodel.BuildDescription.init(BuildDescription.java:814)
+	at org.eclipse.cdt.managedbuilder.internal.buildmodel.DefaultBuildDescriptionFactory.createBuildDescription(DefaultBuildDescriptionFactory.java:45)
+	at org.eclipse.cdt.managedbuilder.internal.buildmodel.DefaultBuildDescriptionFactory.createBuildDescription(DefaultBuildDescriptionFactory.java:37)
+	at org.eclipse.cdt.managedbuilder.buildmodel.BuildDescriptionManager.createBuildDescription(BuildDescriptionManager.java:97)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.performCleanning(CommonBuilder.java:961)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.performPrebuildGeneration(CommonBuilder.java:867)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:748)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:510)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:459)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:728)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:199)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:239)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:292)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:295)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:351)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:374)
+	at org.eclipse.core.internal.resources.Workspace.buildInternal(Workspace.java:513)
+	at org.eclipse.core.internal.resources.Workspace.build(Workspace.java:422)
+	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 16:13:01.043
 !MESSAGE String index out of range: -7
 !STACK 0
 java.lang.StringIndexOutOfBoundsException: String index out of range: -7
@@ -52,7 +166,7 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: -7
 	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
 
-!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 01:01:08.131
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 16:13:01.137
 !MESSAGE String index out of range: -7
 !STACK 0
 java.lang.StringIndexOutOfBoundsException: String index out of range: -7
@@ -106,7 +220,7 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: -7
 	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
 
-!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 01:03:02.594
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 16:13:01.177
 !MESSAGE String index out of range: -7
 !STACK 0
 java.lang.StringIndexOutOfBoundsException: String index out of range: -7
@@ -141,7 +255,7 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: -7
 	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
 
-!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 01:03:02.596
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 16:13:01.190
 !MESSAGE String index out of range: -7
 !STACK 0
 java.lang.StringIndexOutOfBoundsException: String index out of range: -7
@@ -176,7 +290,7 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: -7
 	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
 
-!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 01:03:02.615
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 16:13:01.231
 !MESSAGE String index out of range: -7
 !STACK 0
 java.lang.StringIndexOutOfBoundsException: String index out of range: -7
@@ -220,7 +334,7 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: -7
 	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
 
-!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 01:03:02.616
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 16:13:01.233
 !MESSAGE String index out of range: -7
 !STACK 0
 java.lang.StringIndexOutOfBoundsException: String index out of range: -7
@@ -264,7 +378,7 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: -7
 	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
 
-!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 01:03:02.858
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 16:13:01.424
 !MESSAGE String index out of range: -7
 !STACK 0
 java.lang.StringIndexOutOfBoundsException: String index out of range: -7
@@ -318,7 +432,7 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: -7
 	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
 
-!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 01:03:02.876
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 16:13:01.473
 !MESSAGE String index out of range: -7
 !STACK 0
 java.lang.StringIndexOutOfBoundsException: String index out of range: -7
@@ -353,7 +467,7 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: -7
 	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
 
-!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 01:03:02.878
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 16:13:01.480
 !MESSAGE String index out of range: -7
 !STACK 0
 java.lang.StringIndexOutOfBoundsException: String index out of range: -7
@@ -388,7 +502,7 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: -7
 	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
 
-!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 01:03:02.894
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 16:13:01.550
 !MESSAGE String index out of range: -7
 !STACK 0
 java.lang.StringIndexOutOfBoundsException: String index out of range: -7
@@ -432,7 +546,7 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: -7
 	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
 
-!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 01:03:02.896
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 16:13:01.551
 !MESSAGE String index out of range: -7
 !STACK 0
 java.lang.StringIndexOutOfBoundsException: String index out of range: -7
@@ -476,7 +590,7 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: -7
 	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
 
-!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 01:03:03.808
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 16:13:01.667
 !MESSAGE String index out of range: -7
 !STACK 0
 java.lang.StringIndexOutOfBoundsException: String index out of range: -7
@@ -530,7 +644,7 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: -7
 	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
 
-!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 01:03:03.825
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 16:13:01.704
 !MESSAGE String index out of range: -7
 !STACK 0
 java.lang.StringIndexOutOfBoundsException: String index out of range: -7
@@ -565,7 +679,7 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: -7
 	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
 
-!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 01:03:03.827
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 16:13:01.707
 !MESSAGE String index out of range: -7
 !STACK 0
 java.lang.StringIndexOutOfBoundsException: String index out of range: -7
@@ -600,7 +714,7 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: -7
 	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
 
-!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 01:03:03.847
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 16:13:01.752
 !MESSAGE String index out of range: -7
 !STACK 0
 java.lang.StringIndexOutOfBoundsException: String index out of range: -7
@@ -644,7 +758,7 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: -7
 	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
 
-!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 01:03:03.849
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 16:13:01.754
 !MESSAGE String index out of range: -7
 !STACK 0
 java.lang.StringIndexOutOfBoundsException: String index out of range: -7
@@ -688,7 +802,7 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: -7
 	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
 
-!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 01:03:04.105
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 16:13:04.447
 !MESSAGE String index out of range: -7
 !STACK 0
 java.lang.StringIndexOutOfBoundsException: String index out of range: -7
@@ -742,7 +856,7 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: -7
 	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
 
-!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 01:04:05.490
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 16:13:22.160
 !MESSAGE String index out of range: -7
 !STACK 0
 java.lang.StringIndexOutOfBoundsException: String index out of range: -7
@@ -777,7 +891,7 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: -7
 	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
 
-!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 01:04:05.492
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 16:13:22.163
 !MESSAGE String index out of range: -7
 !STACK 0
 java.lang.StringIndexOutOfBoundsException: String index out of range: -7
@@ -812,7 +926,7 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: -7
 	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
 
-!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 01:04:05.511
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 16:13:22.197
 !MESSAGE String index out of range: -7
 !STACK 0
 java.lang.StringIndexOutOfBoundsException: String index out of range: -7
@@ -856,7 +970,7 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: -7
 	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
 
-!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 01:04:05.512
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 16:13:22.198
 !MESSAGE String index out of range: -7
 !STACK 0
 java.lang.StringIndexOutOfBoundsException: String index out of range: -7
@@ -900,7 +1014,7 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: -7
 	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
 
-!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 01:04:05.591
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 16:13:22.286
 !MESSAGE String index out of range: -7
 !STACK 0
 java.lang.StringIndexOutOfBoundsException: String index out of range: -7
@@ -954,7 +1068,7 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: -7
 	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
 
-!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 01:04:05.606
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 16:13:22.311
 !MESSAGE String index out of range: -7
 !STACK 0
 java.lang.StringIndexOutOfBoundsException: String index out of range: -7
@@ -989,7 +1103,7 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: -7
 	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
 
-!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 01:04:05.607
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 16:13:22.313
 !MESSAGE String index out of range: -7
 !STACK 0
 java.lang.StringIndexOutOfBoundsException: String index out of range: -7
@@ -1024,7 +1138,7 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: -7
 	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
 
-!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 01:04:05.622
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 16:13:22.339
 !MESSAGE String index out of range: -7
 !STACK 0
 java.lang.StringIndexOutOfBoundsException: String index out of range: -7
@@ -1068,7 +1182,7 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: -7
 	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
 
-!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 01:04:05.623
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 16:13:22.342
 !MESSAGE String index out of range: -7
 !STACK 0
 java.lang.StringIndexOutOfBoundsException: String index out of range: -7
@@ -1112,7 +1226,7 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: -7
 	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
 
-!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 01:04:06.439
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 16:13:22.440
 !MESSAGE String index out of range: -7
 !STACK 0
 java.lang.StringIndexOutOfBoundsException: String index out of range: -7
@@ -1166,7 +1280,7 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: -7
 	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
 
-!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 01:04:06.462
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 16:13:22.475
 !MESSAGE String index out of range: -7
 !STACK 0
 java.lang.StringIndexOutOfBoundsException: String index out of range: -7
@@ -1201,7 +1315,7 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: -7
 	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
 
-!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 01:04:06.463
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 16:13:22.479
 !MESSAGE String index out of range: -7
 !STACK 0
 java.lang.StringIndexOutOfBoundsException: String index out of range: -7
@@ -1236,7 +1350,7 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: -7
 	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
 
-!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 01:04:06.479
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 16:13:22.557
 !MESSAGE String index out of range: -7
 !STACK 0
 java.lang.StringIndexOutOfBoundsException: String index out of range: -7
@@ -1280,7 +1394,7 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: -7
 	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
 
-!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 01:04:06.480
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 16:13:22.561
 !MESSAGE String index out of range: -7
 !STACK 0
 java.lang.StringIndexOutOfBoundsException: String index out of range: -7
@@ -1324,7 +1438,7 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: -7
 	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
 
-!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 01:04:06.574
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 16:13:22.844
 !MESSAGE String index out of range: -7
 !STACK 0
 java.lang.StringIndexOutOfBoundsException: String index out of range: -7
@@ -1378,7 +1492,7 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: -7
 	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
 
-!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 01:04:20.234
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 16:13:22.963
 !MESSAGE String index out of range: -7
 !STACK 0
 java.lang.StringIndexOutOfBoundsException: String index out of range: -7
@@ -1413,7 +1527,7 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: -7
 	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
 
-!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 01:04:20.236
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 16:13:22.979
 !MESSAGE String index out of range: -7
 !STACK 0
 java.lang.StringIndexOutOfBoundsException: String index out of range: -7
@@ -1448,7 +1562,7 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: -7
 	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
 
-!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 01:04:20.251
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 16:13:23.062
 !MESSAGE String index out of range: -7
 !STACK 0
 java.lang.StringIndexOutOfBoundsException: String index out of range: -7
@@ -1492,7 +1606,7 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: -7
 	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
 
-!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 01:04:20.253
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 16:13:23.064
 !MESSAGE String index out of range: -7
 !STACK 0
 java.lang.StringIndexOutOfBoundsException: String index out of range: -7
@@ -1536,7 +1650,7 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: -7
 	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
 
-!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 01:04:20.484
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 16:13:24.112
 !MESSAGE String index out of range: -7
 !STACK 0
 java.lang.StringIndexOutOfBoundsException: String index out of range: -7
@@ -1590,7 +1704,7 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: -7
 	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
 
-!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 01:04:20.499
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 16:13:55.985
 !MESSAGE String index out of range: -7
 !STACK 0
 java.lang.StringIndexOutOfBoundsException: String index out of range: -7
@@ -1625,7 +1739,7 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: -7
 	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
 
-!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 01:04:20.500
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 16:13:55.989
 !MESSAGE String index out of range: -7
 !STACK 0
 java.lang.StringIndexOutOfBoundsException: String index out of range: -7
@@ -1660,7 +1774,7 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: -7
 	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
 
-!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 01:04:20.520
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 16:13:56.025
 !MESSAGE String index out of range: -7
 !STACK 0
 java.lang.StringIndexOutOfBoundsException: String index out of range: -7
@@ -1704,7 +1818,7 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: -7
 	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
 
-!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 01:04:20.521
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 16:13:56.027
 !MESSAGE String index out of range: -7
 !STACK 0
 java.lang.StringIndexOutOfBoundsException: String index out of range: -7
@@ -1748,7 +1862,7 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: -7
 	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
 
-!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 01:04:21.321
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 16:13:56.114
 !MESSAGE String index out of range: -7
 !STACK 0
 java.lang.StringIndexOutOfBoundsException: String index out of range: -7
@@ -1802,7 +1916,7 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: -7
 	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
 
-!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 01:04:21.337
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 16:13:56.138
 !MESSAGE String index out of range: -7
 !STACK 0
 java.lang.StringIndexOutOfBoundsException: String index out of range: -7
@@ -1837,7 +1951,7 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: -7
 	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
 
-!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 01:04:21.339
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 16:13:56.140
 !MESSAGE String index out of range: -7
 !STACK 0
 java.lang.StringIndexOutOfBoundsException: String index out of range: -7
@@ -1872,7 +1986,7 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: -7
 	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
 
-!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 01:04:21.356
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 16:13:56.164
 !MESSAGE String index out of range: -7
 !STACK 0
 java.lang.StringIndexOutOfBoundsException: String index out of range: -7
@@ -1916,7 +2030,7 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: -7
 	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
 
-!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 01:04:21.357
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 16:13:56.165
 !MESSAGE String index out of range: -7
 !STACK 0
 java.lang.StringIndexOutOfBoundsException: String index out of range: -7
@@ -1960,7 +2074,7 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: -7
 	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
 
-!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 01:04:21.441
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 16:13:56.247
 !MESSAGE String index out of range: -7
 !STACK 0
 java.lang.StringIndexOutOfBoundsException: String index out of range: -7
@@ -2014,7 +2128,7 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: -7
 	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
 
-!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 01:04:35.689
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 16:13:56.318
 !MESSAGE String index out of range: -7
 !STACK 0
 java.lang.StringIndexOutOfBoundsException: String index out of range: -7
@@ -2049,7 +2163,7 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: -7
 	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
 
-!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 01:04:35.690
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 16:13:56.344
 !MESSAGE String index out of range: -7
 !STACK 0
 java.lang.StringIndexOutOfBoundsException: String index out of range: -7
@@ -2084,7 +2198,7 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: -7
 	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
 
-!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 01:04:35.706
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 16:13:56.457
 !MESSAGE String index out of range: -7
 !STACK 0
 java.lang.StringIndexOutOfBoundsException: String index out of range: -7
@@ -2128,7 +2242,7 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: -7
 	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
 
-!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 01:04:35.708
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 16:13:56.472
 !MESSAGE String index out of range: -7
 !STACK 0
 java.lang.StringIndexOutOfBoundsException: String index out of range: -7
@@ -2172,7 +2286,7 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: -7
 	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
 
-!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 01:04:35.826
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 16:13:56.776
 !MESSAGE String index out of range: -7
 !STACK 0
 java.lang.StringIndexOutOfBoundsException: String index out of range: -7
@@ -2226,7 +2340,7 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: -7
 	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
 
-!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 01:04:35.839
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 16:13:56.820
 !MESSAGE String index out of range: -7
 !STACK 0
 java.lang.StringIndexOutOfBoundsException: String index out of range: -7
@@ -2261,7 +2375,7 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: -7
 	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
 
-!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 01:04:35.841
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 16:13:56.826
 !MESSAGE String index out of range: -7
 !STACK 0
 java.lang.StringIndexOutOfBoundsException: String index out of range: -7
@@ -2296,7 +2410,7 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: -7
 	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
 
-!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 01:04:35.864
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 16:13:56.912
 !MESSAGE String index out of range: -7
 !STACK 0
 java.lang.StringIndexOutOfBoundsException: String index out of range: -7
@@ -2340,7 +2454,7 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: -7
 	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
 
-!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 01:04:35.865
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 16:13:56.918
 !MESSAGE String index out of range: -7
 !STACK 0
 java.lang.StringIndexOutOfBoundsException: String index out of range: -7
@@ -2384,7 +2498,7 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: -7
 	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
 
-!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 01:04:36.710
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 16:13:58.247
 !MESSAGE String index out of range: -7
 !STACK 0
 java.lang.StringIndexOutOfBoundsException: String index out of range: -7
@@ -2438,7 +2552,7 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: -7
 	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
 
-!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 01:04:36.733
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 16:14:19.488
 !MESSAGE String index out of range: -7
 !STACK 0
 java.lang.StringIndexOutOfBoundsException: String index out of range: -7
@@ -2473,7 +2587,7 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: -7
 	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
 
-!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 01:04:36.735
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 16:14:19.511
 !MESSAGE String index out of range: -7
 !STACK 0
 java.lang.StringIndexOutOfBoundsException: String index out of range: -7
@@ -2508,7 +2622,7 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: -7
 	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
 
-!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 01:04:36.751
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 16:14:19.560
 !MESSAGE String index out of range: -7
 !STACK 0
 java.lang.StringIndexOutOfBoundsException: String index out of range: -7
@@ -2552,7 +2666,7 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: -7
 	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
 
-!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 01:04:36.752
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 16:14:19.562
 !MESSAGE String index out of range: -7
 !STACK 0
 java.lang.StringIndexOutOfBoundsException: String index out of range: -7
@@ -2596,7 +2710,7 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: -7
 	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
 
-!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 01:04:36.834
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 16:14:19.643
 !MESSAGE String index out of range: -7
 !STACK 0
 java.lang.StringIndexOutOfBoundsException: String index out of range: -7
@@ -2650,7 +2764,7 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: -7
 	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
 
-!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 01:04:50.985
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 16:14:19.661
 !MESSAGE String index out of range: -7
 !STACK 0
 java.lang.StringIndexOutOfBoundsException: String index out of range: -7
@@ -2685,7 +2799,7 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: -7
 	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
 
-!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 01:04:50.986
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 16:14:19.662
 !MESSAGE String index out of range: -7
 !STACK 0
 java.lang.StringIndexOutOfBoundsException: String index out of range: -7
@@ -2720,7 +2834,7 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: -7
 	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
 
-!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 01:04:51.014
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 16:14:19.684
 !MESSAGE String index out of range: -7
 !STACK 0
 java.lang.StringIndexOutOfBoundsException: String index out of range: -7
@@ -2764,7 +2878,7 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: -7
 	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
 
-!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 01:04:51.015
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 16:14:19.686
 !MESSAGE String index out of range: -7
 !STACK 0
 java.lang.StringIndexOutOfBoundsException: String index out of range: -7
@@ -2808,7 +2922,7 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: -7
 	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
 
-!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 01:04:51.094
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 16:14:19.767
 !MESSAGE String index out of range: -7
 !STACK 0
 java.lang.StringIndexOutOfBoundsException: String index out of range: -7
@@ -2862,7 +2976,7 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: -7
 	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
 
-!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 01:04:51.108
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 16:14:19.786
 !MESSAGE String index out of range: -7
 !STACK 0
 java.lang.StringIndexOutOfBoundsException: String index out of range: -7
@@ -2897,7 +3011,7 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: -7
 	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
 
-!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 01:04:51.110
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 16:14:19.788
 !MESSAGE String index out of range: -7
 !STACK 0
 java.lang.StringIndexOutOfBoundsException: String index out of range: -7
@@ -2932,7 +3046,7 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: -7
 	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
 
-!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 01:04:51.124
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 16:14:19.862
 !MESSAGE String index out of range: -7
 !STACK 0
 java.lang.StringIndexOutOfBoundsException: String index out of range: -7
@@ -2976,7 +3090,7 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: -7
 	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
 
-!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 01:04:51.125
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 16:14:19.864
 !MESSAGE String index out of range: -7
 !STACK 0
 java.lang.StringIndexOutOfBoundsException: String index out of range: -7
@@ -3020,7 +3134,7 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: -7
 	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
 
-!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 01:04:51.933
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 16:14:20.036
 !MESSAGE String index out of range: -7
 !STACK 0
 java.lang.StringIndexOutOfBoundsException: String index out of range: -7
@@ -3074,7 +3188,7 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: -7
 	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
 
-!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 01:04:51.950
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 16:14:20.195
 !MESSAGE String index out of range: -7
 !STACK 0
 java.lang.StringIndexOutOfBoundsException: String index out of range: -7
@@ -3109,7 +3223,7 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: -7
 	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
 
-!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 01:04:51.951
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 16:14:20.197
 !MESSAGE String index out of range: -7
 !STACK 0
 java.lang.StringIndexOutOfBoundsException: String index out of range: -7
@@ -3144,7 +3258,7 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: -7
 	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
 
-!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 01:04:51.974
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 16:14:20.379
 !MESSAGE String index out of range: -7
 !STACK 0
 java.lang.StringIndexOutOfBoundsException: String index out of range: -7
@@ -3188,7 +3302,7 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: -7
 	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
 
-!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 01:04:51.975
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 16:14:20.381
 !MESSAGE String index out of range: -7
 !STACK 0
 java.lang.StringIndexOutOfBoundsException: String index out of range: -7
@@ -3232,7 +3346,7 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: -7
 	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
 
-!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 01:04:52.065
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 16:14:21.494
 !MESSAGE String index out of range: -7
 !STACK 0
 java.lang.StringIndexOutOfBoundsException: String index out of range: -7
@@ -3286,7 +3400,7 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: -7
 	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
 
-!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 01:05:04.353
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 16:14:41.026
 !MESSAGE String index out of range: -7
 !STACK 0
 java.lang.StringIndexOutOfBoundsException: String index out of range: -7
@@ -3321,7 +3435,7 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: -7
 	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
 
-!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 01:05:04.354
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 16:14:41.056
 !MESSAGE String index out of range: -7
 !STACK 0
 java.lang.StringIndexOutOfBoundsException: String index out of range: -7
@@ -3356,7 +3470,7 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: -7
 	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
 
-!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 01:05:04.370
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 16:14:41.101
 !MESSAGE String index out of range: -7
 !STACK 0
 java.lang.StringIndexOutOfBoundsException: String index out of range: -7
@@ -3400,7 +3514,7 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: -7
 	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
 
-!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 01:05:04.371
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 16:14:41.104
 !MESSAGE String index out of range: -7
 !STACK 0
 java.lang.StringIndexOutOfBoundsException: String index out of range: -7
@@ -3444,7 +3558,7 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: -7
 	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
 
-!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 01:05:04.447
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 16:14:41.200
 !MESSAGE String index out of range: -7
 !STACK 0
 java.lang.StringIndexOutOfBoundsException: String index out of range: -7
@@ -3498,7 +3612,7 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: -7
 	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
 
-!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 01:05:04.461
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 16:14:41.220
 !MESSAGE String index out of range: -7
 !STACK 0
 java.lang.StringIndexOutOfBoundsException: String index out of range: -7
@@ -3533,7 +3647,7 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: -7
 	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
 
-!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 01:05:04.462
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 16:14:41.222
 !MESSAGE String index out of range: -7
 !STACK 0
 java.lang.StringIndexOutOfBoundsException: String index out of range: -7
@@ -3568,7 +3682,7 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: -7
 	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
 
-!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 01:05:04.474
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 16:14:41.252
 !MESSAGE String index out of range: -7
 !STACK 0
 java.lang.StringIndexOutOfBoundsException: String index out of range: -7
@@ -3612,7 +3726,7 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: -7
 	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
 
-!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 01:05:04.475
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 16:14:41.253
 !MESSAGE String index out of range: -7
 !STACK 0
 java.lang.StringIndexOutOfBoundsException: String index out of range: -7
@@ -3656,7 +3770,7 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: -7
 	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
 
-!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 01:05:04.549
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 16:14:41.354
 !MESSAGE String index out of range: -7
 !STACK 0
 java.lang.StringIndexOutOfBoundsException: String index out of range: -7
@@ -3710,7 +3824,7 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: -7
 	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
 
-!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 01:05:04.561
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 16:14:41.454
 !MESSAGE String index out of range: -7
 !STACK 0
 java.lang.StringIndexOutOfBoundsException: String index out of range: -7
@@ -3745,7 +3859,7 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: -7
 	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
 
-!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 01:05:04.562
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 16:14:41.457
 !MESSAGE String index out of range: -7
 !STACK 0
 java.lang.StringIndexOutOfBoundsException: String index out of range: -7
@@ -3780,7 +3894,7 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: -7
 	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
 
-!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 01:05:04.574
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 16:14:41.557
 !MESSAGE String index out of range: -7
 !STACK 0
 java.lang.StringIndexOutOfBoundsException: String index out of range: -7
@@ -3824,7 +3938,7 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: -7
 	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
 
-!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 01:05:04.575
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 16:14:41.580
 !MESSAGE String index out of range: -7
 !STACK 0
 java.lang.StringIndexOutOfBoundsException: String index out of range: -7
@@ -3868,7 +3982,7 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: -7
 	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
 
-!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 01:05:04.648
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 16:14:41.823
 !MESSAGE String index out of range: -7
 !STACK 0
 java.lang.StringIndexOutOfBoundsException: String index out of range: -7
@@ -3922,7 +4036,7 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: -7
 	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
 
-!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 01:05:25.000
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 16:14:41.888
 !MESSAGE String index out of range: -7
 !STACK 0
 java.lang.StringIndexOutOfBoundsException: String index out of range: -7
@@ -3957,7 +4071,7 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: -7
 	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
 
-!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 01:05:25.002
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 16:14:41.892
 !MESSAGE String index out of range: -7
 !STACK 0
 java.lang.StringIndexOutOfBoundsException: String index out of range: -7
@@ -3992,7 +4106,7 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: -7
 	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
 
-!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 01:05:25.031
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 16:14:41.951
 !MESSAGE String index out of range: -7
 !STACK 0
 java.lang.StringIndexOutOfBoundsException: String index out of range: -7
@@ -4036,7 +4150,7 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: -7
 	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
 
-!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 01:05:25.032
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 16:14:41.957
 !MESSAGE String index out of range: -7
 !STACK 0
 java.lang.StringIndexOutOfBoundsException: String index out of range: -7
@@ -4080,7 +4194,7 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: -7
 	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
 
-!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 01:05:25.311
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 16:14:43.016
 !MESSAGE String index out of range: -7
 !STACK 0
 java.lang.StringIndexOutOfBoundsException: String index out of range: -7
@@ -4134,7 +4248,7 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: -7
 	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
 
-!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 01:05:25.353
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 16:19:11.043
 !MESSAGE String index out of range: -7
 !STACK 0
 java.lang.StringIndexOutOfBoundsException: String index out of range: -7
@@ -4169,7 +4283,7 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: -7
 	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
 
-!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 01:05:25.355
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 16:19:11.071
 !MESSAGE String index out of range: -7
 !STACK 0
 java.lang.StringIndexOutOfBoundsException: String index out of range: -7
@@ -4204,7 +4318,7 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: -7
 	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
 
-!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 01:05:25.381
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 16:19:11.104
 !MESSAGE String index out of range: -7
 !STACK 0
 java.lang.StringIndexOutOfBoundsException: String index out of range: -7
@@ -4248,7 +4362,7 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: -7
 	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
 
-!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 01:05:25.383
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 16:19:11.106
 !MESSAGE String index out of range: -7
 !STACK 0
 java.lang.StringIndexOutOfBoundsException: String index out of range: -7
@@ -4292,7 +4406,7 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: -7
 	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
 
-!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 01:05:26.211
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 16:19:11.202
 !MESSAGE String index out of range: -7
 !STACK 0
 java.lang.StringIndexOutOfBoundsException: String index out of range: -7
@@ -4346,7 +4460,7 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: -7
 	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
 
-!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 01:05:26.225
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 16:19:11.222
 !MESSAGE String index out of range: -7
 !STACK 0
 java.lang.StringIndexOutOfBoundsException: String index out of range: -7
@@ -4381,7 +4495,7 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: -7
 	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
 
-!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 01:05:26.227
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 16:19:11.224
 !MESSAGE String index out of range: -7
 !STACK 0
 java.lang.StringIndexOutOfBoundsException: String index out of range: -7
@@ -4416,7 +4530,7 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: -7
 	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
 
-!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 01:05:26.243
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 16:19:11.251
 !MESSAGE String index out of range: -7
 !STACK 0
 java.lang.StringIndexOutOfBoundsException: String index out of range: -7
@@ -4460,7 +4574,7 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: -7
 	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
 
-!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 01:05:26.244
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 16:19:11.253
 !MESSAGE String index out of range: -7
 !STACK 0
 java.lang.StringIndexOutOfBoundsException: String index out of range: -7
@@ -4504,7 +4618,7 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: -7
 	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
 
-!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 01:05:26.335
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 16:19:11.336
 !MESSAGE String index out of range: -7
 !STACK 0
 java.lang.StringIndexOutOfBoundsException: String index out of range: -7
@@ -4558,7 +4672,7 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: -7
 	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
 
-!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 01:05:46.664
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 16:19:11.372
 !MESSAGE String index out of range: -7
 !STACK 0
 java.lang.StringIndexOutOfBoundsException: String index out of range: -7
@@ -4593,7 +4707,7 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: -7
 	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
 
-!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 01:05:46.665
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 16:19:11.374
 !MESSAGE String index out of range: -7
 !STACK 0
 java.lang.StringIndexOutOfBoundsException: String index out of range: -7
@@ -4628,7 +4742,7 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: -7
 	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
 
-!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 01:05:46.681
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 16:19:11.432
 !MESSAGE String index out of range: -7
 !STACK 0
 java.lang.StringIndexOutOfBoundsException: String index out of range: -7
@@ -4672,7 +4786,7 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: -7
 	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
 
-!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 01:05:46.682
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 16:19:11.435
 !MESSAGE String index out of range: -7
 !STACK 0
 java.lang.StringIndexOutOfBoundsException: String index out of range: -7
@@ -4716,7 +4830,7 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: -7
 	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
 
-!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 01:05:46.779
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 16:19:11.632
 !MESSAGE String index out of range: -7
 !STACK 0
 java.lang.StringIndexOutOfBoundsException: String index out of range: -7
@@ -4770,7 +4884,7 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: -7
 	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
 
-!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 01:05:46.791
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 16:19:11.700
 !MESSAGE String index out of range: -7
 !STACK 0
 java.lang.StringIndexOutOfBoundsException: String index out of range: -7
@@ -4805,7 +4919,7 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: -7
 	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
 
-!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 01:05:46.792
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 16:19:11.702
 !MESSAGE String index out of range: -7
 !STACK 0
 java.lang.StringIndexOutOfBoundsException: String index out of range: -7
@@ -4840,7 +4954,7 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: -7
 	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
 
-!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 01:05:46.806
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 16:19:11.794
 !MESSAGE String index out of range: -7
 !STACK 0
 java.lang.StringIndexOutOfBoundsException: String index out of range: -7
@@ -4884,7 +4998,7 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: -7
 	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
 
-!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 01:05:46.807
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 16:19:11.814
 !MESSAGE String index out of range: -7
 !STACK 0
 java.lang.StringIndexOutOfBoundsException: String index out of range: -7
@@ -4928,7 +5042,7 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: -7
 	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
 
-!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 01:05:47.592
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 16:19:11.990
 !MESSAGE String index out of range: -7
 !STACK 0
 java.lang.StringIndexOutOfBoundsException: String index out of range: -7
@@ -4982,7 +5096,7 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: -7
 	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
 
-!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 01:05:47.609
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 16:30:53.518
 !MESSAGE String index out of range: -7
 !STACK 0
 java.lang.StringIndexOutOfBoundsException: String index out of range: -7
@@ -5017,7 +5131,7 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: -7
 	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
 
-!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 01:05:47.611
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 16:30:53.521
 !MESSAGE String index out of range: -7
 !STACK 0
 java.lang.StringIndexOutOfBoundsException: String index out of range: -7
@@ -5052,7 +5166,7 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: -7
 	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
 
-!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 01:05:47.625
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 16:30:53.544
 !MESSAGE String index out of range: -7
 !STACK 0
 java.lang.StringIndexOutOfBoundsException: String index out of range: -7
@@ -5096,7 +5210,7 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: -7
 	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
 
-!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 01:05:47.626
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 16:30:53.546
 !MESSAGE String index out of range: -7
 !STACK 0
 java.lang.StringIndexOutOfBoundsException: String index out of range: -7
@@ -5140,7 +5254,7 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: -7
 	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
 
-!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 01:05:47.711
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 16:30:53.645
 !MESSAGE String index out of range: -7
 !STACK 0
 java.lang.StringIndexOutOfBoundsException: String index out of range: -7
@@ -5194,7 +5308,7 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: -7
 	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
 
-!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 01:06:11.640
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 16:30:53.669
 !MESSAGE String index out of range: -7
 !STACK 0
 java.lang.StringIndexOutOfBoundsException: String index out of range: -7
@@ -5229,7 +5343,7 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: -7
 	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
 
-!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 01:06:11.642
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 16:30:53.671
 !MESSAGE String index out of range: -7
 !STACK 0
 java.lang.StringIndexOutOfBoundsException: String index out of range: -7
@@ -5264,7 +5378,7 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: -7
 	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
 
-!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 01:06:11.655
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 16:30:53.692
 !MESSAGE String index out of range: -7
 !STACK 0
 java.lang.StringIndexOutOfBoundsException: String index out of range: -7
@@ -5308,7 +5422,7 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: -7
 	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
 
-!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 01:06:11.656
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 16:30:53.693
 !MESSAGE String index out of range: -7
 !STACK 0
 java.lang.StringIndexOutOfBoundsException: String index out of range: -7
@@ -5352,7 +5466,7 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: -7
 	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
 
-!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 01:06:11.733
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 16:30:55.024
 !MESSAGE String index out of range: -7
 !STACK 0
 java.lang.StringIndexOutOfBoundsException: String index out of range: -7
@@ -5406,7 +5520,7 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: -7
 	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
 
-!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 01:06:11.747
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 16:30:55.098
 !MESSAGE String index out of range: -7
 !STACK 0
 java.lang.StringIndexOutOfBoundsException: String index out of range: -7
@@ -5441,7 +5555,7 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: -7
 	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
 
-!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 01:06:11.749
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 16:30:55.109
 !MESSAGE String index out of range: -7
 !STACK 0
 java.lang.StringIndexOutOfBoundsException: String index out of range: -7
@@ -5476,7 +5590,7 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: -7
 	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
 
-!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 01:06:11.760
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 16:30:55.266
 !MESSAGE String index out of range: -7
 !STACK 0
 java.lang.StringIndexOutOfBoundsException: String index out of range: -7
@@ -5520,7 +5634,7 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: -7
 	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
 
-!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 01:06:11.761
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 16:30:55.268
 !MESSAGE String index out of range: -7
 !STACK 0
 java.lang.StringIndexOutOfBoundsException: String index out of range: -7
@@ -5564,7 +5678,7 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: -7
 	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
 
-!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 01:06:12.596
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 16:30:55.429
 !MESSAGE String index out of range: -7
 !STACK 0
 java.lang.StringIndexOutOfBoundsException: String index out of range: -7
@@ -5618,7 +5732,7 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: -7
 	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
 
-!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 01:06:12.610
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 16:30:55.503
 !MESSAGE String index out of range: -7
 !STACK 0
 java.lang.StringIndexOutOfBoundsException: String index out of range: -7
@@ -5653,7 +5767,7 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: -7
 	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
 
-!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 01:06:12.611
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 16:30:55.507
 !MESSAGE String index out of range: -7
 !STACK 0
 java.lang.StringIndexOutOfBoundsException: String index out of range: -7
@@ -5688,7 +5802,7 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: -7
 	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
 
-!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 01:06:12.625
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 16:30:55.574
 !MESSAGE String index out of range: -7
 !STACK 0
 java.lang.StringIndexOutOfBoundsException: String index out of range: -7
@@ -5732,7 +5846,7 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: -7
 	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
 
-!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 01:06:12.626
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 16:30:55.575
 !MESSAGE String index out of range: -7
 !STACK 0
 java.lang.StringIndexOutOfBoundsException: String index out of range: -7
@@ -5776,7 +5890,7 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: -7
 	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
 
-!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 01:06:12.703
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 16:30:55.716
 !MESSAGE String index out of range: -7
 !STACK 0
 java.lang.StringIndexOutOfBoundsException: String index out of range: -7
@@ -5830,7 +5944,7 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: -7
 	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
 
-!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 01:06:54.168
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 16:32:28.729
 !MESSAGE String index out of range: -7
 !STACK 0
 java.lang.StringIndexOutOfBoundsException: String index out of range: -7
@@ -5865,7 +5979,7 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: -7
 	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
 
-!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 01:06:54.169
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 16:32:28.732
 !MESSAGE String index out of range: -7
 !STACK 0
 java.lang.StringIndexOutOfBoundsException: String index out of range: -7
@@ -5900,7 +6014,7 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: -7
 	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
 
-!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 01:06:54.194
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 16:32:28.772
 !MESSAGE String index out of range: -7
 !STACK 0
 java.lang.StringIndexOutOfBoundsException: String index out of range: -7
@@ -5944,7 +6058,7 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: -7
 	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
 
-!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 01:06:54.195
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 16:32:28.774
 !MESSAGE String index out of range: -7
 !STACK 0
 java.lang.StringIndexOutOfBoundsException: String index out of range: -7
@@ -5988,7 +6102,7 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: -7
 	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
 
-!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 01:06:54.270
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 16:32:28.887
 !MESSAGE String index out of range: -7
 !STACK 0
 java.lang.StringIndexOutOfBoundsException: String index out of range: -7
@@ -6042,7 +6156,7 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: -7
 	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
 
-!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 01:06:54.282
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 16:32:28.904
 !MESSAGE String index out of range: -7
 !STACK 0
 java.lang.StringIndexOutOfBoundsException: String index out of range: -7
@@ -6077,7 +6191,7 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: -7
 	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
 
-!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 01:06:54.283
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 16:32:28.905
 !MESSAGE String index out of range: -7
 !STACK 0
 java.lang.StringIndexOutOfBoundsException: String index out of range: -7
@@ -6112,7 +6226,7 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: -7
 	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
 
-!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 01:06:54.294
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 16:32:28.930
 !MESSAGE String index out of range: -7
 !STACK 0
 java.lang.StringIndexOutOfBoundsException: String index out of range: -7
@@ -6156,7 +6270,7 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: -7
 	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
 
-!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 01:06:54.295
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 16:32:28.932
 !MESSAGE String index out of range: -7
 !STACK 0
 java.lang.StringIndexOutOfBoundsException: String index out of range: -7
@@ -6200,7 +6314,7 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: -7
 	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
 
-!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 01:06:55.125
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 16:32:30.537
 !MESSAGE String index out of range: -7
 !STACK 0
 java.lang.StringIndexOutOfBoundsException: String index out of range: -7
@@ -6254,7 +6368,7 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: -7
 	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
 
-!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 01:06:55.138
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 16:32:30.574
 !MESSAGE String index out of range: -7
 !STACK 0
 java.lang.StringIndexOutOfBoundsException: String index out of range: -7
@@ -6289,7 +6403,7 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: -7
 	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
 
-!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 01:06:55.140
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 16:32:30.580
 !MESSAGE String index out of range: -7
 !STACK 0
 java.lang.StringIndexOutOfBoundsException: String index out of range: -7
@@ -6324,7 +6438,7 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: -7
 	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
 
-!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 01:06:55.155
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 16:32:30.646
 !MESSAGE String index out of range: -7
 !STACK 0
 java.lang.StringIndexOutOfBoundsException: String index out of range: -7
@@ -6368,7 +6482,7 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: -7
 	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
 
-!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 01:06:55.156
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 16:32:30.648
 !MESSAGE String index out of range: -7
 !STACK 0
 java.lang.StringIndexOutOfBoundsException: String index out of range: -7
@@ -6412,7 +6526,7 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: -7
 	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
 
-!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 01:06:55.235
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 16:32:30.795
 !MESSAGE String index out of range: -7
 !STACK 0
 java.lang.StringIndexOutOfBoundsException: String index out of range: -7
@@ -6466,7 +6580,7 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: -7
 	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
 
-!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 01:07:31.728
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 16:32:30.842
 !MESSAGE String index out of range: -7
 !STACK 0
 java.lang.StringIndexOutOfBoundsException: String index out of range: -7
@@ -6501,7 +6615,7 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: -7
 	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
 
-!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 01:07:31.729
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 16:32:30.847
 !MESSAGE String index out of range: -7
 !STACK 0
 java.lang.StringIndexOutOfBoundsException: String index out of range: -7
@@ -6536,7 +6650,7 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: -7
 	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
 
-!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 01:07:31.746
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 16:32:30.886
 !MESSAGE String index out of range: -7
 !STACK 0
 java.lang.StringIndexOutOfBoundsException: String index out of range: -7
@@ -6580,7 +6694,7 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: -7
 	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
 
-!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 01:07:31.747
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 16:32:30.888
 !MESSAGE String index out of range: -7
 !STACK 0
 java.lang.StringIndexOutOfBoundsException: String index out of range: -7
@@ -6624,7 +6738,7 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: -7
 	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
 
-!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 01:07:31.890
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 16:32:30.997
 !MESSAGE String index out of range: -7
 !STACK 0
 java.lang.StringIndexOutOfBoundsException: String index out of range: -7
@@ -6678,7 +6792,7 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: -7
 	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
 
-!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 01:07:31.902
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 17:30:25.309
 !MESSAGE String index out of range: -7
 !STACK 0
 java.lang.StringIndexOutOfBoundsException: String index out of range: -7
@@ -6713,7 +6827,7 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: -7
 	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
 
-!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 01:07:31.904
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 17:30:25.326
 !MESSAGE String index out of range: -7
 !STACK 0
 java.lang.StringIndexOutOfBoundsException: String index out of range: -7
@@ -6748,7 +6862,7 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: -7
 	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
 
-!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 01:07:31.916
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 17:30:25.367
 !MESSAGE String index out of range: -7
 !STACK 0
 java.lang.StringIndexOutOfBoundsException: String index out of range: -7
@@ -6792,7 +6906,7 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: -7
 	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
 
-!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 01:07:31.917
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 17:30:25.369
 !MESSAGE String index out of range: -7
 !STACK 0
 java.lang.StringIndexOutOfBoundsException: String index out of range: -7
@@ -6836,7 +6950,7 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: -7
 	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
 
-!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 01:07:32.703
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 17:30:25.803
 !MESSAGE String index out of range: -7
 !STACK 0
 java.lang.StringIndexOutOfBoundsException: String index out of range: -7
@@ -6890,7 +7004,7 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: -7
 	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
 
-!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 01:07:32.722
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 17:30:25.988
 !MESSAGE String index out of range: -7
 !STACK 0
 java.lang.StringIndexOutOfBoundsException: String index out of range: -7
@@ -6925,7 +7039,7 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: -7
 	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
 
-!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 01:07:32.724
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 17:30:25.990
 !MESSAGE String index out of range: -7
 !STACK 0
 java.lang.StringIndexOutOfBoundsException: String index out of range: -7
@@ -6960,7 +7074,7 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: -7
 	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
 
-!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 01:07:32.743
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 17:30:26.117
 !MESSAGE String index out of range: -7
 !STACK 0
 java.lang.StringIndexOutOfBoundsException: String index out of range: -7
@@ -7004,7 +7118,7 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: -7
 	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
 
-!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 01:07:32.744
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 17:30:26.120
 !MESSAGE String index out of range: -7
 !STACK 0
 java.lang.StringIndexOutOfBoundsException: String index out of range: -7
@@ -7048,7 +7162,7 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: -7
 	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
 
-!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 01:07:32.914
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 17:30:26.430
 !MESSAGE String index out of range: -7
 !STACK 0
 java.lang.StringIndexOutOfBoundsException: String index out of range: -7
@@ -7102,7 +7216,7 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: -7
 	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
 
-!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 01:08:00.321
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 17:30:26.521
 !MESSAGE String index out of range: -7
 !STACK 0
 java.lang.StringIndexOutOfBoundsException: String index out of range: -7
@@ -7137,7 +7251,7 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: -7
 	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
 
-!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 01:08:00.322
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 17:30:26.524
 !MESSAGE String index out of range: -7
 !STACK 0
 java.lang.StringIndexOutOfBoundsException: String index out of range: -7
@@ -7172,7 +7286,7 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: -7
 	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
 
-!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 01:08:00.338
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 17:30:26.573
 !MESSAGE String index out of range: -7
 !STACK 0
 java.lang.StringIndexOutOfBoundsException: String index out of range: -7
@@ -7216,7 +7330,7 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: -7
 	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
 
-!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 01:08:00.339
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 17:30:26.575
 !MESSAGE String index out of range: -7
 !STACK 0
 java.lang.StringIndexOutOfBoundsException: String index out of range: -7
@@ -7260,7 +7374,7 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: -7
 	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
 
-!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 01:08:00.415
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 17:30:26.814
 !MESSAGE String index out of range: -7
 !STACK 0
 java.lang.StringIndexOutOfBoundsException: String index out of range: -7
@@ -7314,7 +7428,7 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: -7
 	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
 
-!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 01:08:00.427
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 17:30:26.947
 !MESSAGE String index out of range: -7
 !STACK 0
 java.lang.StringIndexOutOfBoundsException: String index out of range: -7
@@ -7349,7 +7463,7 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: -7
 	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
 
-!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 01:08:00.428
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 17:30:26.949
 !MESSAGE String index out of range: -7
 !STACK 0
 java.lang.StringIndexOutOfBoundsException: String index out of range: -7
@@ -7384,7 +7498,7 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: -7
 	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
 
-!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 01:08:00.440
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 17:30:27.041
 !MESSAGE String index out of range: -7
 !STACK 0
 java.lang.StringIndexOutOfBoundsException: String index out of range: -7
@@ -7428,7 +7542,7 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: -7
 	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
 
-!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 01:08:00.442
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 17:30:27.044
 !MESSAGE String index out of range: -7
 !STACK 0
 java.lang.StringIndexOutOfBoundsException: String index out of range: -7
@@ -7472,7 +7586,7 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: -7
 	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
 
-!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 01:08:01.226
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 17:30:31.026
 !MESSAGE String index out of range: -7
 !STACK 0
 java.lang.StringIndexOutOfBoundsException: String index out of range: -7
@@ -7526,7 +7640,7 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: -7
 	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
 
-!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 01:08:01.238
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 17:32:09.880
 !MESSAGE String index out of range: -7
 !STACK 0
 java.lang.StringIndexOutOfBoundsException: String index out of range: -7
@@ -7561,7 +7675,7 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: -7
 	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
 
-!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 01:08:01.239
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 17:32:09.919
 !MESSAGE String index out of range: -7
 !STACK 0
 java.lang.StringIndexOutOfBoundsException: String index out of range: -7
@@ -7596,7 +7710,7 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: -7
 	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
 
-!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 01:08:01.259
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 17:32:09.953
 !MESSAGE String index out of range: -7
 !STACK 0
 java.lang.StringIndexOutOfBoundsException: String index out of range: -7
@@ -7640,7 +7754,7 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: -7
 	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
 
-!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 01:08:01.260
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 17:32:09.955
 !MESSAGE String index out of range: -7
 !STACK 0
 java.lang.StringIndexOutOfBoundsException: String index out of range: -7
@@ -7684,7 +7798,7 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: -7
 	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
 
-!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 01:08:01.335
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 17:32:10.040
 !MESSAGE String index out of range: -7
 !STACK 0
 java.lang.StringIndexOutOfBoundsException: String index out of range: -7
@@ -7738,7 +7852,7 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: -7
 	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
 
-!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 01:08:48.712
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 17:32:10.060
 !MESSAGE String index out of range: -7
 !STACK 0
 java.lang.StringIndexOutOfBoundsException: String index out of range: -7
@@ -7773,7 +7887,7 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: -7
 	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
 
-!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 01:08:48.714
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 17:32:10.063
 !MESSAGE String index out of range: -7
 !STACK 0
 java.lang.StringIndexOutOfBoundsException: String index out of range: -7
@@ -7808,7 +7922,7 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: -7
 	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
 
-!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 01:08:48.733
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 17:32:10.106
 !MESSAGE String index out of range: -7
 !STACK 0
 java.lang.StringIndexOutOfBoundsException: String index out of range: -7
@@ -7852,7 +7966,7 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: -7
 	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
 
-!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 01:08:48.734
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 17:32:10.108
 !MESSAGE String index out of range: -7
 !STACK 0
 java.lang.StringIndexOutOfBoundsException: String index out of range: -7
@@ -7896,7 +8010,7 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: -7
 	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
 
-!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 01:08:48.807
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 17:32:10.276
 !MESSAGE String index out of range: -7
 !STACK 0
 java.lang.StringIndexOutOfBoundsException: String index out of range: -7
@@ -7950,7 +8064,7 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: -7
 	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
 
-!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 01:08:48.817
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 17:32:10.304
 !MESSAGE String index out of range: -7
 !STACK 0
 java.lang.StringIndexOutOfBoundsException: String index out of range: -7
@@ -7985,7 +8099,7 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: -7
 	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
 
-!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 01:08:48.818
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 17:32:10.310
 !MESSAGE String index out of range: -7
 !STACK 0
 java.lang.StringIndexOutOfBoundsException: String index out of range: -7
@@ -8020,7 +8134,7 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: -7
 	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
 
-!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 01:08:48.828
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 17:32:10.350
 !MESSAGE String index out of range: -7
 !STACK 0
 java.lang.StringIndexOutOfBoundsException: String index out of range: -7
@@ -8064,7 +8178,7 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: -7
 	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
 
-!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 01:08:48.829
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 17:32:10.386
 !MESSAGE String index out of range: -7
 !STACK 0
 java.lang.StringIndexOutOfBoundsException: String index out of range: -7
@@ -8108,7 +8222,7 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: -7
 	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
 
-!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 01:08:49.568
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 17:32:10.700
 !MESSAGE String index out of range: -7
 !STACK 0
 java.lang.StringIndexOutOfBoundsException: String index out of range: -7
@@ -8162,7 +8276,7 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: -7
 	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
 
-!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 01:08:49.587
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 17:32:10.751
 !MESSAGE String index out of range: -7
 !STACK 0
 java.lang.StringIndexOutOfBoundsException: String index out of range: -7
@@ -8197,7 +8311,7 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: -7
 	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
 
-!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 01:08:49.588
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 17:32:10.759
 !MESSAGE String index out of range: -7
 !STACK 0
 java.lang.StringIndexOutOfBoundsException: String index out of range: -7
@@ -8232,7 +8346,7 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: -7
 	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
 
-!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 01:08:49.602
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 17:32:10.814
 !MESSAGE String index out of range: -7
 !STACK 0
 java.lang.StringIndexOutOfBoundsException: String index out of range: -7
@@ -8276,7 +8390,7 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: -7
 	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
 
-!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 01:08:49.603
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 17:32:10.816
 !MESSAGE String index out of range: -7
 !STACK 0
 java.lang.StringIndexOutOfBoundsException: String index out of range: -7
@@ -8320,7 +8434,7 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: -7
 	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
 
-!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 01:08:49.681
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 17:32:13.001
 !MESSAGE String index out of range: -7
 !STACK 0
 java.lang.StringIndexOutOfBoundsException: String index out of range: -7
@@ -8374,7 +8488,7 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: -7
 	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
 
-!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 01:12:20.351
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 17:41:19.990
 !MESSAGE String index out of range: -7
 !STACK 0
 java.lang.StringIndexOutOfBoundsException: String index out of range: -7
@@ -8409,7 +8523,7 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: -7
 	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
 
-!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 01:12:20.352
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 17:41:20.040
 !MESSAGE String index out of range: -7
 !STACK 0
 java.lang.StringIndexOutOfBoundsException: String index out of range: -7
@@ -8444,7 +8558,7 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: -7
 	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
 
-!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 01:12:20.368
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 17:41:20.085
 !MESSAGE String index out of range: -7
 !STACK 0
 java.lang.StringIndexOutOfBoundsException: String index out of range: -7
@@ -8488,7 +8602,7 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: -7
 	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
 
-!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 01:12:20.369
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 17:41:20.086
 !MESSAGE String index out of range: -7
 !STACK 0
 java.lang.StringIndexOutOfBoundsException: String index out of range: -7
@@ -8532,7 +8646,7 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: -7
 	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
 
-!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 01:12:20.486
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 17:41:20.658
 !MESSAGE String index out of range: -7
 !STACK 0
 java.lang.StringIndexOutOfBoundsException: String index out of range: -7
@@ -8586,7 +8700,7 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: -7
 	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
 
-!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 01:12:20.497
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 17:41:20.766
 !MESSAGE String index out of range: -7
 !STACK 0
 java.lang.StringIndexOutOfBoundsException: String index out of range: -7
@@ -8621,7 +8735,7 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: -7
 	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
 
-!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 01:12:20.498
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 17:41:20.783
 !MESSAGE String index out of range: -7
 !STACK 0
 java.lang.StringIndexOutOfBoundsException: String index out of range: -7
@@ -8656,7 +8770,7 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: -7
 	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
 
-!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 01:12:20.510
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 17:41:20.876
 !MESSAGE String index out of range: -7
 !STACK 0
 java.lang.StringIndexOutOfBoundsException: String index out of range: -7
@@ -8700,7 +8814,7 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: -7
 	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
 
-!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 01:12:20.511
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 17:41:20.877
 !MESSAGE String index out of range: -7
 !STACK 0
 java.lang.StringIndexOutOfBoundsException: String index out of range: -7
@@ -8744,7 +8858,7 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: -7
 	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
 
-!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 01:12:21.302
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 17:41:21.125
 !MESSAGE String index out of range: -7
 !STACK 0
 java.lang.StringIndexOutOfBoundsException: String index out of range: -7
@@ -8798,7 +8912,7 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: -7
 	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
 
-!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 01:12:21.314
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 17:41:21.171
 !MESSAGE String index out of range: -7
 !STACK 0
 java.lang.StringIndexOutOfBoundsException: String index out of range: -7
@@ -8833,7 +8947,7 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: -7
 	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
 
-!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 01:12:21.316
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 17:41:21.175
 !MESSAGE String index out of range: -7
 !STACK 0
 java.lang.StringIndexOutOfBoundsException: String index out of range: -7
@@ -8868,7 +8982,7 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: -7
 	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
 
-!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 01:12:21.332
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 17:41:21.206
 !MESSAGE String index out of range: -7
 !STACK 0
 java.lang.StringIndexOutOfBoundsException: String index out of range: -7
@@ -8912,7 +9026,7 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: -7
 	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
 
-!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 01:12:21.333
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 17:41:21.207
 !MESSAGE String index out of range: -7
 !STACK 0
 java.lang.StringIndexOutOfBoundsException: String index out of range: -7
@@ -8956,7 +9070,7 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: -7
 	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
 
-!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 01:12:21.409
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 17:41:21.427
 !MESSAGE String index out of range: -7
 !STACK 0
 java.lang.StringIndexOutOfBoundsException: String index out of range: -7
@@ -9010,7 +9124,7 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: -7
 	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
 
-!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 01:15:13.671
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 17:41:21.496
 !MESSAGE String index out of range: -7
 !STACK 0
 java.lang.StringIndexOutOfBoundsException: String index out of range: -7
@@ -9045,7 +9159,7 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: -7
 	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
 
-!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 01:15:13.672
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 17:41:21.502
 !MESSAGE String index out of range: -7
 !STACK 0
 java.lang.StringIndexOutOfBoundsException: String index out of range: -7
@@ -9080,7 +9194,7 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: -7
 	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
 
-!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 01:15:13.688
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 17:41:21.554
 !MESSAGE String index out of range: -7
 !STACK 0
 java.lang.StringIndexOutOfBoundsException: String index out of range: -7
@@ -9124,7 +9238,7 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: -7
 	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
 
-!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 01:15:13.690
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 17:41:21.556
 !MESSAGE String index out of range: -7
 !STACK 0
 java.lang.StringIndexOutOfBoundsException: String index out of range: -7
@@ -9168,7 +9282,7 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: -7
 	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
 
-!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 01:15:13.770
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 17:41:27.872
 !MESSAGE String index out of range: -7
 !STACK 0
 java.lang.StringIndexOutOfBoundsException: String index out of range: -7
@@ -9222,7 +9336,7 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: -7
 	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
 
-!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 01:15:13.781
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 17:42:19.208
 !MESSAGE String index out of range: -7
 !STACK 0
 java.lang.StringIndexOutOfBoundsException: String index out of range: -7
@@ -9257,7 +9371,7 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: -7
 	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
 
-!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 01:15:13.782
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 17:42:19.316
 !MESSAGE String index out of range: -7
 !STACK 0
 java.lang.StringIndexOutOfBoundsException: String index out of range: -7
@@ -9292,7 +9406,7 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: -7
 	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
 
-!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 01:15:13.793
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 17:42:19.357
 !MESSAGE String index out of range: -7
 !STACK 0
 java.lang.StringIndexOutOfBoundsException: String index out of range: -7
@@ -9336,7 +9450,7 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: -7
 	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
 
-!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 01:15:13.794
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 17:42:19.359
 !MESSAGE String index out of range: -7
 !STACK 0
 java.lang.StringIndexOutOfBoundsException: String index out of range: -7
@@ -9380,7 +9494,7 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: -7
 	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
 
-!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 01:15:14.635
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 17:42:19.509
 !MESSAGE String index out of range: -7
 !STACK 0
 java.lang.StringIndexOutOfBoundsException: String index out of range: -7
@@ -9434,7 +9548,7 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: -7
 	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
 
-!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 01:15:14.649
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 17:42:19.525
 !MESSAGE String index out of range: -7
 !STACK 0
 java.lang.StringIndexOutOfBoundsException: String index out of range: -7
@@ -9469,7 +9583,7 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: -7
 	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
 
-!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 01:15:14.650
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 17:42:19.526
 !MESSAGE String index out of range: -7
 !STACK 0
 java.lang.StringIndexOutOfBoundsException: String index out of range: -7
@@ -9504,7 +9618,7 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: -7
 	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
 
-!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 01:15:14.670
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 17:42:19.554
 !MESSAGE String index out of range: -7
 !STACK 0
 java.lang.StringIndexOutOfBoundsException: String index out of range: -7
@@ -9548,7 +9662,7 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: -7
 	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
 
-!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 01:15:14.671
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 17:42:19.556
 !MESSAGE String index out of range: -7
 !STACK 0
 java.lang.StringIndexOutOfBoundsException: String index out of range: -7
@@ -9592,7 +9706,7 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: -7
 	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
 
-!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 01:15:14.752
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 17:42:19.736
 !MESSAGE String index out of range: -7
 !STACK 0
 java.lang.StringIndexOutOfBoundsException: String index out of range: -7
@@ -9646,7 +9760,7 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: -7
 	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
 
-!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 01:16:03.648
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 17:42:19.828
 !MESSAGE String index out of range: -7
 !STACK 0
 java.lang.StringIndexOutOfBoundsException: String index out of range: -7
@@ -9681,7 +9795,7 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: -7
 	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
 
-!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 01:16:03.649
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 17:42:19.832
 !MESSAGE String index out of range: -7
 !STACK 0
 java.lang.StringIndexOutOfBoundsException: String index out of range: -7
@@ -9716,7 +9830,7 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: -7
 	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
 
-!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 01:16:03.664
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 17:42:20.134
 !MESSAGE String index out of range: -7
 !STACK 0
 java.lang.StringIndexOutOfBoundsException: String index out of range: -7
@@ -9760,7 +9874,7 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: -7
 	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
 
-!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 01:16:03.665
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 17:42:20.184
 !MESSAGE String index out of range: -7
 !STACK 0
 java.lang.StringIndexOutOfBoundsException: String index out of range: -7
@@ -9804,7 +9918,7 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: -7
 	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
 
-!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 01:16:03.741
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 17:42:20.461
 !MESSAGE String index out of range: -7
 !STACK 0
 java.lang.StringIndexOutOfBoundsException: String index out of range: -7
@@ -9858,7 +9972,7 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: -7
 	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
 
-!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 01:16:03.751
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 17:42:20.531
 !MESSAGE String index out of range: -7
 !STACK 0
 java.lang.StringIndexOutOfBoundsException: String index out of range: -7
@@ -9893,7 +10007,7 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: -7
 	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
 
-!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 01:16:03.752
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 17:42:20.533
 !MESSAGE String index out of range: -7
 !STACK 0
 java.lang.StringIndexOutOfBoundsException: String index out of range: -7
@@ -9928,7 +10042,7 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: -7
 	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
 
-!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 01:16:03.763
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 17:42:20.581
 !MESSAGE String index out of range: -7
 !STACK 0
 java.lang.StringIndexOutOfBoundsException: String index out of range: -7
@@ -9972,7 +10086,7 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: -7
 	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
 
-!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 01:16:03.764
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 17:42:20.582
 !MESSAGE String index out of range: -7
 !STACK 0
 java.lang.StringIndexOutOfBoundsException: String index out of range: -7
@@ -10016,7 +10130,7 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: -7
 	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
 
-!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 01:16:04.544
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 17:42:26.402
 !MESSAGE String index out of range: -7
 !STACK 0
 java.lang.StringIndexOutOfBoundsException: String index out of range: -7
@@ -10070,7 +10184,7 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: -7
 	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
 
-!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 01:16:04.555
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 17:42:45.353
 !MESSAGE String index out of range: -7
 !STACK 0
 java.lang.StringIndexOutOfBoundsException: String index out of range: -7
@@ -10105,7 +10219,7 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: -7
 	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
 
-!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 01:16:04.556
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 17:42:45.357
 !MESSAGE String index out of range: -7
 !STACK 0
 java.lang.StringIndexOutOfBoundsException: String index out of range: -7
@@ -10140,7 +10254,7 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: -7
 	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
 
-!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 01:16:04.578
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 17:42:45.399
 !MESSAGE String index out of range: -7
 !STACK 0
 java.lang.StringIndexOutOfBoundsException: String index out of range: -7
@@ -10184,7 +10298,7 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: -7
 	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
 
-!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 01:16:04.579
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 17:42:45.400
 !MESSAGE String index out of range: -7
 !STACK 0
 java.lang.StringIndexOutOfBoundsException: String index out of range: -7
@@ -10228,7 +10342,7 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: -7
 	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
 
-!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 01:16:04.659
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 17:42:45.652
 !MESSAGE String index out of range: -7
 !STACK 0
 java.lang.StringIndexOutOfBoundsException: String index out of range: -7
@@ -10282,7 +10396,7 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: -7
 	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
 
-!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 01:22:04.743
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 17:42:45.699
 !MESSAGE String index out of range: -7
 !STACK 0
 java.lang.StringIndexOutOfBoundsException: String index out of range: -7
@@ -10317,7 +10431,7 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: -7
 	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
 
-!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 01:22:04.744
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 17:42:45.721
 !MESSAGE String index out of range: -7
 !STACK 0
 java.lang.StringIndexOutOfBoundsException: String index out of range: -7
@@ -10352,7 +10466,7 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: -7
 	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
 
-!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 01:22:04.763
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 17:42:45.928
 !MESSAGE String index out of range: -7
 !STACK 0
 java.lang.StringIndexOutOfBoundsException: String index out of range: -7
@@ -10396,7 +10510,7 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: -7
 	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
 
-!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 01:22:04.765
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 17:42:45.963
 !MESSAGE String index out of range: -7
 !STACK 0
 java.lang.StringIndexOutOfBoundsException: String index out of range: -7
@@ -10440,7 +10554,7 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: -7
 	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
 
-!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 01:22:04.845
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 17:42:46.202
 !MESSAGE String index out of range: -7
 !STACK 0
 java.lang.StringIndexOutOfBoundsException: String index out of range: -7
@@ -10494,7 +10608,7 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: -7
 	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
 
-!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 01:22:04.856
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 17:42:46.250
 !MESSAGE String index out of range: -7
 !STACK 0
 java.lang.StringIndexOutOfBoundsException: String index out of range: -7
@@ -10529,7 +10643,7 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: -7
 	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
 
-!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 01:22:04.857
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 17:42:46.255
 !MESSAGE String index out of range: -7
 !STACK 0
 java.lang.StringIndexOutOfBoundsException: String index out of range: -7
@@ -10564,7 +10678,7 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: -7
 	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
 
-!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 01:22:04.868
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 17:42:46.312
 !MESSAGE String index out of range: -7
 !STACK 0
 java.lang.StringIndexOutOfBoundsException: String index out of range: -7
@@ -10608,7 +10722,7 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: -7
 	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
 
-!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 01:22:04.869
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 17:42:46.319
 !MESSAGE String index out of range: -7
 !STACK 0
 java.lang.StringIndexOutOfBoundsException: String index out of range: -7
@@ -10652,7 +10766,7 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: -7
 	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
 
-!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 01:22:05.860
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 17:42:46.486
 !MESSAGE String index out of range: -7
 !STACK 0
 java.lang.StringIndexOutOfBoundsException: String index out of range: -7
@@ -10706,7 +10820,7 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: -7
 	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
 
-!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 01:22:05.873
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 17:42:46.521
 !MESSAGE String index out of range: -7
 !STACK 0
 java.lang.StringIndexOutOfBoundsException: String index out of range: -7
@@ -10741,7 +10855,7 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: -7
 	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
 
-!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 01:22:05.875
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 17:42:46.525
 !MESSAGE String index out of range: -7
 !STACK 0
 java.lang.StringIndexOutOfBoundsException: String index out of range: -7
@@ -10776,7 +10890,7 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: -7
 	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
 
-!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 01:22:05.888
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 17:42:46.574
 !MESSAGE String index out of range: -7
 !STACK 0
 java.lang.StringIndexOutOfBoundsException: String index out of range: -7
@@ -10820,7 +10934,7 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: -7
 	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
 
-!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 01:22:05.889
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 17:42:46.581
 !MESSAGE String index out of range: -7
 !STACK 0
 java.lang.StringIndexOutOfBoundsException: String index out of range: -7
@@ -10864,7 +10978,7 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: -7
 	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
 
-!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 01:22:05.966
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 17:42:48.199
 !MESSAGE String index out of range: -7
 !STACK 0
 java.lang.StringIndexOutOfBoundsException: String index out of range: -7
@@ -10918,7 +11032,7 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: -7
 	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
 
-!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 01:24:25.535
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 17:43:25.895
 !MESSAGE String index out of range: -7
 !STACK 0
 java.lang.StringIndexOutOfBoundsException: String index out of range: -7
@@ -10953,7 +11067,7 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: -7
 	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
 
-!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 01:24:25.537
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 17:43:25.899
 !MESSAGE String index out of range: -7
 !STACK 0
 java.lang.StringIndexOutOfBoundsException: String index out of range: -7
@@ -10988,7 +11102,7 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: -7
 	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
 
-!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 01:24:25.556
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 17:43:25.940
 !MESSAGE String index out of range: -7
 !STACK 0
 java.lang.StringIndexOutOfBoundsException: String index out of range: -7
@@ -11032,7 +11146,7 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: -7
 	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
 
-!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 01:24:25.557
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 17:43:25.941
 !MESSAGE String index out of range: -7
 !STACK 0
 java.lang.StringIndexOutOfBoundsException: String index out of range: -7
@@ -11076,7 +11190,7 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: -7
 	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
 
-!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 01:24:25.671
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 17:43:26.032
 !MESSAGE String index out of range: -7
 !STACK 0
 java.lang.StringIndexOutOfBoundsException: String index out of range: -7
@@ -11130,7 +11244,7 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: -7
 	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
 
-!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 01:24:25.687
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 17:43:26.048
 !MESSAGE String index out of range: -7
 !STACK 0
 java.lang.StringIndexOutOfBoundsException: String index out of range: -7
@@ -11165,7 +11279,7 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: -7
 	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
 
-!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 01:24:25.688
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 17:43:26.049
 !MESSAGE String index out of range: -7
 !STACK 0
 java.lang.StringIndexOutOfBoundsException: String index out of range: -7
@@ -11200,7 +11314,7 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: -7
 	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
 
-!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 01:24:25.701
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 17:43:26.080
 !MESSAGE String index out of range: -7
 !STACK 0
 java.lang.StringIndexOutOfBoundsException: String index out of range: -7
@@ -11244,7 +11358,7 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: -7
 	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
 
-!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 01:24:25.702
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 17:43:26.081
 !MESSAGE String index out of range: -7
 !STACK 0
 java.lang.StringIndexOutOfBoundsException: String index out of range: -7
@@ -11288,7 +11402,7 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: -7
 	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
 
-!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 01:24:26.663
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 17:43:26.163
 !MESSAGE String index out of range: -7
 !STACK 0
 java.lang.StringIndexOutOfBoundsException: String index out of range: -7
@@ -11342,7 +11456,7 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: -7
 	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
 
-!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 01:24:26.675
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 17:43:26.190
 !MESSAGE String index out of range: -7
 !STACK 0
 java.lang.StringIndexOutOfBoundsException: String index out of range: -7
@@ -11377,7 +11491,7 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: -7
 	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
 
-!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 01:24:26.676
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 17:43:26.194
 !MESSAGE String index out of range: -7
 !STACK 0
 java.lang.StringIndexOutOfBoundsException: String index out of range: -7
@@ -11412,7 +11526,7 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: -7
 	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
 
-!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 01:24:26.697
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 17:43:26.248
 !MESSAGE String index out of range: -7
 !STACK 0
 java.lang.StringIndexOutOfBoundsException: String index out of range: -7
@@ -11456,7 +11570,7 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: -7
 	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
 
-!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 01:24:26.698
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 17:43:26.250
 !MESSAGE String index out of range: -7
 !STACK 0
 java.lang.StringIndexOutOfBoundsException: String index out of range: -7
@@ -11500,7 +11614,7 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: -7
 	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
 
-!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 01:24:26.782
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 17:43:26.474
 !MESSAGE String index out of range: -7
 !STACK 0
 java.lang.StringIndexOutOfBoundsException: String index out of range: -7
@@ -11554,7 +11668,7 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: -7
 	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
 
-!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 01:25:12.398
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 17:43:26.547
 !MESSAGE String index out of range: -7
 !STACK 0
 java.lang.StringIndexOutOfBoundsException: String index out of range: -7
@@ -11571,129 +11685,6 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: -7
 	at org.eclipse.cdt.managedbuilder.internal.core.Configuration.needsRebuild(Configuration.java:1625)
 	at org.eclipse.cdt.managedbuilder.internal.core.Configuration.needsRebuild(Configuration.java:1608)
 	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.performCleanning(CommonBuilder.java:945)
-	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.performPrebuildGeneration(CommonBuilder.java:867)
-	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:748)
-	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:510)
-	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:459)
-	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:728)
-	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
-	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:199)
-	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:239)
-	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:292)
-	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
-	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:295)
-	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:351)
-	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:374)
-	at org.eclipse.core.internal.resources.Workspace.buildInternal(Workspace.java:513)
-	at org.eclipse.core.internal.resources.Workspace.build(Workspace.java:422)
-	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
-	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
-
-!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 01:25:12.399
-!MESSAGE String index out of range: -7
-!STACK 0
-java.lang.StringIndexOutOfBoundsException: String index out of range: -7
-	at java.lang.String.substring(String.java:1875)
-	at org.eclipse.cdt.managedbuilder.internal.core.AdditionalInput$1LibFilter.accept(AdditionalInput.java:497)
-	at org.eclipse.cdt.managedbuilder.internal.core.AdditionalInput.findLibrary(AdditionalInput.java:531)
-	at org.eclipse.cdt.managedbuilder.internal.core.AdditionalInput.getDepLibs(AdditionalInput.java:466)
-	at org.eclipse.cdt.managedbuilder.internal.core.AdditionalInput.dependencyChanged(AdditionalInput.java:414)
-	at org.eclipse.cdt.managedbuilder.internal.core.AdditionalInput.needsRebuild(AdditionalInput.java:352)
-	at org.eclipse.cdt.managedbuilder.internal.core.InputType.needsRebuild(InputType.java:1674)
-	at org.eclipse.cdt.managedbuilder.internal.core.Tool.needsRebuild(Tool.java:3395)
-	at org.eclipse.cdt.managedbuilder.internal.core.ToolChain.needsRebuild(ToolChain.java:2043)
-	at org.eclipse.cdt.managedbuilder.internal.core.FolderInfo.needsRebuild(FolderInfo.java:346)
-	at org.eclipse.cdt.managedbuilder.internal.core.Configuration.needsRebuild(Configuration.java:1625)
-	at org.eclipse.cdt.managedbuilder.internal.core.Configuration.needsRebuild(Configuration.java:1608)
-	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.performCleanning(CommonBuilder.java:951)
-	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.performPrebuildGeneration(CommonBuilder.java:867)
-	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:748)
-	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:510)
-	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:459)
-	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:728)
-	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
-	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:199)
-	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:239)
-	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:292)
-	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
-	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:295)
-	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:351)
-	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:374)
-	at org.eclipse.core.internal.resources.Workspace.buildInternal(Workspace.java:513)
-	at org.eclipse.core.internal.resources.Workspace.build(Workspace.java:422)
-	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
-	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
-
-!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 01:25:12.414
-!MESSAGE String index out of range: -7
-!STACK 0
-java.lang.StringIndexOutOfBoundsException: String index out of range: -7
-	at java.lang.String.substring(String.java:1875)
-	at org.eclipse.cdt.managedbuilder.internal.core.AdditionalInput$1LibFilter.accept(AdditionalInput.java:497)
-	at org.eclipse.cdt.managedbuilder.internal.core.AdditionalInput.findLibrary(AdditionalInput.java:531)
-	at org.eclipse.cdt.managedbuilder.internal.core.AdditionalInput.getDepLibs(AdditionalInput.java:466)
-	at org.eclipse.cdt.managedbuilder.internal.core.AdditionalInput.dependencyChanged(AdditionalInput.java:414)
-	at org.eclipse.cdt.managedbuilder.internal.core.AdditionalInput.needsRebuild(AdditionalInput.java:352)
-	at org.eclipse.cdt.managedbuilder.internal.core.InputType.needsRebuild(InputType.java:1674)
-	at org.eclipse.cdt.managedbuilder.internal.core.Tool.needsRebuild(Tool.java:3395)
-	at org.eclipse.cdt.managedbuilder.internal.buildmodel.BuildStep.needsRebuild(BuildStep.java:93)
-	at org.eclipse.cdt.managedbuilder.internal.buildmodel.BuildDescription$RebuildStateSynchronizer.visit(BuildDescription.java:302)
-	at org.eclipse.cdt.managedbuilder.buildmodel.BuildDescriptionManager.doAccept(BuildDescriptionManager.java:151)
-	at org.eclipse.cdt.managedbuilder.buildmodel.BuildDescriptionManager.doAccept(BuildDescriptionManager.java:159)
-	at org.eclipse.cdt.managedbuilder.buildmodel.BuildDescriptionManager.doAccept(BuildDescriptionManager.java:159)
-	at org.eclipse.cdt.managedbuilder.buildmodel.BuildDescriptionManager.doAccept(BuildDescriptionManager.java:133)
-	at org.eclipse.cdt.managedbuilder.buildmodel.BuildDescriptionManager.accept(BuildDescriptionManager.java:127)
-	at org.eclipse.cdt.managedbuilder.internal.buildmodel.BuildDescription.synchRebuildState(BuildDescription.java:428)
-	at org.eclipse.cdt.managedbuilder.internal.buildmodel.BuildDescription.initDescription(BuildDescription.java:764)
-	at org.eclipse.cdt.managedbuilder.internal.buildmodel.BuildDescription.init(BuildDescription.java:814)
-	at org.eclipse.cdt.managedbuilder.internal.buildmodel.DefaultBuildDescriptionFactory.createBuildDescription(DefaultBuildDescriptionFactory.java:45)
-	at org.eclipse.cdt.managedbuilder.internal.buildmodel.DefaultBuildDescriptionFactory.createBuildDescription(DefaultBuildDescriptionFactory.java:37)
-	at org.eclipse.cdt.managedbuilder.buildmodel.BuildDescriptionManager.createBuildDescription(BuildDescriptionManager.java:97)
-	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.performCleanning(CommonBuilder.java:961)
-	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.performPrebuildGeneration(CommonBuilder.java:867)
-	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:748)
-	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:510)
-	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:459)
-	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:728)
-	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
-	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:199)
-	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:239)
-	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:292)
-	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
-	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:295)
-	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:351)
-	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:374)
-	at org.eclipse.core.internal.resources.Workspace.buildInternal(Workspace.java:513)
-	at org.eclipse.core.internal.resources.Workspace.build(Workspace.java:422)
-	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
-	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
-
-!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2015-04-03 01:25:12.415
-!MESSAGE String index out of range: -7
-!STACK 0
-java.lang.StringIndexOutOfBoundsException: String index out of range: -7
-	at java.lang.String.substring(String.java:1875)
-	at org.eclipse.cdt.managedbuilder.internal.core.AdditionalInput$1LibFilter.accept(AdditionalInput.java:497)
-	at org.eclipse.cdt.managedbuilder.internal.core.AdditionalInput.findLibrary(AdditionalInput.java:531)
-	at org.eclipse.cdt.managedbuilder.internal.core.AdditionalInput.getDepLibs(AdditionalInput.java:466)
-	at org.eclipse.cdt.managedbuilder.internal.core.AdditionalInput.dependencyChanged(AdditionalInput.java:414)
-	at org.eclipse.cdt.managedbuilder.internal.core.AdditionalInput.needsRebuild(AdditionalInput.java:352)
-	at org.eclipse.cdt.managedbuilder.internal.core.InputType.needsRebuild(InputType.java:1674)
-	at org.eclipse.cdt.managedbuilder.internal.core.Tool.needsRebuild(Tool.java:3395)
-	at org.eclipse.cdt.managedbuilder.internal.buildmodel.BuildStep.needsRebuild(BuildStep.java:94)
-	at org.eclipse.cdt.managedbuilder.internal.buildmodel.BuildDescription$RebuildStateSynchronizer.visit(BuildDescription.java:302)
-	at org.eclipse.cdt.managedbuilder.buildmodel.BuildDescriptionManager.doAccept(BuildDescriptionManager.java:151)
-	at org.eclipse.cdt.managedbuilder.buildmodel.BuildDescriptionManager.doAccept(BuildDescriptionManager.java:159)
-	at org.eclipse.cdt.managedbuilder.buildmodel.BuildDescriptionManager.doAccept(BuildDescriptionManager.java:159)
-	at org.eclipse.cdt.managedbuilder.buildmodel.BuildDescriptionManager.doAccept(BuildDescriptionManager.java:133)
-	at org.eclipse.cdt.managedbuilder.buildmodel.BuildDescriptionManager.accept(BuildDescriptionManager.java:127)
-	at org.eclipse.cdt.managedbuilder.internal.buildmodel.BuildDescription.synchRebuildState(BuildDescription.java:428)
-	at org.eclipse.cdt.managedbuilder.internal.buildmodel.BuildDescription.initDescription(BuildDescription.java:764)
-	at org.eclipse.cdt.managedbuilder.internal.buildmodel.BuildDescription.init(BuildDescription.java:814)
-	at org.eclipse.cdt.managedbuilder.internal.buildmodel.DefaultBuildDescriptionFactory.createBuildDescription(DefaultBuildDescriptionFactory.java:45)
-	at org.eclipse.cdt.managedbuilder.internal.buildmodel.DefaultBuildDescriptionFactory.createBuildDescription(DefaultBuildDescriptionFactory.java:37)
-	at org.eclipse.cdt.managedbuilder.buildmodel.BuildDescriptionManager.createBuildDescription(BuildDescriptionManager.java:97)
-	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.performCleanning(CommonBuilder.java:961)
 	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.performPrebuildGeneration(CommonBuilder.java:867)
 	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:748)
 	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:510)

@@ -2206,3 +2206,956 @@ Finished building target: EE_492G_MIDTERM_2
 01:40:44 **** Incremental Build of configuration Release for project fitElipse ****
 make all 
 make: Nothing to be done for `all'.
+15:52:13 **** Incremental Build of configuration Release for project EE_492G_MIDTERM_1 ****
+make all 
+Building file: ../main.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/local/include/opencv -O3 -Wall -c -fmessage-length=0 -MMD -MP -MF"main.d" -MT"main.d" -o "main.o" "../main.cpp"
+Finished building: ../main.cpp
+ 
+Building target: EE_492G_MIDTERM_1
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -o "EE_492G_MIDTERM_1"  ./main.o   -lopencv_imgproc -lopencv_core -lopencv_highgui -lopencv_imgcodecs
+Finished building target: EE_492G_MIDTERM_1
+ 
+15:52:21 **** Incremental Build of configuration Release for project EE_492G_MIDTERM_2 ****
+make all 
+Building file: ../main.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/local/include/opencv -O3 -Wall -c -fmessage-length=0 -MMD -MP -MF"main.d" -MT"main.d" -o "main.o" "../main.cpp"
+Finished building: ../main.cpp
+ 
+Building target: EE_492G_MIDTERM_2
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -o "EE_492G_MIDTERM_2"  ./main.o   -lopencv_core -lopencv_imgproc -lopencv_imgcodecs -lopencv_highgui
+Finished building target: EE_492G_MIDTERM_2
+ 
+15:52:24 **** Incremental Build of configuration Release for project fitElipse ****
+make all 
+Building file: ../main.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/local/include/opencv -O3 -Wall -c -fmessage-length=0 -MMD -MP -MF"main.d" -MT"main.d" -o "main.o" "../main.cpp"
+Finished building: ../main.cpp
+ 
+Building target: fitElipse
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -o "fitElipse"  ./main.o   -lopencv_core -lopencv_highgui -lopencv_imgproc -lopencv_imgcodecs
+Finished building target: fitElipse
+ 
+15:52:26 **** Build of configuration Release for project houghTransform ****
+make all 
+Building file: ../main.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/local/include/opencv -O3 -Wall -c -fmessage-length=0 -MMD -MP -MF"main.d" -MT"main.d" -o "main.o" "../main.cpp"
+Finished building: ../main.cpp
+ 
+Building target: houghTransform
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -o "houghTransform"  ./main.o   -lopencv_core -lopencv_imgcodecs -lopencv_highgui -lopencv_imgproc
+/usr/bin/ld: /usr/lib/debug/usr/lib/x86_64-linux-gnu/crt1.o(.debug_info): relocation 0 has invalid symbol index 11
+/usr/bin/ld: /usr/lib/debug/usr/lib/x86_64-linux-gnu/crt1.o(.debug_info): relocation 1 has invalid symbol index 12
+/usr/bin/ld: /usr/lib/debug/usr/lib/x86_64-linux-gnu/crt1.o(.debug_info): relocation 2 has invalid symbol index 2
+/usr/bin/ld: /usr/lib/debug/usr/lib/x86_64-linux-gnu/crt1.o(.debug_info): relocation 3 has invalid symbol index 2
+/usr/bin/ld: /usr/lib/debug/usr/lib/x86_64-linux-gnu/crt1.o(.debug_info): relocation 4 has invalid symbol index 11
+/usr/bin/ld: /usr/lib/debug/usr/lib/x86_64-linux-gnu/crt1.o(.debug_info): relocation 5 has invalid symbol index 13
+/usr/bin/ld: /usr/lib/debug/usr/lib/x86_64-linux-gnu/crt1.o(.debug_info): relocation 6 has invalid symbol index 13
+/usr/bin/ld: /usr/lib/debug/usr/lib/x86_64-linux-gnu/crt1.o(.debug_info): relocation 7 has invalid symbol index 13
+/usr/bin/ld: /usr/lib/debug/usr/lib/x86_64-linux-gnu/crt1.o(.debug_info): relocation 8 has invalid symbol index 12
+/usr/bin/ld: /usr/lib/debug/usr/lib/x86_64-linux-gnu/crt1.o(.debug_info): relocation 9 has invalid symbol index 13
+/usr/bin/ld: /usr/lib/debug/usr/lib/x86_64-linux-gnu/crt1.o(.debug_info): relocation 10 has invalid symbol index 13
+/usr/bin/ld: /usr/lib/debug/usr/lib/x86_64-linux-gnu/crt1.o(.debug_info): relocation 11 has invalid symbol index 13
+/usr/bin/ld: /usr/lib/debug/usr/lib/x86_64-linux-gnu/crt1.o(.debug_info): relocation 12 has invalid symbol index 13
+/usr/bin/ld: /usr/lib/debug/usr/lib/x86_64-linux-gnu/crt1.o(.debug_info): relocation 13 has invalid symbol index 13
+/usr/bin/ld: /usr/lib/debug/usr/lib/x86_64-linux-gnu/crt1.o(.debug_info): relocation 14 has invalid symbol index 13
+/usr/bin/ld: /usr/lib/debug/usr/lib/x86_64-linux-gnu/crt1.o(.debug_info): relocation 15 has invalid symbol index 13
+/usr/bin/ld: /usr/lib/debug/usr/lib/x86_64-linux-gnu/crt1.o(.debug_info): relocation 16 has invalid symbol index 13
+/usr/bin/ld: /usr/lib/debug/usr/lib/x86_64-linux-gnu/crt1.o(.debug_info): relocation 17 has invalid symbol index 13
+/usr/bin/ld: /usr/lib/debug/usr/lib/x86_64-linux-gnu/crt1.o(.debug_info): relocation 18 has invalid symbol index 13
+/usr/bin/ld: /usr/lib/debug/usr/lib/x86_64-linux-gnu/crt1.o(.debug_info): relocation 19 has invalid symbol index 21
+/usr/bin/ld: /usr/lib/debug/usr/lib/x86_64-linux-gnu/crt1.o(.debug_line): relocation 0 has invalid symbol index 2
+/usr/lib/gcc/x86_64-linux-gnu/4.8/../../../x86_64-linux-gnu/crt1.o: In function `_start':
+(.text+0x20): undefined reference to `main'
+collect2: error: ld returned 1 exit status
+make: *** [houghTransform] Error 1
+16:03:14 **** Incremental Build of configuration Release for project EE_492G_MIDTERM_1 ****
+make all 
+make: Nothing to be done for `all'.
+16:03:14 **** Incremental Build of configuration Release for project EE_492G_MIDTERM_2 ****
+make all 
+make: Nothing to be done for `all'.
+16:03:15 **** Incremental Build of configuration Release for project fitElipse ****
+make all 
+make: Nothing to be done for `all'.
+16:03:15 **** Incremental Build of configuration Release for project houghTransform ****
+make all 
+Building file: ../main.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/local/include/opencv -O3 -Wall -c -fmessage-length=0 -MMD -MP -MF"main.d" -MT"main.d" -o "main.o" "../main.cpp"
+/usr/bin/ld: /usr/lib/debug/usr/lib/x86_64-linux-gnu/crt1.o(.debug_info): relocation 0 has invalid symbol index 11
+/usr/bin/ld: /usr/lib/debug/usr/lib/x86_64-linux-gnu/crt1.o(.debug_info): relocation 1 has invalid symbol index 12
+/usr/bin/ld: /usr/lib/debug/usr/lib/x86_64-linux-gnu/crt1.o(.debug_info): relocation 2 has invalid symbol index 2
+/usr/bin/ld: /usr/lib/debug/usr/lib/x86_64-linux-gnu/crt1.o(.debug_info): relocation 3 has invalid symbol index 2
+Finished building: ../main.cpp
+ 
+Building target: houghTransform
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -o "houghTransform"  ./main.o   -lopencv_core -lopencv_imgcodecs -lopencv_highgui -lopencv_imgproc
+/usr/bin/ld: /usr/lib/debug/usr/lib/x86_64-linux-gnu/crt1.o(.debug_info): relocation 4 has invalid symbol index 11
+/usr/bin/ld: /usr/lib/debug/usr/lib/x86_64-linux-gnu/crt1.o(.debug_info): relocation 5 has invalid symbol index 13
+/usr/bin/ld: /usr/lib/debug/usr/lib/x86_64-linux-gnu/crt1.o(.debug_info): relocation 6 has invalid symbol index 13
+/usr/bin/ld: /usr/lib/debug/usr/lib/x86_64-linux-gnu/crt1.o(.debug_info): relocation 7 has invalid symbol index 13
+/usr/bin/ld: /usr/lib/debug/usr/lib/x86_64-linux-gnu/crt1.o(.debug_info): relocation 8 has invalid symbol index 12
+/usr/bin/ld: /usr/lib/debug/usr/lib/x86_64-linux-gnu/crt1.o(.debug_info): relocation 9 has invalid symbol index 13
+/usr/bin/ld: /usr/lib/debug/usr/lib/x86_64-linux-gnu/crt1.o(.debug_info): relocation 10 has invalid symbol index 13
+/usr/bin/ld: /usr/lib/debug/usr/lib/x86_64-linux-gnu/crt1.o(.debug_info): relocation 11 has invalid symbol index 13
+/usr/bin/ld: /usr/lib/debug/usr/lib/x86_64-linux-gnu/crt1.o(.debug_info): relocation 12 has invalid symbol index 13
+/usr/bin/ld: /usr/lib/debug/usr/lib/x86_64-linux-gnu/crt1.o(.debug_info): relocation 13 has invalid symbol index 13
+/usr/bin/ld: /usr/lib/debug/usr/lib/x86_64-linux-gnu/crt1.o(.debug_info): relocation 14 has invalid symbol index 13
+/usr/bin/ld: /usr/lib/debug/usr/lib/x86_64-linux-gnu/crt1.o(.debug_info): relocation 15 has invalid symbol index 13
+/usr/bin/ld: /usr/lib/debug/usr/lib/x86_64-linux-gnu/crt1.o(.debug_info): relocation 16 has invalid symbol index 13
+/usr/bin/ld: /usr/lib/debug/usr/lib/x86_64-linux-gnu/crt1.o(.debug_info): relocation 17 has invalid symbol index 13
+/usr/bin/ld: /usr/lib/debug/usr/lib/x86_64-linux-gnu/crt1.o(.debug_info): relocation 18 has invalid symbol index 13
+/usr/bin/ld: /usr/lib/debug/usr/lib/x86_64-linux-gnu/crt1.o(.debug_info): relocation 19 has invalid symbol index 21
+/usr/bin/ld: /usr/lib/debug/usr/lib/x86_64-linux-gnu/crt1.o(.debug_line): relocation 0 has invalid symbol index 2
+/usr/lib/gcc/x86_64-linux-gnu/4.8/../../../x86_64-linux-gnu/crt1.o: In function `_start':
+(.text+0x20): undefined reference to `main'
+collect2: error: ld returned 1 exit status
+make: *** [houghTransform] Error 1
+16:03:36 **** Incremental Build of configuration Release for project EE_492G_MIDTERM_1 ****
+make all 
+make: Nothing to be done for `all'.
+16:03:36 **** Incremental Build of configuration Release for project EE_492G_MIDTERM_2 ****
+make all 
+make: Nothing to be done for `all'.
+16:03:36 **** Incremental Build of configuration Release for project fitElipse ****
+make all 
+make: Nothing to be done for `all'.
+16:03:37 **** Incremental Build of configuration Release for project houghTransform ****
+make all 
+Building file: ../main.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/local/include/opencv -O3 -Wall -c -fmessage-length=0 -MMD -MP -MF"main.d" -MT"main.d" -o "main.o" "../main.cpp"
+Finished building: ../main.cpp
+ 
+Building target: houghTransform
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -o "houghTransform"  ./main.o   -lopencv_core -lopencv_imgcodecs -lopencv_highgui -lopencv_imgproc
+Finished building target: houghTransform
+ 
+16:09:02 **** Incremental Build of configuration Release for project EE_492G_MIDTERM_1 ****
+make all 
+make: Nothing to be done for `all'.
+16:09:02 **** Incremental Build of configuration Release for project EE_492G_MIDTERM_2 ****
+make all 
+make: Nothing to be done for `all'.
+16:09:02 **** Incremental Build of configuration Release for project fitElipse ****
+make all 
+make: Nothing to be done for `all'.
+16:09:03 **** Incremental Build of configuration Release for project houghTransform ****
+make all 
+Building file: ../main.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/local/include/opencv -O3 -Wall -c -fmessage-length=0 -MMD -MP -MF"main.d" -MT"main.d" -o "main.o" "../main.cpp"
+Finished building: ../main.cpp
+ 
+Building target: houghTransform
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -o "houghTransform"  ./main.o   -lopencv_core -lopencv_imgcodecs -lopencv_highgui -lopencv_imgproc
+Finished building target: houghTransform
+ 
+16:13:01 **** Incremental Build of configuration Release for project EE_492G_MIDTERM_1 ****
+make all 
+make: Nothing to be done for `all'.
+16:13:01 **** Incremental Build of configuration Release for project EE_492G_MIDTERM_2 ****
+make all 
+make: Nothing to be done for `all'.
+16:13:01 **** Incremental Build of configuration Release for project fitElipse ****
+make all 
+make: Nothing to be done for `all'.
+16:13:01 **** Incremental Build of configuration Release for project houghTransform ****
+make all 
+Building file: ../main.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/local/include/opencv -O3 -Wall -c -fmessage-length=0 -MMD -MP -MF"main.d" -MT"main.d" -o "main.o" "../main.cpp"
+Finished building: ../main.cpp
+ 
+Building target: houghTransform
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -o "houghTransform"  ./main.o   -lopencv_core -lopencv_imgcodecs -lopencv_highgui -lopencv_imgproc
+Finished building target: houghTransform
+ 
+16:13:22 **** Incremental Build of configuration Release for project EE_492G_MIDTERM_1 ****
+make all 
+make: Nothing to be done for `all'.
+16:13:22 **** Incremental Build of configuration Release for project EE_492G_MIDTERM_2 ****
+make all 
+make: Nothing to be done for `all'.
+16:13:22 **** Incremental Build of configuration Release for project fitElipse ****
+make all 
+make: Nothing to be done for `all'.
+16:13:23 **** Incremental Build of configuration Release for project houghTransform ****
+make all 
+Building file: ../main.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/local/include/opencv -O3 -Wall -c -fmessage-length=0 -MMD -MP -MF"main.d" -MT"main.d" -o "main.o" "../main.cpp"
+Finished building: ../main.cpp
+ 
+Building target: houghTransform
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -o "houghTransform"  ./main.o   -lopencv_core -lopencv_imgcodecs -lopencv_highgui -lopencv_imgproc
+Finished building target: houghTransform
+ 
+16:13:56 **** Incremental Build of configuration Release for project EE_492G_MIDTERM_1 ****
+make all 
+make: Nothing to be done for `all'.
+16:13:56 **** Incremental Build of configuration Release for project EE_492G_MIDTERM_2 ****
+make all 
+make: Nothing to be done for `all'.
+16:13:56 **** Incremental Build of configuration Release for project fitElipse ****
+make all 
+make: Nothing to be done for `all'.
+16:13:56 **** Incremental Build of configuration Release for project houghTransform ****
+make all 
+Building file: ../main.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/local/include/opencv -O3 -Wall -c -fmessage-length=0 -MMD -MP -MF"main.d" -MT"main.d" -o "main.o" "../main.cpp"
+Finished building: ../main.cpp
+ 
+Building target: houghTransform
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -o "houghTransform"  ./main.o   -lopencv_core -lopencv_imgcodecs -lopencv_highgui -lopencv_imgproc
+Finished building target: houghTransform
+ 
+16:14:19 **** Incremental Build of configuration Release for project EE_492G_MIDTERM_1 ****
+make all 
+make: Nothing to be done for `all'.
+16:14:19 **** Incremental Build of configuration Release for project EE_492G_MIDTERM_2 ****
+make all 
+make: Nothing to be done for `all'.
+16:14:19 **** Incremental Build of configuration Release for project fitElipse ****
+make all 
+make: Nothing to be done for `all'.
+16:14:20 **** Incremental Build of configuration Release for project houghTransform ****
+make all 
+Building file: ../main.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/local/include/opencv -O3 -Wall -c -fmessage-length=0 -MMD -MP -MF"main.d" -MT"main.d" -o "main.o" "../main.cpp"
+Finished building: ../main.cpp
+ 
+Building target: houghTransform
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -o "houghTransform"  ./main.o   -lopencv_core -lopencv_imgcodecs -lopencv_highgui -lopencv_imgproc
+Finished building target: houghTransform
+ 
+16:14:41 **** Incremental Build of configuration Release for project EE_492G_MIDTERM_1 ****
+make all 
+make: Nothing to be done for `all'.
+16:14:41 **** Incremental Build of configuration Release for project EE_492G_MIDTERM_2 ****
+make all 
+make: Nothing to be done for `all'.
+16:14:41 **** Incremental Build of configuration Release for project fitElipse ****
+make all 
+make: Nothing to be done for `all'.
+16:14:41 **** Incremental Build of configuration Release for project houghTransform ****
+make all 
+Building file: ../main.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/local/include/opencv -O3 -Wall -c -fmessage-length=0 -MMD -MP -MF"main.d" -MT"main.d" -o "main.o" "../main.cpp"
+Finished building: ../main.cpp
+ 
+Building target: houghTransform
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -o "houghTransform"  ./main.o   -lopencv_core -lopencv_imgcodecs -lopencv_highgui -lopencv_imgproc
+Finished building target: houghTransform
+ 
+16:19:11 **** Incremental Build of configuration Release for project EE_492G_MIDTERM_1 ****
+make all 
+make: Nothing to be done for `all'.
+16:19:11 **** Incremental Build of configuration Release for project EE_492G_MIDTERM_2 ****
+make all 
+make: Nothing to be done for `all'.
+16:19:11 **** Incremental Build of configuration Release for project fitElipse ****
+make all 
+make: Nothing to be done for `all'.
+16:19:11 **** Incremental Build of configuration Release for project houghTransform ****
+make all 
+make: Nothing to be done for `all'.
+16:30:53 **** Incremental Build of configuration Release for project EE_492G_MIDTERM_1 ****
+make all 
+make: Nothing to be done for `all'.
+16:30:53 **** Incremental Build of configuration Release for project EE_492G_MIDTERM_2 ****
+make all 
+Building file: ../main.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/local/include/opencv -O3 -Wall -c -fmessage-length=0 -MMD -MP -MF"main.d" -MT"main.d" -o "main.o" "../main.cpp"
+Finished building: ../main.cpp
+ 
+Building target: EE_492G_MIDTERM_2
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -o "EE_492G_MIDTERM_2"  ./main.o   -lopencv_core -lopencv_imgproc -lopencv_imgcodecs -lopencv_highgui
+Finished building target: EE_492G_MIDTERM_2
+ 
+16:30:55 **** Incremental Build of configuration Release for project fitElipse ****
+make all 
+make: Nothing to be done for `all'.
+16:30:55 **** Incremental Build of configuration Release for project houghTransform ****
+make all 
+make: Nothing to be done for `all'.
+16:32:28 **** Incremental Build of configuration Release for project EE_492G_MIDTERM_1 ****
+make all 
+make: Nothing to be done for `all'.
+16:32:28 **** Incremental Build of configuration Release for project EE_492G_MIDTERM_2 ****
+make all 
+Building file: ../main.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/local/include/opencv -O3 -Wall -c -fmessage-length=0 -MMD -MP -MF"main.d" -MT"main.d" -o "main.o" "../main.cpp"
+Finished building: ../main.cpp
+ 
+Building target: EE_492G_MIDTERM_2
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -o "EE_492G_MIDTERM_2"  ./main.o   -lopencv_core -lopencv_imgproc -lopencv_imgcodecs -lopencv_highgui
+Finished building target: EE_492G_MIDTERM_2
+ 
+16:32:30 **** Incremental Build of configuration Release for project fitElipse ****
+make all 
+make: Nothing to be done for `all'.
+16:32:30 **** Incremental Build of configuration Release for project houghTransform ****
+make all 
+make: Nothing to be done for `all'.
+17:30:25 **** Incremental Build of configuration Release for project EE_492G_MIDTERM_1 ****
+make all 
+make: Nothing to be done for `all'.
+17:30:26 **** Incremental Build of configuration Release for project EE_492G_MIDTERM_2 ****
+make all 
+make: Nothing to be done for `all'.
+17:30:26 **** Incremental Build of configuration Release for project fitElipse ****
+make all 
+make: Nothing to be done for `all'.
+17:30:27 **** Incremental Build of configuration Release for project houghTransform ****
+make all 
+Building file: ../main.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/local/include/opencv -O3 -Wall -c -fmessage-length=0 -MMD -MP -MF"main.d" -MT"main.d" -o "main.o" "../main.cpp"
+Finished building: ../main.cpp
+ 
+Building target: houghTransform
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -o "houghTransform"  ./main.o   -lopencv_core -lopencv_imgcodecs -lopencv_highgui -lopencv_imgproc
+Finished building target: houghTransform
+ 
+17:32:09 **** Incremental Build of configuration Release for project EE_492G_MIDTERM_1 ****
+make all 
+make: Nothing to be done for `all'.
+17:32:10 **** Incremental Build of configuration Release for project EE_492G_MIDTERM_2 ****
+make all 
+make: Nothing to be done for `all'.
+17:32:10 **** Incremental Build of configuration Release for project fitElipse ****
+make all 
+make: Nothing to be done for `all'.
+17:32:10 **** Incremental Build of configuration Release for project houghTransform ****
+make all 
+Building file: ../main.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/local/include/opencv -O3 -Wall -c -fmessage-length=0 -MMD -MP -MF"main.d" -MT"main.d" -o "main.o" "../main.cpp"
+Finished building: ../main.cpp
+ 
+Building target: houghTransform
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -o "houghTransform"  ./main.o   -lopencv_core -lopencv_imgcodecs -lopencv_highgui -lopencv_imgproc
+Finished building target: houghTransform
+ 
+17:41:20 **** Incremental Build of configuration Release for project EE_492G_MIDTERM_1 ****
+make all 
+make: Nothing to be done for `all'.
+17:41:20 **** Incremental Build of configuration Release for project EE_492G_MIDTERM_2 ****
+make all 
+make: Nothing to be done for `all'.
+17:41:21 **** Incremental Build of configuration Release for project fitElipse ****
+make all 
+make: Nothing to be done for `all'.
+17:41:21 **** Incremental Build of configuration Release for project houghTransform ****
+make all 
+Building file: ../main.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/local/include/opencv -O3 -Wall -c -fmessage-length=0 -MMD -MP -MF"main.d" -MT"main.d" -o "main.o" "../main.cpp"
+Finished building: ../main.cpp
+ 
+Building target: houghTransform
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -o "houghTransform"  ./main.o   -lopencv_core -lopencv_imgcodecs -lopencv_highgui -lopencv_imgproc
+Finished building target: houghTransform
+ 
+17:42:19 **** Incremental Build of configuration Release for project EE_492G_MIDTERM_1 ****
+make all 
+make: Nothing to be done for `all'.
+17:42:19 **** Incremental Build of configuration Release for project EE_492G_MIDTERM_2 ****
+make all 
+make: Nothing to be done for `all'.
+17:42:20 **** Incremental Build of configuration Release for project fitElipse ****
+make all 
+make: Nothing to be done for `all'.
+17:42:20 **** Incremental Build of configuration Release for project houghTransform ****
+make all 
+Building file: ../main.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/local/include/opencv -O3 -Wall -c -fmessage-length=0 -MMD -MP -MF"main.d" -MT"main.d" -o "main.o" "../main.cpp"
+Finished building: ../main.cpp
+ 
+Building target: houghTransform
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -o "houghTransform"  ./main.o   -lopencv_core -lopencv_imgcodecs -lopencv_highgui -lopencv_imgproc
+Finished building target: houghTransform
+ 
+17:42:45 **** Incremental Build of configuration Release for project EE_492G_MIDTERM_1 ****
+make all 
+make: Nothing to be done for `all'.
+17:42:46 **** Incremental Build of configuration Release for project EE_492G_MIDTERM_2 ****
+make all 
+make: Nothing to be done for `all'.
+17:42:46 **** Incremental Build of configuration Release for project fitElipse ****
+make all 
+make: Nothing to be done for `all'.
+17:42:46 **** Incremental Build of configuration Release for project houghTransform ****
+make all 
+Building file: ../main.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/local/include/opencv -O3 -Wall -c -fmessage-length=0 -MMD -MP -MF"main.d" -MT"main.d" -o "main.o" "../main.cpp"
+Finished building: ../main.cpp
+ 
+Building target: houghTransform
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -o "houghTransform"  ./main.o   -lopencv_core -lopencv_imgcodecs -lopencv_highgui -lopencv_imgproc
+Finished building target: houghTransform
+ 
+17:43:25 **** Incremental Build of configuration Release for project EE_492G_MIDTERM_1 ****
+make all 
+make: Nothing to be done for `all'.
+17:43:26 **** Incremental Build of configuration Release for project EE_492G_MIDTERM_2 ****
+make all 
+make: Nothing to be done for `all'.
+17:43:26 **** Incremental Build of configuration Release for project fitElipse ****
+make all 
+make: Nothing to be done for `all'.
+17:43:26 **** Incremental Build of configuration Release for project houghTransform ****
+make all 
+Building file: ../main.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/local/include/opencv -O3 -Wall -c -fmessage-length=0 -MMD -MP -MF"main.d" -MT"main.d" -o "main.o" "../main.cpp"
+Finished building: ../main.cpp
+ 
+Building target: houghTransform
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -o "houghTransform"  ./main.o   -lopencv_core -lopencv_imgcodecs -lopencv_highgui -lopencv_imgproc
+Finished building target: houghTransform
+ 
+17:43:55 **** Incremental Build of configuration Release for project EE_492G_MIDTERM_1 ****
+make all 
+make: Nothing to be done for `all'.
+17:43:55 **** Incremental Build of configuration Release for project EE_492G_MIDTERM_2 ****
+make all 
+make: Nothing to be done for `all'.
+17:43:55 **** Incremental Build of configuration Release for project fitElipse ****
+make all 
+make: Nothing to be done for `all'.
+17:43:55 **** Incremental Build of configuration Release for project houghTransform ****
+make all 
+Building file: ../main.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/local/include/opencv -O3 -Wall -c -fmessage-length=0 -MMD -MP -MF"main.d" -MT"main.d" -o "main.o" "../main.cpp"
+Finished building: ../main.cpp
+ 
+Building target: houghTransform
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -o "houghTransform"  ./main.o   -lopencv_core -lopencv_imgcodecs -lopencv_highgui -lopencv_imgproc
+Finished building target: houghTransform
+ 
+17:44:27 **** Incremental Build of configuration Release for project EE_492G_MIDTERM_1 ****
+make all 
+make: Nothing to be done for `all'.
+17:44:27 **** Incremental Build of configuration Release for project EE_492G_MIDTERM_2 ****
+make all 
+make: Nothing to be done for `all'.
+17:44:27 **** Incremental Build of configuration Release for project fitElipse ****
+make all 
+make: Nothing to be done for `all'.
+17:44:27 **** Incremental Build of configuration Release for project houghTransform ****
+make all 
+Building file: ../main.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/local/include/opencv -O3 -Wall -c -fmessage-length=0 -MMD -MP -MF"main.d" -MT"main.d" -o "main.o" "../main.cpp"
+Finished building: ../main.cpp
+ 
+Building target: houghTransform
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -o "houghTransform"  ./main.o   -lopencv_core -lopencv_imgcodecs -lopencv_highgui -lopencv_imgproc
+Finished building target: houghTransform
+ 
+17:45:13 **** Incremental Build of configuration Release for project EE_492G_MIDTERM_1 ****
+make all 
+make: Nothing to be done for `all'.
+17:45:14 **** Incremental Build of configuration Release for project EE_492G_MIDTERM_2 ****
+make all 
+make: Nothing to be done for `all'.
+17:45:14 **** Incremental Build of configuration Release for project fitElipse ****
+make all 
+make: Nothing to be done for `all'.
+17:45:14 **** Incremental Build of configuration Release for project houghTransform ****
+make all 
+Building file: ../main.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/local/include/opencv -O3 -Wall -c -fmessage-length=0 -MMD -MP -MF"main.d" -MT"main.d" -o "main.o" "../main.cpp"
+Finished building: ../main.cpp
+ 
+Building target: houghTransform
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -o "houghTransform"  ./main.o   -lopencv_core -lopencv_imgcodecs -lopencv_highgui -lopencv_imgproc
+Finished building target: houghTransform
+ 
+17:45:30 **** Incremental Build of configuration Release for project EE_492G_MIDTERM_1 ****
+make all 
+make: Nothing to be done for `all'.
+17:45:30 **** Incremental Build of configuration Release for project EE_492G_MIDTERM_2 ****
+make all 
+make: Nothing to be done for `all'.
+17:45:30 **** Incremental Build of configuration Release for project fitElipse ****
+make all 
+make: Nothing to be done for `all'.
+17:45:30 **** Incremental Build of configuration Release for project houghTransform ****
+make all 
+make: Nothing to be done for `all'.
+18:01:21 **** Incremental Build of configuration Release for project EE_492G_MIDTERM_1 ****
+make all 
+make: Nothing to be done for `all'.
+18:01:21 **** Incremental Build of configuration Release for project EE_492G_MIDTERM_2 ****
+make all 
+make: Nothing to be done for `all'.
+18:01:22 **** Incremental Build of configuration Release for project fitElipse ****
+make all 
+make: Nothing to be done for `all'.
+18:01:22 **** Incremental Build of configuration Release for project houghTransform ****
+make all 
+Building file: ../main.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/local/include/opencv -O3 -Wall -c -fmessage-length=0 -MMD -MP -MF"main.d" -MT"main.d" -o "main.o" "../main.cpp"
+Finished building: ../main.cpp
+ 
+Building target: houghTransform
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -o "houghTransform"  ./main.o   -lopencv_core -lopencv_imgcodecs -lopencv_highgui -lopencv_imgproc
+Finished building target: houghTransform
+ 
+18:06:55 **** Incremental Build of configuration Release for project EE_492G_MIDTERM_1 ****
+make all 
+make: Nothing to be done for `all'.
+18:06:56 **** Incremental Build of configuration Release for project EE_492G_MIDTERM_2 ****
+make all 
+make: Nothing to be done for `all'.
+18:06:56 **** Incremental Build of configuration Release for project fitElipse ****
+make all 
+make: Nothing to be done for `all'.
+18:06:56 **** Incremental Build of configuration Release for project houghTransform ****
+make all 
+Building file: ../main.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/local/include/opencv -O3 -Wall -c -fmessage-length=0 -MMD -MP -MF"main.d" -MT"main.d" -o "main.o" "../main.cpp"
+../main.cpp: In function ‘int main(int, char**)’:
+../main.cpp:16:6: warning: unused variable ‘topThirdHeight’ [-Wunused-variable]
+  int topThirdHeight = src.size().height/3;
+      ^
+Finished building: ../main.cpp
+ 
+Building target: houghTransform
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -o "houghTransform"  ./main.o   -lopencv_core -lopencv_imgcodecs -lopencv_highgui -lopencv_imgproc
+Finished building target: houghTransform
+ 
+18:08:03 **** Incremental Build of configuration Release for project EE_492G_MIDTERM_1 ****
+make all 
+make: Nothing to be done for `all'.
+18:08:03 **** Incremental Build of configuration Release for project EE_492G_MIDTERM_2 ****
+make all 
+make: Nothing to be done for `all'.
+18:08:04 **** Incremental Build of configuration Release for project fitElipse ****
+make all 
+make: Nothing to be done for `all'.
+18:08:04 **** Incremental Build of configuration Release for project houghTransform ****
+make all 
+Building file: ../main.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/local/include/opencv -O3 -Wall -c -fmessage-length=0 -MMD -MP -MF"main.d" -MT"main.d" -o "main.o" "../main.cpp"
+Finished building: ../main.cpp
+ 
+Building target: houghTransform
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -o "houghTransform"  ./main.o   -lopencv_core -lopencv_imgcodecs -lopencv_highgui -lopencv_imgproc
+Finished building target: houghTransform
+ 
+18:10:06 **** Incremental Build of configuration Release for project EE_492G_MIDTERM_1 ****
+make all 
+make: Nothing to be done for `all'.
+18:10:06 **** Incremental Build of configuration Release for project EE_492G_MIDTERM_2 ****
+make all 
+make: Nothing to be done for `all'.
+18:10:07 **** Incremental Build of configuration Release for project fitElipse ****
+make all 
+make: Nothing to be done for `all'.
+18:10:07 **** Incremental Build of configuration Release for project houghTransform ****
+make all 
+Building file: ../main.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/local/include/opencv -O3 -Wall -c -fmessage-length=0 -MMD -MP -MF"main.d" -MT"main.d" -o "main.o" "../main.cpp"
+Finished building: ../main.cpp
+ 
+Building target: houghTransform
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -o "houghTransform"  ./main.o   -lopencv_core -lopencv_imgcodecs -lopencv_highgui -lopencv_imgproc
+Finished building target: houghTransform
+ 
+18:10:44 **** Incremental Build of configuration Release for project EE_492G_MIDTERM_1 ****
+make all 
+make: Nothing to be done for `all'.
+18:10:44 **** Incremental Build of configuration Release for project EE_492G_MIDTERM_2 ****
+make all 
+make: Nothing to be done for `all'.
+18:10:44 **** Incremental Build of configuration Release for project fitElipse ****
+make all 
+make: Nothing to be done for `all'.
+18:10:44 **** Incremental Build of configuration Release for project houghTransform ****
+make all 
+Building file: ../main.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/local/include/opencv -O3 -Wall -c -fmessage-length=0 -MMD -MP -MF"main.d" -MT"main.d" -o "main.o" "../main.cpp"
+Finished building: ../main.cpp
+ 
+Building target: houghTransform
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -o "houghTransform"  ./main.o   -lopencv_core -lopencv_imgcodecs -lopencv_highgui -lopencv_imgproc
+Finished building target: houghTransform
+ 
+18:11:45 **** Incremental Build of configuration Release for project EE_492G_MIDTERM_1 ****
+make all 
+make: Nothing to be done for `all'.
+18:11:45 **** Incremental Build of configuration Release for project EE_492G_MIDTERM_2 ****
+make all 
+make: Nothing to be done for `all'.
+18:11:45 **** Incremental Build of configuration Release for project fitElipse ****
+make all 
+make: Nothing to be done for `all'.
+18:11:46 **** Incremental Build of configuration Release for project houghTransform ****
+make all 
+Building file: ../main.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/local/include/opencv -O3 -Wall -c -fmessage-length=0 -MMD -MP -MF"main.d" -MT"main.d" -o "main.o" "../main.cpp"
+Finished building: ../main.cpp
+ 
+Building target: houghTransform
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -o "houghTransform"  ./main.o   -lopencv_core -lopencv_imgcodecs -lopencv_highgui -lopencv_imgproc
+Finished building target: houghTransform
+ 
+18:12:25 **** Incremental Build of configuration Release for project EE_492G_MIDTERM_1 ****
+make all 
+make: Nothing to be done for `all'.
+18:12:25 **** Incremental Build of configuration Release for project EE_492G_MIDTERM_2 ****
+make all 
+make: Nothing to be done for `all'.
+18:12:25 **** Incremental Build of configuration Release for project fitElipse ****
+make all 
+make: Nothing to be done for `all'.
+18:12:26 **** Incremental Build of configuration Release for project houghTransform ****
+make all 
+Building file: ../main.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/local/include/opencv -O3 -Wall -c -fmessage-length=0 -MMD -MP -MF"main.d" -MT"main.d" -o "main.o" "../main.cpp"
+Finished building: ../main.cpp
+ 
+Building target: houghTransform
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -o "houghTransform"  ./main.o   -lopencv_core -lopencv_imgcodecs -lopencv_highgui -lopencv_imgproc
+Finished building target: houghTransform
+ 
+18:12:52 **** Incremental Build of configuration Release for project EE_492G_MIDTERM_1 ****
+make all 
+make: Nothing to be done for `all'.
+18:12:52 **** Incremental Build of configuration Release for project EE_492G_MIDTERM_2 ****
+make all 
+make: Nothing to be done for `all'.
+18:12:52 **** Incremental Build of configuration Release for project fitElipse ****
+make all 
+make: Nothing to be done for `all'.
+18:12:52 **** Incremental Build of configuration Release for project houghTransform ****
+make all 
+Building file: ../main.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/local/include/opencv -O3 -Wall -c -fmessage-length=0 -MMD -MP -MF"main.d" -MT"main.d" -o "main.o" "../main.cpp"
+Finished building: ../main.cpp
+ 
+Building target: houghTransform
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -o "houghTransform"  ./main.o   -lopencv_core -lopencv_imgcodecs -lopencv_highgui -lopencv_imgproc
+Finished building target: houghTransform
+ 
+18:14:20 **** Incremental Build of configuration Release for project EE_492G_MIDTERM_1 ****
+make all 
+make: Nothing to be done for `all'.
+18:14:20 **** Incremental Build of configuration Release for project EE_492G_MIDTERM_2 ****
+make all 
+make: Nothing to be done for `all'.
+18:14:20 **** Incremental Build of configuration Release for project fitElipse ****
+make all 
+make: Nothing to be done for `all'.
+18:14:20 **** Incremental Build of configuration Release for project houghTransform ****
+make all 
+Building file: ../main.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/local/include/opencv -O3 -Wall -c -fmessage-length=0 -MMD -MP -MF"main.d" -MT"main.d" -o "main.o" "../main.cpp"
+Finished building: ../main.cpp
+ 
+Building target: houghTransform
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -o "houghTransform"  ./main.o   -lopencv_core -lopencv_imgcodecs -lopencv_highgui -lopencv_imgproc
+Finished building target: houghTransform
+ 
+18:14:48 **** Incremental Build of configuration Release for project EE_492G_MIDTERM_1 ****
+make all 
+make: Nothing to be done for `all'.
+18:14:48 **** Incremental Build of configuration Release for project EE_492G_MIDTERM_2 ****
+make all 
+make: Nothing to be done for `all'.
+18:14:48 **** Incremental Build of configuration Release for project fitElipse ****
+make all 
+make: Nothing to be done for `all'.
+18:14:49 **** Incremental Build of configuration Release for project houghTransform ****
+make all 
+Building file: ../main.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/local/include/opencv -O3 -Wall -c -fmessage-length=0 -MMD -MP -MF"main.d" -MT"main.d" -o "main.o" "../main.cpp"
+Finished building: ../main.cpp
+ 
+Building target: houghTransform
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -o "houghTransform"  ./main.o   -lopencv_core -lopencv_imgcodecs -lopencv_highgui -lopencv_imgproc
+Finished building target: houghTransform
+ 
+18:16:58 **** Incremental Build of configuration Release for project EE_492G_MIDTERM_1 ****
+make all 
+make: Nothing to be done for `all'.
+18:16:58 **** Incremental Build of configuration Release for project EE_492G_MIDTERM_2 ****
+make all 
+make: Nothing to be done for `all'.
+18:16:58 **** Incremental Build of configuration Release for project fitElipse ****
+make all 
+make: Nothing to be done for `all'.
+18:16:58 **** Incremental Build of configuration Release for project houghTransform ****
+make all 
+Building file: ../main.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/local/include/opencv -O3 -Wall -c -fmessage-length=0 -MMD -MP -MF"main.d" -MT"main.d" -o "main.o" "../main.cpp"
+Finished building: ../main.cpp
+ 
+Building target: houghTransform
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -o "houghTransform"  ./main.o   -lopencv_core -lopencv_imgcodecs -lopencv_highgui -lopencv_imgproc
+Finished building target: houghTransform
+ 
+18:17:51 **** Incremental Build of configuration Release for project EE_492G_MIDTERM_1 ****
+make all 
+make: Nothing to be done for `all'.
+18:17:52 **** Incremental Build of configuration Release for project EE_492G_MIDTERM_2 ****
+make all 
+make: Nothing to be done for `all'.
+18:17:52 **** Incremental Build of configuration Release for project fitElipse ****
+make all 
+make: Nothing to be done for `all'.
+18:17:52 **** Incremental Build of configuration Release for project houghTransform ****
+make all 
+Building file: ../main.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/local/include/opencv -O3 -Wall -c -fmessage-length=0 -MMD -MP -MF"main.d" -MT"main.d" -o "main.o" "../main.cpp"
+Finished building: ../main.cpp
+ 
+Building target: houghTransform
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -o "houghTransform"  ./main.o   -lopencv_core -lopencv_imgcodecs -lopencv_highgui -lopencv_imgproc
+Finished building target: houghTransform
+ 
+18:18:44 **** Incremental Build of configuration Release for project EE_492G_MIDTERM_1 ****
+make all 
+make: Nothing to be done for `all'.
+18:18:44 **** Incremental Build of configuration Release for project EE_492G_MIDTERM_2 ****
+make all 
+make: Nothing to be done for `all'.
+18:18:44 **** Incremental Build of configuration Release for project fitElipse ****
+make all 
+make: Nothing to be done for `all'.
+18:18:44 **** Incremental Build of configuration Release for project houghTransform ****
+make all 
+Building file: ../main.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/local/include/opencv -O3 -Wall -c -fmessage-length=0 -MMD -MP -MF"main.d" -MT"main.d" -o "main.o" "../main.cpp"
+Finished building: ../main.cpp
+ 
+Building target: houghTransform
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -o "houghTransform"  ./main.o   -lopencv_core -lopencv_imgcodecs -lopencv_highgui -lopencv_imgproc
+Finished building target: houghTransform
+ 
+18:19:14 **** Incremental Build of configuration Release for project EE_492G_MIDTERM_1 ****
+make all 
+make: Nothing to be done for `all'.
+18:19:15 **** Incremental Build of configuration Release for project EE_492G_MIDTERM_2 ****
+make all 
+make: Nothing to be done for `all'.
+18:19:15 **** Incremental Build of configuration Release for project fitElipse ****
+make all 
+make: Nothing to be done for `all'.
+18:19:15 **** Incremental Build of configuration Release for project houghTransform ****
+make all 
+Building file: ../main.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/local/include/opencv -O3 -Wall -c -fmessage-length=0 -MMD -MP -MF"main.d" -MT"main.d" -o "main.o" "../main.cpp"
+Finished building: ../main.cpp
+ 
+Building target: houghTransform
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -o "houghTransform"  ./main.o   -lopencv_core -lopencv_imgcodecs -lopencv_highgui -lopencv_imgproc
+Finished building target: houghTransform
+ 
+18:27:06 **** Incremental Build of configuration Release for project EE_492G_MIDTERM_1 ****
+make all 
+make: Nothing to be done for `all'.
+18:27:07 **** Incremental Build of configuration Release for project EE_492G_MIDTERM_2 ****
+make all 
+make: Nothing to be done for `all'.
+18:27:07 **** Incremental Build of configuration Release for project fitElipse ****
+make all 
+make: Nothing to be done for `all'.
+18:27:07 **** Incremental Build of configuration Release for project houghTransform ****
+make all 
+Building file: ../main.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/local/include/opencv -O3 -Wall -c -fmessage-length=0 -MMD -MP -MF"main.d" -MT"main.d" -o "main.o" "../main.cpp"
+Finished building: ../main.cpp
+ 
+Building target: houghTransform
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -o "houghTransform"  ./main.o   -lopencv_core -lopencv_imgcodecs -lopencv_highgui -lopencv_imgproc
+Finished building target: houghTransform
+ 
+18:35:42 **** Incremental Build of configuration Release for project EE_492G_MIDTERM_1 ****
+make all 
+make: Nothing to be done for `all'.
+18:35:42 **** Incremental Build of configuration Release for project EE_492G_MIDTERM_2 ****
+make all 
+Building file: ../main.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/local/include/opencv -O3 -Wall -c -fmessage-length=0 -MMD -MP -MF"main.d" -MT"main.d" -o "main.o" "../main.cpp"
+Finished building: ../main.cpp
+ 
+Building target: EE_492G_MIDTERM_2
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -o "EE_492G_MIDTERM_2"  ./main.o   -lopencv_core -lopencv_imgproc -lopencv_imgcodecs -lopencv_highgui
+Finished building target: EE_492G_MIDTERM_2
+ 
+18:35:46 **** Incremental Build of configuration Release for project fitElipse ****
+make all 
+make: Nothing to be done for `all'.
+18:35:46 **** Incremental Build of configuration Release for project houghTransform ****
+make all 
+make: Nothing to be done for `all'.
+18:36:45 **** Incremental Build of configuration Release for project EE_492G_MIDTERM_1 ****
+make all 
+make: Nothing to be done for `all'.
+18:36:46 **** Incremental Build of configuration Release for project EE_492G_MIDTERM_2 ****
+make all 
+make: Nothing to be done for `all'.
+18:36:46 **** Incremental Build of configuration Release for project fitElipse ****
+make all 
+make: Nothing to be done for `all'.
+18:36:46 **** Incremental Build of configuration Release for project houghTransform ****
+make all 
+make: Nothing to be done for `all'.
+18:37:24 **** Incremental Build of configuration Release for project EE_492G_MIDTERM_1 ****
+make all 
+make: Nothing to be done for `all'.
+18:37:24 **** Incremental Build of configuration Release for project EE_492G_MIDTERM_2 ****
+make all 
+Building file: ../main.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/local/include/opencv -O3 -Wall -c -fmessage-length=0 -MMD -MP -MF"main.d" -MT"main.d" -o "main.o" "../main.cpp"
+Finished building: ../main.cpp
+ 
+Building target: EE_492G_MIDTERM_2
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -o "EE_492G_MIDTERM_2"  ./main.o   -lopencv_core -lopencv_imgproc -lopencv_imgcodecs -lopencv_highgui
+Finished building target: EE_492G_MIDTERM_2
+ 
+18:37:25 **** Incremental Build of configuration Release for project fitElipse ****
+make all 
+make: Nothing to be done for `all'.
+18:37:26 **** Incremental Build of configuration Release for project houghTransform ****
+make all 
+make: Nothing to be done for `all'.
+19:20:13 **** Incremental Build of configuration Release for project EE_492G_MIDTERM_1 ****
+make all 
+Building file: ../main.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/local/include/opencv -O3 -Wall -c -fmessage-length=0 -MMD -MP -MF"main.d" -MT"main.d" -o "main.o" "../main.cpp"
+Finished building: ../main.cpp
+ 
+Building target: EE_492G_MIDTERM_1
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -o "EE_492G_MIDTERM_1"  ./main.o   -lopencv_imgproc -lopencv_core -lopencv_highgui -lopencv_imgcodecs
+Finished building target: EE_492G_MIDTERM_1
+ 
+19:20:18 **** Incremental Build of configuration Release for project EE_492G_MIDTERM_2 ****
+make all 
+make: Nothing to be done for `all'.
+19:20:18 **** Incremental Build of configuration Release for project fitElipse ****
+make all 
+make: Nothing to be done for `all'.
+19:20:19 **** Incremental Build of configuration Release for project houghTransform ****
+make all 
+make: Nothing to be done for `all'.
+19:21:08 **** Incremental Build of configuration Release for project EE_492G_MIDTERM_1 ****
+make all 
+make: Nothing to be done for `all'.
+19:21:08 **** Incremental Build of configuration Release for project EE_492G_MIDTERM_2 ****
+make all 
+Building file: ../main.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/local/include/opencv -O3 -Wall -c -fmessage-length=0 -MMD -MP -MF"main.d" -MT"main.d" -o "main.o" "../main.cpp"
+Finished building: ../main.cpp
+ 
+Building target: EE_492G_MIDTERM_2
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -o "EE_492G_MIDTERM_2"  ./main.o   -lopencv_core -lopencv_imgproc -lopencv_imgcodecs -lopencv_highgui
+Finished building target: EE_492G_MIDTERM_2
+ 
+19:21:10 **** Incremental Build of configuration Release for project fitElipse ****
+make all 
+make: Nothing to be done for `all'.
+19:21:10 **** Incremental Build of configuration Release for project houghTransform ****
+make all 
+make: Nothing to be done for `all'.
+19:21:36 **** Incremental Build of configuration Release for project EE_492G_MIDTERM_1 ****
+make all 
+make: Nothing to be done for `all'.
+19:21:36 **** Incremental Build of configuration Release for project EE_492G_MIDTERM_2 ****
+make all 
+make: Nothing to be done for `all'.
+19:21:36 **** Incremental Build of configuration Release for project fitElipse ****
+make all 
+make: Nothing to be done for `all'.
+19:21:36 **** Incremental Build of configuration Release for project houghTransform ****
+make all 
+Building file: ../main.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/local/include/opencv -O3 -Wall -c -fmessage-length=0 -MMD -MP -MF"main.d" -MT"main.d" -o "main.o" "../main.cpp"
+Finished building: ../main.cpp
+ 
+Building target: houghTransform
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -o "houghTransform"  ./main.o   -lopencv_core -lopencv_imgcodecs -lopencv_highgui -lopencv_imgproc
+Finished building target: houghTransform
+ 
