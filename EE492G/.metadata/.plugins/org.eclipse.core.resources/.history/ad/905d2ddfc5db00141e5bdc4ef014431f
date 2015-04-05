@@ -1,0 +1,134 @@
+/*************************** Lane Recognition ***************************/
+
+#include <opencv2/highgui/highgui.hpp>
+#include <opencv2/imgproc/imgproc.hpp>
+#include <opencv2/core/core.hpp>
+#include <opencv2/opencv.hpp>
+#include <iostream>
+#include <math.h>
+
+#define HORIZON_SIZE 3		// fraction of the image that the horizon takes up (1/HORIZON_SIZE)
+#define HOUGH_THRESHOLD 50
+#define HOUGH_MIN_LINE_LENGTH 50
+#define HOUGH_MAX_LINE_GAP 100
+#define LINE_REJECT_ANGLE 10
+
+using namespace cv;
+using namespace std;
+
+struct Lane {
+	Point p0, p1;
+	float angle, m, b;
+};
+
+void getLanes(Mat& image, Mat edges, vector<Vec4i> lines){
+	// initialize vector of lanes
+	vector<Lane> right, left;
+
+	// find attributes of each line and classify right left or null line
+	for (size_t i = 0; i < lines.size(); i++){
+		// variable for each x,y point given in lines and current Lane
+		Vec4i line = lines[i];
+		Lane current;
+
+		// find change in both x and y points and angle
+		int deltaX = line[2] - line[0];
+		int deltaY = line[3] - line[1];
+		float angle = atan2f(deltaY,deltaX) * 180/CV_PI;
+
+		// reject lines that are near the horizontal
+		if (fabs(angle) <= LINE_REJECT_ANGLE) continue;
+
+		// calculate y = mx + b
+		if (deltaX == 0) deltaX = 1;
+		float m = deltaY/(float)deltaX;
+		float b = line[1] - (line[0]*m);
+
+		// assign Lane parameters
+		current.p0 = Point(line[0],line[1]);
+		current.p1 = Point(line[2],line[3]);
+		current.angle = angle;
+		current.m = m;
+		current.b = b;
+
+		// distinguish between a right or left lane by its midpoint
+		int midpoint = (line[0] + line[2])/2;
+		if(midpoint < image.size().width/2){
+			left.push_back(current);
+		} else if (midpoint > image.size().width/2){
+			right.push_back(current);
+		}
+	}
+
+	// show Hough lines
+	int horizonHeight = image.size().height/HORIZON_SIZE;
+	for	(size_t i=0; i<right.size(); i++) {
+		line(image, Point(right[i].p0.x, right[i].p0.y + horizonHeight),
+				Point(right[i].p0.x, right[i].p1.y + horizonHeight), Scalar(0, 0, 255), 2);
+	}
+
+	for	(size_t i=0; i<left.size(); i++) {
+		line(image, Point(left[i].p0.x, left[i].p0.y + horizonHeight),
+						Point(left[i].p0.x, left[i].p1.y + horizonHeight), Scalar(0, 0, 255), 2);
+	}
+}
+
+int main(int argc, char** argv){
+    // check number of arguments and display program features if necessary
+    if (argc != 2){
+        cout << "Usage: Segment coffee beans and find Major and Minor Axis" << endl;
+        return -1;
+    }
+
+	// Read input file and create grayscale copy
+	Mat image,gray;
+	image = imread(argv[1]);
+	cvtColor(image, gray, COLOR_BGR2GRAY);
+	imshow("original",image);
+
+	// Check to see if the file was read correctly
+	if(!image.data){
+		cout << "Could not open or find the image" << endl;
+		return -1;
+	}
+
+	//////////////////// Process Road ////////////////////
+
+	// Crop off horizon
+	int horizonHeight = gray.size().height/HORIZON_SIZE;
+	Mat roi = gray(Rect(0,horizonHeight,gray.size().width -1,(horizonHeight*(HORIZON_SIZE-1)) -1));
+
+	// Gaussian Blur
+	GaussianBlur(roi, roi, Size(5, 5), 1.5, 1.5);
+
+	// Find lanes with Canny Filer and a Probabilistic Hough Transform
+	Mat edges;
+	double rho = 1;
+	double theta = CV_PI/180;
+	vector<Vec4i> lines;
+
+	Canny(roi, edges,100,200);
+	imshow("edges",edges);
+	HoughLinesP( edges, lines, rho, theta, HOUGH_THRESHOLD, HOUGH_MIN_LINE_LENGTH, HOUGH_MAX_LINE_GAP);
+
+	Mat color = image.clone();
+	for(size_t i = 0; i < lines.size(); i++){
+		Vec4i l = lines[i];
+		line(image, Point(l[0], l[1] + horizonHeight), Point(l[2], l[3] + horizonHeight), Scalar(0, 0, 255), 2);
+	imshow("results", image);
+	}
+
+	// Process Lanes
+	Mat color2 = roi.clone();
+	cvtColor(color2, color2, COLOR_GRAY2BGR);
+	getLanes(color, edges, lines);
+	imshow("Lanes",color2);
+
+	//////////////////////////////////////////////////////
+
+	// Show results
+
+	// Wait until a key is pressed before ending
+	waitKey(0);
+	return 0;
+}

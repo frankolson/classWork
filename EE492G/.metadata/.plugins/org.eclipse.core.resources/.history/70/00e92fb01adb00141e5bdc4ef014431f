@@ -1,0 +1,59 @@
+/*************************** Lane Recognition ***************************/
+
+#include <opencv2/highgui/highgui.hpp>
+#include <opencv2/imgproc/imgproc.hpp>
+#include <opencv2/core/core.hpp>
+#include <opencv2/opencv.hpp>
+#include <iostream>
+
+#define HORIZON_SIZE 4		// fraction of the image that the horizon takes up (1/HORIZON_SIZE)
+
+using namespace cv;
+using namespace std;
+
+void getLanes(Mat* image, Mat* edges){
+
+}
+
+int main(int argc, char** argv){
+    // check number of arguments and display program features if necessary
+    if (argc != 2){
+        cout << "Usage: Segment coffee beans and find Major and Minor Axis" << endl;
+        return -1;
+    }
+
+	// Read input file and create grayscale copy
+	Mat image,gray;
+	image = imread(argv[1]);
+	cvtColor(image, gray, COLOR_BGR2GRAY);
+	imshow("original",image);
+
+	// Check to see if the file was read correctly
+	if(!image.data){
+		cout << "Could not open or find the image" << endl;
+		return -1;
+	}
+
+	//////////////////// Process Road ////////////////////
+
+	// Crop off horizon
+	int horizonHeight = gray.size().height/HORIZON_SIZE;
+	Mat roi = gray(Rect(0,horizonHeight,gray.size().width -1,(horizonHeight*(HORIZON_SIZE-1)) -1));
+	imshow("roi",roi);
+
+	// Gaussian Blur
+	GaussianBlur(roi, roi, Size(5, 5), 0, 0);
+
+	// Find lanes
+	Mat edges;
+	Canny(roi, edges,1,100);
+	imshow("canny",edges);
+
+	//////////////////////////////////////////////////////
+
+	// Show results
+
+	// Wait until a key is pressed before ending
+	waitKey(0);
+	return 0;
+}

@@ -1,4 +1,4 @@
-19:21:36 **** Incremental Build of configuration Release for project houghTransform ****
+12:00:15 **** Incremental Build of configuration Release for project houghTransform ****
 make all 
 Building file: ../main.cpp
 Invoking: GCC C++ Compiler
@@ -11,5 +11,5 @@ g++ -L/usr/local/lib -o "houghTransform"  ./main.o   -lopencv_core -lopencv_imgc
 Finished building target: houghTransform
  
 
-19:21:37 Build Finished (took 912ms)
+12:00:16 Build Finished (took 628ms)
 

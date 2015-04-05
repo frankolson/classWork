@@ -1,0 +1,80 @@
+/*************************** Lane Recognition ***************************/
+
+#include <opencv2/highgui/highgui.hpp>
+#include <opencv2/imgproc/imgproc.hpp>
+#include <opencv2/core/core.hpp>
+#include <opencv2/opencv.hpp>
+#include <iostream>
+
+#define HORIZON_SIZE 3		// fraction of the image that the horizon takes up (1/HORIZON_SIZE)
+#define HOUGH_THRESHOLD 50
+#define HOUGH_MIN_LINE_LENGTH 50
+#define HOUGH_MAX_LINE_GAP 100
+
+using namespace cv;
+using namespace std;
+
+struct Lane {
+	Lane(){}
+	Lane(Point a, Point b, float angle, float kl, float bl): p0(a),p1(b),angle(angle),votes(0),
+			visited(false),found(false),k(kl),b(bl) {}
+
+	Point p0, p1;
+	int votes;
+	bool visited, found;
+	float angle, k, b;
+};
+
+void getLanes(Mat& image, Mat edges, vector<Vec4i> lines){
+
+}
+
+int main(int argc, char** argv){
+    // check number of arguments and display program features if necessary
+    if (argc != 2){
+        cout << "Usage: Segment coffee beans and find Major and Minor Axis" << endl;
+        return -1;
+    }
+
+	// Read input file and create grayscale copy
+	Mat image,gray;
+	image = imread(argv[1]);
+	cvtColor(image, gray, COLOR_BGR2GRAY);
+	imshow("original",image);
+
+	// Check to see if the file was read correctly
+	if(!image.data){
+		cout << "Could not open or find the image" << endl;
+		return -1;
+	}
+
+	//////////////////// Process Road ////////////////////
+
+	// Crop off horizon
+	int horizonHeight = gray.size().height/HORIZON_SIZE;
+	Mat roi = gray(Rect(0,horizonHeight,gray.size().width -1,(horizonHeight*(HORIZON_SIZE-1)) -1));
+
+	// Gaussian Blur
+	GaussianBlur(roi, roi, Size(5, 5), 1.5, 1.5);
+
+	// Find lanes with Canny Filer and a Probabilistic Hough Transform
+	Mat edges;
+	double rho = 1;
+	double theta = CV_PI/180;
+	vector<Vec4i> lines;
+
+	Canny(roi, edges,100,200);
+	imshow("edges",edges);
+	HoughLinesP( edges, lines, rho, theta, HOUGH_THRESHOLD, HOUGH_MIN_LINE_LENGTH, HOUGH_MAX_LINE_GAP);
+
+	// Process Lanes
+	getLanes(image, edges, lines);
+
+	//////////////////////////////////////////////////////
+
+	// Show results
+
+	// Wait until a key is pressed before ending
+	waitKey(0);
+	return 0;
+}

@@ -1,0 +1,32 @@
+/*************************** Lane Recognition ***************************/
+
+#include <opencv2/highgui/highgui.hpp>
+#include <opencv2/imgproc/imgproc.hpp>
+#include <opencv2/core/core.hpp>
+#include <iostream>
+
+using namespace cv;
+using namespace std;
+
+int main(int argc, char** argv){
+    // check number of arguments and display program features if necessary
+    if (argc != 2){
+        cout << "Usage: Segment coffee beans and find Major and Minor Axis" << endl;
+        return -1;
+    }
+
+	// Read input file and create grayscale copy
+	Mat image,gray;
+	image = imread(argv[1]);
+	gray = cvtColor(image, gray, COLOR_BGR2GRAY);
+
+	// Check to see if the file was read correctly
+	if(!image.data){
+		cout << "Could not open or find the image" << endl;
+		return -1;
+	}
+
+	// Wait until a key is pressed before ending
+	waitKey(0);
+	return 0;
+}
