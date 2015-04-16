@@ -1,0 +1,284 @@
+/*************************** Coffee Bean Segmentation ***************************/
+
+#include <opencv2/core/core.hpp>
+#include <opencv2/highgui/highgui.hpp>
+#include <opencv2/imgproc/imgproc.hpp>
+#include <opencv2/opencv.hpp>
+#include <cmath>
+#include <iostream>
+#define PI 3.14159265
+
+using namespace cv;
+using namespace std;
+
+
+///////////////////////////////////////// Draw Axis //////////////////////////////////////////////
+void drawAxis(Mat& out, RotatedRect box){
+	// initial setup
+	double angle = box.angle;
+	int h = box.size.height;
+	int w = box.size.width;
+
+	// Initialize center point
+	int xInitial = box.center.x;
+	int yInitial = box.center.y;
+
+	/* Major Axis */
+	// Top point
+	Point Top;
+	Top.x = ((w/2)*(cos(angle*PI/180))) + xInitial;
+	Top.y = ((w/2)*(sin(angle*PI/180))) + yInitial;
+	// Bottom Point
+	Point Bottom;
+	Bottom.x = xInitial - ((w/2)*(cos(angle*PI/180)));
+	Bottom.y = yInitial - ((w/2)*(sin(angle*PI/180)));
+	// Draw Major Axis
+	line(out, Top, Bottom, Scalar(0,255,0));
+
+	/* Minor Axis */
+	// Left point
+	Point Left;
+	Left.x = ((h/2)*(cos((angle+90)*PI/180))) + xInitial;
+	Left.y = ((h/2)*(sin((angle+90)*PI/180))) + yInitial;
+	// Right Point
+	Point Right;
+	Right.x = xInitial - ((h/2)*(cos((angle+90)*PI/180)));
+	Right.y = yInitial - ((h/2)*(sin((angle+90)*PI/180)));
+	// Draw Major Axis
+	line(out, Left, Right, Scalar(0,255,0));
+
+}
+//////////////////////////////////////////////////////////////////////////////////////////////////
+
+//////////////////////////////////////// Get Ellipse /////////////////////////////////////////////
+void findEllipse(Mat& img, Mat& original){
+	// find contours
+	vector<vector<Point> > contours;
+	findContours(img, contours, RETR_LIST, CHAIN_APPROX_NONE);
+
+	// initialize output picture
+	Mat cimage = Mat::zeros(img.size(), CV_8UC3);
+
+	// fit the ellipses
+	for (size_t i = 0; i < contours.size(); i++){
+		size_t count = contours[i].size();
+        if( count < 6 )
+            continue;
+
+        Mat pointsf;
+        Mat(contours[i]).convertTo(pointsf, CV_32F);
+        RotatedRect box = fitEllipse(pointsf);
+
+        // Draw Axis
+        drawAxis(original, box);
+
+        if( MAX(box.size.width, box.size.height) > MIN(box.size.width, box.size.height)*30 )
+            continue;
+        drawContours(original, contours, (int)i, Scalar::all(255), 1, 8);
+
+        ellipse(original, box, Scalar(0,0,255), 1, LINE_AA);
+        ellipse(original, box.center, box.size*0.5f, box.angle, 0, 360, Scalar(0,255,255), 1, LINE_AA);
+        Point2f vtx[4];
+        box.points(vtx);
+        //for( int j = 0; j < 4; j++ )
+            //line(cimage, vtx[j], vtx[(j+1)%4], Scalar(0,255,0), 1, LINE_AA);
+	}
+
+	// show results in a sizable window
+	namedWindow("Result", WINDOW_NORMAL);
+	imshow("Result", original);
+}
+//////////////////////////////////////////////////////////////////////////////////////////////////
+
+/////////////////////////////////////// Remove Noise /////////////////////////////////////////////
+void removeSmallBlobs(Mat& im, int thresh)
+{
+    // Only accept CV_8UC1
+    if (im.channels() != 1 || im.type() != CV_8U){
+        cout << "not the right type" << endl;
+        return;
+    }
+
+    // Find all contours
+    vector<vector<Point> > contours;
+    vector<Vec4i> hierarchy;
+    findContours(im.clone(), contours, hierarchy, RETR_CCOMP, CHAIN_APPROX_SIMPLE);
+
+    for (size_t i = 0; i < contours.size(); i++){
+        // look for hierarchy[i][3]!=-1, ie hole boundaries
+        if ( (hierarchy[i][3] != -1) && (contourArea(contours[i]) < thresh) ) {
+            // fill with white
+            drawContours( im, contours, i, Scalar(255,255,255),-1  );
+        }
+        //drawContours(im, contours, i, Scalar(255,255,255),-1);
+    }
+    cout << endl << endl;
+}
+//////////////////////////////////////////////////////////////////////////////////////////////////
+
+/////////////////////////////////////// Segmentation /////////////////////////////////////////////
+Mat segmentation(Mat image){
+    // grayscale
+    Mat binary;
+    binary = image;
+    //cvtColor(image, binary, COLOR_BGR2GRAY);
+
+    // meadian filter
+    for(int j = 0; j < 3; j++){
+    	for ( int i = 1; i < 5; i = i + 2 ){
+    		medianBlur( image, image, i );
+    	}
+    }
+
+    // OTSU or adaptive
+    //adaptiveThreshold( binary, binary, 255,ADAPTIVE_THRESH_MEAN_C,THRESH_BINARY_INV,3, 1 );
+    threshold(binary, binary, 64, 255, THRESH_BINARY_INV| THRESH_OTSU);
+    namedWindow("test1", WINDOW_NORMAL);
+    imshow("test1", binary);
+
+
+    // get rid of small noise
+    removeSmallBlobs(binary, 70);
+    // Calculate distance transform
+    Mat objects, fg;
+    Mat dist = Mat::zeros(binary.size(), CV_8U);
+    distanceTransform(binary, dist, DIST_L2, 3);
+    normalize(dist, dist, 0, 1.0, NORM_MINMAX);
+
+    // Threshold the distance transform results
+    vector<std::vector<cv::Point> > contours;
+    threshold(dist, objects, 0, 255, THRESH_BINARY);
+
+    // Dilate threshold results
+    dilate(dist, fg, Mat(), Point(-1, -1), 5);
+    dilate(objects, objects, Mat(), Point(-1, -1), 5);
+    namedWindow("fg", WINDOW_NORMAL);
+    imshow("fg", fg);
+    namedWindow("objects", WINDOW_NORMAL);
+    imshow("objects", objects);
+
+
+    // Subtract small foreground from large foreground
+    fg = fg - dist;
+
+    // Threshold and convert results
+    threshold(fg, fg, 0, 255, THRESH_BINARY);
+    fg.convertTo(fg, CV_8U);
+    objects.convertTo(objects, CV_8U);
+
+    // cluster peaks
+    bitwise_xor(fg, objects, fg);
+    dilate(fg, fg, cv::Mat(), cv::Point(-1, -1), 10);
+
+    // Identify image pixels without objects
+    Mat bg;
+    dilate(binary, bg, Mat(), Point(-1, -1), 1);
+    threshold(bg, bg, 1, 128, cv::THRESH_BINARY_INV);
+
+    // connected components used to separate each peak (bean)
+    // This is really important as  the watershed algorithm needs
+    // separately identified intensity value valleys in order to
+    // segment properly
+    Mat dt;
+    fg.copyTo(dt);
+    dt.convertTo(dt, CV_8U);
+    Mat lbl(dt.size(), CV_32S);
+    int ncc = connectedComponents(dt, lbl, 4);
+    cout << "Number of Beans: " << ncc -1 << endl;
+
+    // Create a gray color spectrum to paint the peaks
+    vector<unsigned char> colors(ncc);
+    colors[0] = 0; // for background
+    for (int label = 1; label < ncc; ++label)
+        colors[label] = (255/ ncc*label)-1;
+
+    // Paint every separate peak with a shade of gray
+    for (int x = 0; x < dt.rows; x++) {
+        for (int y = 0; y < dt.cols; y++) {
+            int label = lbl.at<int>(x, y);
+            dt.at<unsigned char>(x, y) = colors[label];
+        }
+    }
+
+    // Create markers image
+    Mat markers(binary.size(), CV_8U, Scalar(0));
+    markers = dt + bg;
+    //namedWindow("test2", WINDOW_NORMAL);
+    //imshow("test2", markers);
+
+    // Convert to image of ints
+    markers.convertTo(markers, CV_32S);
+
+    // Apply watershed
+    watershed(image, markers);
+
+    // show segmentation
+    Mat tmp;
+    markers.convertTo(tmp, CV_8U);
+    //namedWindow("watershed1", WINDOW_NORMAL);
+    //imshow("watershed1", tmp);
+
+    // Paint black and white
+    for (int x = 0; x < tmp.rows; x++) {
+        for (int y = 0; y < tmp.cols; y++) {
+            if(tmp.at<unsigned char>(x, y)==128){
+               	tmp.at<unsigned char>(x, y) = 0;
+            }else if(tmp.at<unsigned char>(x, y)==0){
+               	tmp.at<unsigned char>(x, y)=0;
+            }else{
+             	tmp.at<unsigned char>(x, y)=255;
+            }
+        }
+    }
+
+    // erode for clarity
+    erode(tmp, tmp, Mat(), Point(-1, -1), 1);
+
+    // show watershed results
+    Mat tmp2;
+    markers.convertTo(tmp2, CV_8U, 255, 255);
+    namedWindow("watershed", WINDOW_NORMAL);
+    imshow("watershed", tmp);
+
+    return tmp;
+}
+//////////////////////////////////////////////////////////////////////////////////////////////////
+
+int main(int argc, char *argv[]){
+    // check number of arguments and display program features if necessary
+    if (argc != 2){
+        cout << "Usage: Segment coffee beans and find Major and Minor Axis" << endl;
+        return -1;
+    }
+
+    // read the file
+    Mat image;
+    image = imread(argv[1]);
+
+    // check for invalid input
+    if (!image.data){
+        cout << "Could not open or find the image" << std::endl;
+        return -1;
+    }
+
+    // pull out red channel
+    // grayscale
+    	Mat binaryBlue;
+    	// Split Channels
+    	Mat channel[3];
+    	split(image,channel);
+    	channel[1].convertTo(binaryBlue, CV_8U);
+
+    namedWindow("Original", WINDOW_NORMAL);
+    imshow("Original", binaryBlue);
+
+    // Segmentation
+    Mat segments;
+    segments = segmentation(binaryBlue);
+
+    // find ellipse
+    //findEllipse(segments, image);
+
+    waitKey(0);
+    return 0;
+}

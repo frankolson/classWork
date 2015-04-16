@@ -7,7 +7,7 @@
 #include <iostream>
 #include <math.h>
 
-#define HORIZON_SIZE 2		// fraction of the image that the horizon takes up (1/HORIZON_SIZE)
+#define HORIZON_SIZE 3		// fraction of the image that the horizon takes up (1/HORIZON_SIZE)
 #define HOUGH_THRESHOLD 50
 #define HOUGH_MIN_LINE_LENGTH 50
 #define HOUGH_MAX_LINE_GAP 100

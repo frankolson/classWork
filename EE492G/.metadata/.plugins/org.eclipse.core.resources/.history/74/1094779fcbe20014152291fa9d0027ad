@@ -1,0 +1,201 @@
+/*************************** Delaunay Triangulation ***************************/
+
+#include <opencv2/imgproc/imgproc.hpp>
+#include <opencv2/core/core.hpp>
+#include <opencv2/highgui/highgui.hpp>
+#include <cmath>
+#include <iostream>
+
+using namespace std;
+using namespace cv;
+
+/////////////////////////////////////////// index ////////////////////////////////////////////////
+int index(int i, int j, int n){
+	if ((i + j) < 0){
+		return (n + j);
+	}
+	else{
+		return ((i+j)%(n));
+	}
+}
+//////////////////////////////////////////////////////////////////////////////////////////////////
+
+////////////////////////////////////// Gaussian Filter ///////////////////////////////////////////
+vector<float> gaussian(int sigma){
+	// initiate variables
+	int width = 9 * sigma + 1;
+	int w = (9 * sigma) / 2;
+	vector<float> kernal(width);
+	float sum = 0.0;
+	float den = 2*sigma*sigma;
+
+	// populate kernal
+	for (int i = -w; i <= w; i++){
+		// multiply times constant and fill kernal
+		kernal[i+w] = (exp(-(i*i)/den))/(sqrt(CV_PI * 2)*sigma);
+		sum += kernal[i+w];
+	}
+
+	// Normalize answer
+	for (int i = 0; i < width; i++)
+		kernal[i] /= sum;
+
+	// return kernal
+	return kernal;
+}
+//////////////////////////////////////////////////////////////////////////////////////////////////
+
+////////////////////////////// Guassian Filter derivative (dG) ////////////////////////////////////
+vector<float> gaussianDerivative(int sigma){
+	// initiate variables
+	int width = 9 * sigma + 1;
+	int w = (9 * sigma) / 2;
+	vector<float> kernal(width);
+	float sum = 0.0;
+	float den = 2 * sigma*sigma;
+
+	// populate kernal
+	for (int i = -w; i <= w; i++){
+		// multiply times constant and fill kernal
+		kernal[i + w] = -(exp(-(i*i) / den) * i) / ((sqrt(CV_PI * 2)*pow(sigma,3)));
+		sum += kernal[i + w];
+	}
+
+	// Normalize answer
+	for (int i = 0; i < width; i++)
+		kernal[i] /= sum;
+
+	// return kernal
+	return kernal;
+}
+//////////////////////////////////////////////////////////////////////////////////////////////////
+
+////////////////////////////// Guassian Filter derivative (ddG) ////////////////////////////////////
+vector<float> gaussianDerivative2(int sigma){
+	// initiate variables
+	int width = 9 * sigma + 1;
+	int w = (9 * sigma) / 2;
+	vector<float> kernal(width);
+	float sum = 0.0;
+	float den = 2 * sigma*sigma;
+
+	// populate kernal
+	for (int i = -w; i <= w; i++){
+		// multiply times constant and fill kernal
+		kernal[i + w] = ((exp(-(i*i) / den)) * ((i-sigma)*(i+sigma))) / (sqrt(CV_PI * 2)*pow(sigma,5));
+		sum += kernal[i + w];
+	}
+
+	// Normalize answer
+	for (int i = 0; i < width; i++)
+		kernal[i] /= sum;
+
+	// return kernal
+	return kernal;
+}
+//////////////////////////////////////////////////////////////////////////////////////////////////
+
+/////////////////////////////////// Circular Convolution /////////////////////////////////////////
+vector<float> cconv(vector<float> data, vector<float> filter){
+	// obtain filter sizes
+	int n = data.size();
+	int w = filter.size();
+
+	// find the center
+	int c;
+	if (w % 2 == 0){
+		c = w / 2;
+	}
+	else{
+		c = (w + 1) / 2;
+	}
+
+	// create zero filled vector
+	vector<float> y(n);
+	float fillVal = 0.0;
+	fill(y.begin(), y.end(), fillVal);
+
+	// perform circular convolution
+	for (int i = 0; i < n; i++){
+		for (int j = -c; j < c-1; j++){
+			y[i] += filter[j + c] * data[index(i, j, n)];
+		}
+	}
+
+	return y;
+}
+//////////////////////////////////////////////////////////////////////////////////////////////////
+
+/////////////////////////////////////// Vector Power /////////////////////////////////////////////
+void vectPower(vector<float> A, int power, vector<float>& out){
+	// apply exponent
+	for (size_t i = 0; i < A.size(); i++){
+		out[i] = pow(A[i], power);
+	}
+}
+//////////////////////////////////////////////////////////////////////////////////////////////////
+
+/////////////////////////////////////// Find Curvature ///////////////////////////////////////////
+void getCurvature(vector<vector<Point> >& contours, vector<vector<float> >& k){
+
+}
+//////////////////////////////////////////////////////////////////////////////////////////////////
+
+//////////////////////////////////// Segment and Contours ////////////////////////////////////////
+void segment(Mat& img, Mat& imgColor){
+	// OTSU
+	Mat binary;
+	threshold(img, binary, 128, 255, THRESH_BINARY | THRESH_OTSU);
+	imshow("Binary",binary);
+
+	// get contours
+	vector<vector<Point> > contours;
+	vector<Vec4i> hierarchy;
+	findContours(binary, contours, hierarchy, RETR_TREE, CHAIN_APPROX_SIMPLE, Point(0, 0));
+	for(size_t i = 0; i < contours.size(); i++){
+		drawContours(imgColor, contours, (int)i, Scalar(0,0,255),2,8);
+	}
+
+	// get curvature
+	vector<vector<float> > k;
+	getCurvature(contours, k);
+
+
+}
+//////////////////////////////////////////////////////////////////////////////////////////////////
+
+int main(int argc, char** argv){
+	// Account for wrong number arguments
+	if (argc != 2)
+	{
+		cout << "Usage: Calculating curvature" << endl;
+		return -1;
+	}
+
+	// Read the file
+	Mat image;
+	image = imread(argv[1]);
+
+	// Check for invalid input
+	if (!image.data)
+	{
+		cout << "Could not open or find the image" << std::endl;
+		return -1;
+	}
+
+	// CREATE SYNTHETIC SQUARE FOR TESTING
+	cout << "creating synthetic image" << endl;
+	Mat image1 = Mat(500, 500, CV_8UC1, double(50));
+	Mat image2 = Mat(250, 250, CV_8UC1, double(150));
+	image2.copyTo(image1.colRange(124,374).rowRange(124,374));
+	imshow("Test image Original", image1);
+
+	// Draw triangulation
+	Mat imageColor;
+	cvtColor(image1,imageColor, COLOR_GRAY2BGR);
+	segment(image1,imageColor);
+	imshow("Final",imageColor);
+
+	waitKey(0);
+	return 0;
+}

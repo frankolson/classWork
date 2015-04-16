@@ -1,0 +1,15 @@
+20:14:39 **** Incremental Build of configuration Release for project EE_492G_HW_7 ****
+make all 
+Building file: ../main.cpp
+Invoking: GCC C++ Compiler
+g++ -I/home/will/Documents/opencv_libraries/gnuplot-iostream -I/usr/local/include/opencv -O3 -Wall -c -fmessage-length=0 -MMD -MP -MF"main.d" -MT"main.d" -o "main.o" "../main.cpp"
+Finished building: ../main.cpp
+ 
+Building target: EE_492G_HW_7
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -o "EE_492G_HW_7"  ./main.o   -lopencv_imgproc -lopencv_core -lopencv_highgui -lopencv_imgcodecs
+Finished building target: EE_492G_HW_7
+ 
+
+20:14:41 Build Finished (took 2s.0ms)
+

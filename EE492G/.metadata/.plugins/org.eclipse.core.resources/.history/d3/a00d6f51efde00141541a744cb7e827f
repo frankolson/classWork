@@ -1,0 +1,358 @@
+/*************************** Curvature Calculation ***************************/
+
+#include <opencv2/imgproc/imgproc.hpp>
+#include <opencv2/core/core.hpp>
+#include <opencv2/highgui/highgui.hpp>
+#include <cmath>
+#include <iostream>
+
+using namespace cv;
+using namespace std;
+
+//////////////////////////////////// Curvature Histogram /////////////////////////////////////////
+void curveHist(vector<float> curvature){
+	// initialize variables
+	int hist_h = 500;
+	int hist_w = 800;
+	float max = *max_element(curvature.begin(),curvature.end());
+	Size hist_size;
+	hist_size.height = hist_h;
+	hist_size.width = hist_w;
+	Mat Hist = Mat::zeros(hist_size, CV_32S);
+
+
+	// draw histogram
+	for(size_t i = 1; i < curvature.size(); i++){
+		line(Hist, Point(), Point(), Scalar(255,255,255), 2, 8);
+	}
+
+}
+//////////////////////////////////////////////////////////////////////////////////////////////////
+
+/////////////////////////////////////////// index ////////////////////////////////////////////////
+int index(int i, int j, int n){
+	if ((i + j) < 0){
+		return (n + j);
+	}
+	else{
+		return ((i+j)%(n));
+	}
+}
+//////////////////////////////////////////////////////////////////////////////////////////////////
+
+////////////////////////////////////// Gaussian Filter ///////////////////////////////////////////
+vector<float> gaussian(int sigma){
+	// initiate variables
+	int width = 9 * sigma + 1;
+	int w = (9 * sigma) / 2;
+	vector<float> kernal(width);
+	float sum = 0.0;
+	float den = 2*sigma*sigma;
+
+	// populate kernal
+	for (int i = -w; i <= w; i++){
+		// multiply times constant and fill kernal
+		kernal[i+w] = (exp(-(i*i)/den))/(sqrt(CV_PI * 2)*sigma);
+		sum += kernal[i+w];
+	}
+
+	// Normalize answer
+	for (int i = 0; i < width; i++)
+		kernal[i] /= sum;
+
+	// return kernal
+	return kernal;
+}
+//////////////////////////////////////////////////////////////////////////////////////////////////
+
+////////////////////////////// Guassian Filter derivative (dG) ////////////////////////////////////
+vector<float> gaussianDerivative(int sigma){
+	// initiate variables
+	int width = 9 * sigma + 1;
+	int w = (9 * sigma) / 2;
+	vector<float> kernal(width);
+	float sum = 0.0;
+	float den = 2 * sigma*sigma;
+
+	// populate kernal
+	for (int i = -w; i <= w; i++){
+		// multiply times constant and fill kernal
+		kernal[i + w] = -(exp(-(i*i) / den) * i) / ((sqrt(CV_PI * 2)*pow(sigma,3)));
+		sum += kernal[i + w];
+	}
+
+	// Normalize answer
+	for (int i = 0; i < width; i++)
+		kernal[i] /= sum;
+
+	// return kernal
+	return kernal;
+}
+//////////////////////////////////////////////////////////////////////////////////////////////////
+
+////////////////////////////// Guassian Filter derivative (ddG) ////////////////////////////////////
+vector<float> gaussianDerivative2(int sigma){
+	// initiate variables
+	int width = 9 * sigma + 1;
+	int w = (9 * sigma) / 2;
+	vector<float> kernal(width);
+	float sum = 0.0;
+	float den = 2 * sigma*sigma;
+
+	// populate kernal
+	for (int i = -w; i <= w; i++){
+		// multiply times constant and fill kernal
+		kernal[i + w] = ((exp(-(i*i) / den)) * ((i-sigma)*(i+sigma))) / (sqrt(CV_PI * 2)*pow(sigma,5));
+		sum += kernal[i + w];
+	}
+
+	// Normalize answer
+	for (int i = 0; i < width; i++)
+		kernal[i] /= sum;
+
+	// return kernal
+	return kernal;
+}
+//////////////////////////////////////////////////////////////////////////////////////////////////
+
+/////////////////////////////////// Circular Convolution /////////////////////////////////////////
+vector<float> cconv(vector<float> data, vector<float> filter){
+	// obtain filter sizes
+	int n = data.size();
+	int w = filter.size();
+
+	// find the center
+	int c;
+	if (w % 2 == 0){
+		c = w / 2;
+	}
+	else{
+		c = (w + 1) / 2;
+	}
+
+	// create zero filled vector
+	vector<float> y(n);
+	float fillVal = 0.0;
+	fill(y.begin(), y.end(), fillVal);
+
+	// perform circular convolution
+	for (int i = 0; i < n; i++){
+		for (int j = -c; j < c-1; j++){
+			y[i] += filter[j + c] * data[index(i, j, n)];
+		}
+	}
+
+	return y;
+}
+//////////////////////////////////////////////////////////////////////////////////////////////////
+
+/////////////////////////////////////// Vector Power /////////////////////////////////////////////
+void vectPower(vector<float> A, int power, vector<float>& out){
+	// apply exponent
+	for (size_t i = 0; i < A.size(); i++){
+		out[i] = pow(A[i], power);
+	}
+}
+//////////////////////////////////////////////////////////////////////////////////////////////////
+
+/////////////////////////////////////// Segmentation /////////////////////////////////////////////
+Mat segmentation(Mat image){
+	// grayscale
+	Mat binary;
+	cvtColor(image, binary, COLOR_BGR2GRAY);
+	imshow("Original", image);
+
+	// Reduce Noise
+	GaussianBlur(binary, binary, Size(5, 5), 0.5, 0.5); //applying Gaussian filter
+
+	// OTSU
+	threshold(binary, binary, 128, 255, THRESH_BINARY_INV | THRESH_OTSU);
+
+	// Calculate distance transform
+	Mat objects, fg;
+	Mat dist = Mat::zeros(binary.size(), CV_8U);
+	distanceTransform(binary, dist, DIST_L2, 3);
+	normalize(dist, dist, 0, 1.0, NORM_MINMAX);
+
+	// Threshold the distance transform results
+	vector<std::vector<cv::Point> > contours;
+	threshold(dist, objects, 0, 255, THRESH_BINARY);
+
+	// Dilate threshold results
+	dilate(dist, fg, Mat(), Point(-1, -1), 10);
+	dilate(objects, objects, Mat(), Point(-1, -1), 10);
+
+	// Subtract small foreground from large foreground
+	fg = fg - dist;
+
+	// Threshold and convert results
+	threshold(fg, fg, 0, 255, THRESH_BINARY);
+	fg.convertTo(fg, CV_8U);
+	objects.convertTo(objects, CV_8U);
+
+	// cluster peaks
+	bitwise_xor(fg, objects, fg);
+	dilate(fg, fg, cv::Mat(), cv::Point(-1, -1), 3);
+
+	// Identify image pixels without objects
+	Mat bg;
+	dilate(binary, bg, Mat(), Point(-1, -1), 1);
+	threshold(bg, bg, 1, 128, cv::THRESH_BINARY_INV);
+
+	// connected components used to separate each peak (bean)
+	// This is really important as  the watershed algorithm needs
+	// separately identified intensity value valleys in order to
+	// segment properly
+	Mat dt;
+	fg.copyTo(dt);
+	dt.convertTo(dt, CV_8U);
+	Mat lbl(dt.size(), CV_32S);
+	int ncc = connectedComponents(dt, lbl, 4);
+	cout << "Number of Beans: " << ncc - 1 << endl;
+
+	// Create a gray color spectrum to paint the peaks
+	vector<unsigned char> colors(ncc);
+	colors[0] = 0; // for background
+	for (int label = 1; label < ncc; ++label)
+		colors[label] = 255 / ncc*label;
+
+	// Paint every separate peak with a shade of gray
+	for (int x = 0; x < dt.rows; x++) {
+		for (int y = 0; y < dt.cols; y++) {
+			int label = lbl.at<int>(x, y);
+			dt.at<unsigned char>(x, y) = colors[label];
+		}
+	}
+
+	// Create markers image
+	Mat markers(binary.size(), CV_8U, Scalar(0));
+	markers = dt + bg;
+
+	// Convert to image of ints
+	markers.convertTo(markers, CV_32S);
+
+	// Apply watershed
+	watershed(image, markers);
+
+	// show segmentation
+	Mat tmp;
+	markers.convertTo(tmp, CV_8U);
+
+	// show watershed results
+	Mat tmp2;
+	markers.convertTo(tmp2, CV_8U, 255, 255);
+	imshow("watershed", tmp2);
+
+	return tmp2;
+}
+//////////////////////////////////////////////////////////////////////////////////////////////////
+
+//////////////////////////////////////// Curvature ///////////////////////////////////////////////
+void curvature(Mat src)
+{
+	// initiate variables
+	//char winName[20];
+
+	// get contours
+	vector<vector<Point> > contours;
+	vector<Vec4i> hierarchy;
+	findContours(src, contours, hierarchy, RETR_TREE, CHAIN_APPROX_SIMPLE, Point(0, 0));
+
+	// gradually increase sigma ( 1 -> 3 )
+	for (double sig = 1.0; sig <= 1.0; sig++){
+
+		// create guassian kernal
+		vector<float> G;
+		vector<vector<float> > k;
+		G = gaussian(sig);
+
+		// Gaussian derivations
+		vector<float> dG, ddG;
+		dG = gaussianDerivative(sig); // 1st
+		ddG = gaussianDerivative2(sig); // 2nd
+
+		// Apply
+		for (size_t i = 0; i< contours.size(); i++)
+		{
+			const vector<Point>& c = contours[i];
+
+			vector<float> X(c.size());
+			vector<float> Y(c.size());
+			cout << endl << " Contour: " << i << endl;
+			for (size_t j = 0; j < c.size(); j++)
+			{
+				// fill one dimensional matrix x and y
+				X[j] = c[j].x;
+				Y[j] = c[j].y;
+				//cout << X[j] << "," << Y[j] << endl;
+			}
+
+			// get derivatives
+			vector<float> dx = cconv(X, dG);
+			vector<float> ddx = cconv(X, ddG);
+			vector<float> dy = cconv(Y, dG);
+			vector<float> ddy = cconv(Y, ddG);
+
+			// curvature operations
+			vector<float> A(dx.size()), B(dy.size()), C(dx.size()), D(dx.size()),
+							E(dy.size()), F(dx.size()), H(dx.size());
+
+			transform(dx.begin(), dx.end(), ddy.begin(), A.begin(), multiplies<float>());
+			transform(dy.begin(), dy.end(), ddx.begin(), B.begin(), multiplies<float>());
+			transform(A.begin(), A.end(), B.begin(), C.begin(), minus<float>());
+
+			vectPower(dx, 2, D);
+			vectPower(dy, 2, E);
+
+			for(size_t x = 0; x < D.size(); x++) cout << D[x] << ", ";
+			cout << endl << endl;
+
+			transform(D.begin(), D.end(), E.begin(), F.begin(), plus<float>());
+			//add(D, E, F);
+			vectPower(F, 1.5, H);
+
+			// curvature
+			vector<float> kl(H.size());
+			transform(H.begin(), H.end(), C.begin(), kl.begin(), divides<float>());
+		}
+
+		cout << endl << endl;
+
+		//sprintf(winName, "Sigma %d", int(sig));
+		//imshow(winName, conv);
+	}
+}
+//////////////////////////////////////////////////////////////////////////////////////////////////
+
+int main(int argc, char** argv)
+{
+	// account for wrong number arguments
+	if (argc != 2)
+	{
+		cout << "Usage: Calculating curvature" << endl;
+		return -1;
+	}
+
+	// read the file
+	Mat image;
+	image = imread(argv[1]);
+
+	// check for invalid input
+	if (!image.data)
+	{
+		cout << "Could not open or find the image" << std::endl;
+		return -1;
+	}
+
+	// Segmentation Operations
+	Mat watershed;
+	watershed = segmentation(image);
+
+	// Curvature Operations
+	bitwise_not(watershed, watershed);
+	curvature(watershed);
+
+	// wait for a keystroke in the window
+	waitKey(0);
+	return 0;
+}

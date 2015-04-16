@@ -1,0 +1,65 @@
+/*************************** Delaunay Triangulation ***************************/
+
+#include <opencv2/imgproc/imgproc.hpp>
+#include <opencv2/core/core.hpp>
+#include <opencv2/highgui/highgui.hpp>
+#include <cmath>
+#include <iostream>
+
+using namespace std;
+using namespace cv;
+
+//////////////////////////////////// Segment and Contours ////////////////////////////////////////
+void segment(Mat& img, Mat& imgColor){
+	// OTSU
+	Mat binary;
+	threshold(img, binary, 128, 255, THRESH_BINARY | THRESH_OTSU);
+	imshow("Binary",binary);
+
+	cout << "made it past binary" << endl;
+
+	// get contours
+	vector<vector<Point> > contours;
+	vector<Vec4i> hierarchy;
+	findContours(binary, contours, hierarchy, RETR_TREE, CHAIN_APPROX_SIMPLE, Point(0, 0));
+	for(size_t i = 0; i < contours.size(); i++){
+		drawContours(imgColor, contours, (int)i, Scalar(0,0,255),1,8);
+	}
+}
+//////////////////////////////////////////////////////////////////////////////////////////////////
+
+int main(int argc, char** argv){
+	// Account for wrong number arguments
+	if (argc != 2)
+	{
+		cout << "Usage: Calculating curvature" << endl;
+		return -1;
+	}
+
+	// Read the file
+	Mat image;
+	image = imread(argv[1]);
+
+	// Check for invalid input
+	if (!image.data)
+	{
+		cout << "Could not open or find the image" << std::endl;
+		return -1;
+	}
+
+	// CREATE SYNTHETIC SQUARE FOR TESTING
+	cout << "creating synthetic image" << endl;
+	Mat image1 = Mat(500, 500, CV_8UC1, double(50));
+	Mat image2 = Mat(250, 250, CV_8UC1, double(150));
+	image2.copyTo(image1.colRange(124,374).rowRange(124,374));
+	imshow("Test image Original", image1);
+
+	// Draw triangulation
+	Mat imageColor;
+	cvtColor(image1,imageColor, COLOR_GRAY2BGR);
+	segment(image1,imageColor);
+	imshow("Final",imageColor);
+
+	waitKey(0);
+	return 0;
+}
